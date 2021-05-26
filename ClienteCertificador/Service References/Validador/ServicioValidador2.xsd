@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServicioLocalContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServicioLocalContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:3576/ServicioValidador.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ResultadoValidacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Detalles" nillable="true" type="tns:ArrayOfValidacion" />
+      <xs:element minOccurs="0" name="Entrada" nillable="true" type="tns:ValidadorContract" />
+      <xs:element minOccurs="0" name="Valido" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoValidacion" nillable="true" type="tns:ResultadoValidacion" />
+  <xs:complexType name="ArrayOfValidacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Validacion" nillable="true" type="tns:Validacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidacion" nillable="true" type="tns:ArrayOfValidacion" />
+  <xs:complexType name="Validacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valido" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Validacion" nillable="true" type="tns:Validacion" />
+  <xs:complexType name="ValidadorContract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AnoAprobacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CadenaOriginal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CadenaTimbre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Certificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CertificadoNoFiel" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CertificadoValido" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Errores" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaTimbrado" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Folio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hash" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="NoAprobacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoCertificado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoCertificadoSat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RfcEmisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sello" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelloSat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SelloValido" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Serie" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="SumaConceptos" type="xs:double" />
+      <xs:element minOccurs="0" name="SumaImpuestos" type="xs:double" />
+      <xs:element minOccurs="0" name="SumaRetenciones" type="xs:double" />
+      <xs:element minOccurs="0" name="Total" type="xs:double" />
+      <xs:element minOccurs="0" name="Valido" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XmlString" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidadorContract" nillable="true" type="tns:ValidadorContract" />
+</xs:schema>

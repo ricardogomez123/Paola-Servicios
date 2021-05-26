@@ -1,0 +1,1636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xmc="http://xmCrypto.safenet-inc.com/xsd" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:xmd="http://xmCrypto.safenet-inc.com/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xenc="http://www.w3.org/2001/04/xmlenc#" xmlns:dss="urn:oasis:names:tc:dss:1.0:core:schema" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:saml="urn:oasis:names:tc:SAML:1.0:assertion" targetNamespace="http://xmCrypto.safenet-inc.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>xmCryptoService</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://xmCrypto.safenet-inc.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import schemaLocation="xmCryptoService?xsd=xsd0" namespace="http://www.w3.org/2000/09/xmldsig#" />
+      <xs:import schemaLocation="xmCryptoService?xsd=xsd1" namespace="urn:oasis:names:tc:SAML:1.0:assertion" />
+      <xs:import schemaLocation="xmCryptoService?xsd=xsd2" namespace="http://www.w3.org/XML/1998/namespace" />
+      <xs:import schemaLocation="xmCryptoService?xsd=xsd3" namespace="urn:oasis:names:tc:dss:1.0:core:schema" />
+      <xs:element name="SessionStateToken" nillable="true" type="xs:string" />
+      <xs:element name="AuthToken" type="xmc:authTokenType" />
+      <xs:complexType name="authTokenType">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="xmc:SessionStateToken" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Policy" type="xmc:PolicyType" />
+      <xs:complexType name="PolicyType">
+        <xs:sequence>
+          <xs:element name="PolicyName" type="xs:string" />
+          <xs:element name="PolicyValue" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CryptoUser" type="xmc:cryptoUserType" />
+      <xs:complexType name="cryptoUserType">
+        <xs:sequence>
+          <xs:element name="UserID" type="xs:string" />
+          <xs:element minOccurs="0" name="UserName" type="xs:string" />
+          <xs:element minOccurs="0" name="UserComment" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="pkAuthentication" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Policy" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CryptoObject" type="xmc:cryptoObjectType" />
+      <xs:complexType name="cryptoObjectType">
+        <xs:sequence>
+          <xs:element name="KeyAlias" type="xs:string" />
+          <xs:element name="Owner" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Policy" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="authModel" type="xmc:authModelType" />
+      <xs:simpleType name="authModelType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SAMLv1" />
+          <xs:enumeration value="SAMLv2" />
+          <xs:enumeration value="PROP" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="SignatureMode" type="xmc:SignatureModeType" />
+      <xs:simpleType name="SignatureModeType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="RSA" />
+          <xs:enumeration value="DSA" />
+          <xs:enumeration value="ECDSA" />
+          <xs:enumeration value="SHA1withDSA" />
+          <xs:enumeration value="SHA1withRSA" />
+          <xs:enumeration value="SHA1withECDSA" />
+          <xs:enumeration value="SHA224withRSA" />
+          <xs:enumeration value="SHA256withRSA" />
+          <xs:enumeration value="SHA384withRSA" />
+          <xs:enumeration value="SHA512withRSA" />
+          <xs:enumeration value="SHA1withPSSRSA" />
+          <xs:enumeration value="SHA224withPSSRSA" />
+          <xs:enumeration value="SHA256withPSSRSA" />
+          <xs:enumeration value="SHA384withPSSRSA" />
+          <xs:enumeration value="SHA512withPSSRSA" />
+          <xs:enumeration value="SHA224withECDSA" />
+          <xs:enumeration value="SHA256withECDSA" />
+          <xs:enumeration value="SHA384withECDSA" />
+          <xs:enumeration value="SHA512withECDSA" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element default="NoPadding" name="Padding" type="xmc:paddingType" />
+      <xs:simpleType name="paddingType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NoPadding" />
+          <xs:enumeration value="PKCS5Padding" />
+          <xs:enumeration value="ISO10126Padding" />
+          <xs:enumeration value="OAEPWithSHA1AndMGF1Padding" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="Mechanism" type="xmc:MechanismType" />
+      <xs:simpleType name="MechanismType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="CBC" />
+          <xs:enumeration value="ECB" />
+          <xs:enumeration value="NONE" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="KeyAlgorithm" type="xmc:KeyAlgorithmType" />
+      <xs:simpleType name="KeyAlgorithmType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="AES" />
+          <xs:enumeration value="DES" />
+          <xs:enumeration value="DES2" />
+          <xs:enumeration value="DES3" />
+          <xs:enumeration value="RSA" />
+          <xs:enumeration value="RSAX9_31" />
+          <xs:enumeration value="DSA" />
+          <xs:enumeration value="ECDSA" />
+          <xs:enumeration value="RSAPublic" />
+          <xs:enumeration value="RSAPrivate" />
+          <xs:enumeration value="DSAPublic" />
+          <xs:enumeration value="DSAPrivate" />
+          <xs:enumeration value="ECDSAPublic" />
+          <xs:enumeration value="ECDSAPrivate" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="NamedCurve" type="xmc:NamedCurveType" />
+      <xs:simpleType name="NamedCurveType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="secp112r1" />
+          <xs:enumeration value="secp112r2" />
+          <xs:enumeration value="secp128r1" />
+          <xs:enumeration value="secp128r2" />
+          <xs:enumeration value="secp160k1" />
+          <xs:enumeration value="secp160r1" />
+          <xs:enumeration value="secp160r2" />
+          <xs:enumeration value="secp192k1" />
+          <xs:enumeration value="secp224k1" />
+          <xs:enumeration value="secp224r1" />
+          <xs:enumeration value="secp256k1" />
+          <xs:enumeration value="secp384r1" />
+          <xs:enumeration value="secp521r1" />
+          <xs:enumeration value="x9_62_prime192v1" />
+          <xs:enumeration value="x9_62_prime192v2" />
+          <xs:enumeration value="x9_62_prime192v3" />
+          <xs:enumeration value="x9_62_prime239v1" />
+          <xs:enumeration value="x9_62_prime239v2" />
+          <xs:enumeration value="x9_62_prime239v3" />
+          <xs:enumeration value="x9_62_prime256v1" />
+          <xs:enumeration value="sect113r1" />
+          <xs:enumeration value="sect113r2" />
+          <xs:enumeration value="sect131r1" />
+          <xs:enumeration value="sect131r2" />
+          <xs:enumeration value="sect163k1" />
+          <xs:enumeration value="sect163r1" />
+          <xs:enumeration value="sect163r2" />
+          <xs:enumeration value="sect193r1" />
+          <xs:enumeration value="sect193r2" />
+          <xs:enumeration value="sect233k1" />
+          <xs:enumeration value="sect233r1" />
+          <xs:enumeration value="sect239k1" />
+          <xs:enumeration value="sect283k1" />
+          <xs:enumeration value="sect283r1" />
+          <xs:enumeration value="sect409k1" />
+          <xs:enumeration value="sect409r1" />
+          <xs:enumeration value="sect571k1" />
+          <xs:enumeration value="sect571r1" />
+          <xs:enumeration value="x9_62_c2pnb163v1" />
+          <xs:enumeration value="x9_62_c2pnb163v2" />
+          <xs:enumeration value="x9_62_c2pnb163v3" />
+          <xs:enumeration value="x9_62_c2pnb176v1" />
+          <xs:enumeration value="x9_62_c2tnb191v1" />
+          <xs:enumeration value="x9_62_c2tnb191v2" />
+          <xs:enumeration value="x9_62_c2tnb191v3" />
+          <xs:enumeration value="x9_62_c2pnb208w1" />
+          <xs:enumeration value="x9_62_c2tnb239v1" />
+          <xs:enumeration value="x9_62_c2tnb239v2" />
+          <xs:enumeration value="x9_62_c2tnb239v3" />
+          <xs:enumeration value="x9_62_c2pnb272w1" />
+          <xs:enumeration value="x9_62_c2pnb304w1" />
+          <xs:enumeration value="x9_62_c2tnb359v1" />
+          <xs:enumeration value="x9_62_c2pnb368w1" />
+          <xs:enumeration value="x9_62_c2tnb431r1" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="Parameter" type="xmc:ParameterType" />
+      <xs:complexType name="ParameterType">
+        <xs:sequence>
+          <xs:element name="ParameterName" type="xs:string" />
+          <xs:element name="ParameterValue" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="WrappedKey" type="xmc:WrappedKeyType" />
+      <xs:complexType name="WrappedKeyType">
+        <xs:sequence>
+          <xs:element name="WrappedKeyValue" type="xs:string" />
+          <xs:element minOccurs="0" name="MaskingKeyAlias" type="xs:string" />
+          <xs:element minOccurs="0" name="MaskingKeyInfo" type="ds:KeyInfoType" />
+          <xs:element ref="xmc:KeyAlgorithm" />
+          <xs:element ref="xmc:Mechanism" />
+          <xs:element ref="xmc:Padding" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Parameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="WrappingOptions" type="xmc:WrappingOptionsType" />
+      <xs:complexType name="WrappingOptionsType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MaskingKeyAlias" type="xs:string" />
+          <xs:element minOccurs="0" name="MaskingKeyInfo" type="ds:KeyInfoType" />
+          <xs:element ref="xmc:Mechanism" />
+          <xs:element ref="xmc:Padding" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Parameter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="listUsers">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="listUsersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="UserID" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xmc:CryptoUser" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="createUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xmc:CryptoUser" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="updateUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserID" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserID" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xmc:CryptoUser" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="sign">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SigningKeyInfo" type="ds:KeyInfoType" />
+            <xs:element minOccurs="0" name="SigningKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:SignatureMode" />
+            <xs:element maxOccurs="unbounded" ref="xmc:Parameter" />
+            <xs:element minOccurs="0" name="DataToSign" type="xs:string" />
+            <xs:element minOccurs="0" name="uri" type="xs:anyURI" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="signResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Signature" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="verify">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="VerifyingKeyInfo" type="ds:KeyInfoType" />
+            <xs:element minOccurs="0" name="VerifyingKeyAlias" type="xs:string" />
+            <xs:element ref="xmc:SignatureMode" />
+            <xs:element maxOccurs="unbounded" ref="xmc:Parameter" />
+            <xs:element name="Signature" type="xs:string" />
+            <xs:element minOccurs="0" name="DataToSign" type="xs:string" />
+            <xs:element minOccurs="0" name="uri" type="xs:anyURI" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="verifyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateSecretKey">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="KeyAlias" type="xs:string" />
+            <xs:element ref="xmc:KeyAlgorithm" />
+            <xs:element minOccurs="0" name="KeySize" type="xs:integer" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Policy" />
+            <xs:element default="false" name="ReturnKeyInfo" type="xs:boolean" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateSecretKeyResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="ds:KeyInfo" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateKeyPair">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="KeyAlias" type="xs:string" />
+            <xs:element ref="xmc:KeyAlgorithm" />
+            <xs:element name="PublicObject" type="xs:boolean" />
+            <xs:element minOccurs="0" name="KeySize" type="xs:integer" />
+            <xs:element minOccurs="0" ref="xmc:NamedCurve" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Policy" />
+            <xs:element default="false" name="ReturnPublicKeyInfo" type="xs:boolean" />
+            <xs:element default="false" name="ReturnPrivateKeyInfo" type="xs:boolean" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateKeyPairResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PublicKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="PublicKeyInfo" type="ds:KeyInfoType" />
+            <xs:element minOccurs="0" name="PrivateKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="PrivateKeyInfo" type="ds:KeyInfoType" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectInfo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ObjectAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="KeySpace" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getObjectInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xmc:CryptoObject" />
+            <xs:element minOccurs="0" ref="ds:KeyInfo" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAliasList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ReturnOnlyPersonal" type="xs:boolean" />
+            <xs:element minOccurs="0" name="KeySpace" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAliasListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="ObjectAlias" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteObject">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ObjectAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="KeySpace" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="deleteObjectResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="login">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="UserID" type="xs:string" />
+            <xs:element ref="xmc:authModel" />
+            <xs:element minOccurs="0" name="password" type="xs:string" />
+            <xs:element minOccurs="0" name="pkAuthentication" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="loginResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="logout">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="logoutResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="encrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="EncryptionKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="EncryptionKeyInfo" type="ds:KeyInfoType" />
+            <xs:element minOccurs="0" name="DataToEncrypt" type="xs:string" />
+            <xs:element minOccurs="0" name="URIToEncrypt" type="xs:string" />
+            <xs:element ref="xmc:Mechanism" />
+            <xs:element ref="xmc:Padding" />
+            <xs:element maxOccurs="unbounded" ref="xmc:Parameter" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="encryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="EncryptedData" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="decrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DecryptionKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="DecryptionKeyInfo" type="ds:KeyInfoType" />
+            <xs:element minOccurs="0" name="DataToDecrypt" type="xs:string" />
+            <xs:element minOccurs="0" name="URIToDecrypt" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:Mechanism" />
+            <xs:element minOccurs="0" ref="xmc:Padding" />
+            <xs:element maxOccurs="unbounded" ref="xmc:Parameter" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="decryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="DecryptedData" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="inject">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="InjectedKeyAlias" type="xs:string" />
+            <xs:element name="KeyToInject" type="ds:KeyInfoType" />
+            <xs:element name="PublicObject" type="xs:boolean" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Policy" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="injectResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="extract">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="KeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:WrappingOptions" />
+            <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmc:Policy" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="extractResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="ds:KeyInfo" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateRandom">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Size" type="xs:integer" />
+            <xs:element name="Seed" type="xs:integer" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateRandomResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="RandomData" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateCSR">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="xmc:SignatureMode" />
+            <xs:element minOccurs="0" name="PublicKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="PublicKeyInfo" type="ds:KeyInfoType" />
+            <xs:element minOccurs="0" name="PrivateKeyAlias" type="xs:string" />
+            <xs:element minOccurs="0" name="PrivateKeyInfo" type="ds:KeyInfoType" />
+            <xs:element name="SubjectName" type="xs:string" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateCSRResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="CSR" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateX509Cert">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SigningKeyAlias" type="xs:string" />
+            <xs:element name="CertificateDetails" type="ds:X509DataType" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="generateX509CertResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Certificate" type="xs:string" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlSign">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="dss:RequestBaseType">
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="xmc:AuthToken" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlSignResponse">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="dss:ResponseBaseType">
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="dss:SignatureObject" />
+                <xs:element minOccurs="0" ref="xmc:AuthToken" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlVerify">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="dss:RequestBaseType">
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="dss:SignatureObject" />
+                <xs:element minOccurs="0" ref="xmc:AuthToken" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlVerifyResponse">
+        <xs:complexType>
+          <xs:complexContent mixed="false">
+            <xs:extension base="dss:ResponseBaseType">
+              <xs:sequence>
+                <xs:element minOccurs="0" ref="xmc:AuthToken" />
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlEncrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="dss:Document" />
+            <xs:element minOccurs="0" ref="ds:KeyInfo" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlEncryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="dss:Document" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlDecrypt">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="dss:Document" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="xmlDecryptResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" ref="dss:Document" />
+            <xs:element ref="dss:Result" />
+            <xs:element minOccurs="0" ref="xmc:AuthToken" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="verifyMessage">
+    <wsdl:part name="part1" element="xmc:verify" />
+  </wsdl:message>
+  <wsdl:message name="verifyResponseMessage">
+    <wsdl:part name="part1" element="xmc:verifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="xmlDecryptMessage">
+    <wsdl:part name="part1" element="xmc:xmlDecrypt" />
+  </wsdl:message>
+  <wsdl:message name="xmlDecryptResponseMessage">
+    <wsdl:part name="part1" element="xmc:xmlDecryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectMessage">
+    <wsdl:part name="part1" element="xmc:getObjectInfo" />
+  </wsdl:message>
+  <wsdl:message name="getObjectInfoResponseMessage">
+    <wsdl:part name="part1" element="xmc:getObjectInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAliasListMessage">
+    <wsdl:part name="part1" element="xmc:getAliasList" />
+  </wsdl:message>
+  <wsdl:message name="getAliasListResponseMessage">
+    <wsdl:part name="part1" element="xmc:getAliasListResponse" />
+  </wsdl:message>
+  <wsdl:message name="generateRandomMessage">
+    <wsdl:part name="part1" element="xmc:generateRandom" />
+  </wsdl:message>
+  <wsdl:message name="generateRandomResponseMessage">
+    <wsdl:part name="part1" element="xmc:generateRandomResponse" />
+  </wsdl:message>
+  <wsdl:message name="generateKeyPairMessage">
+    <wsdl:part name="part1" element="xmc:generateKeyPair" />
+  </wsdl:message>
+  <wsdl:message name="generateKeyPairResponseMessage">
+    <wsdl:part name="part1" element="xmc:generateKeyPairResponse" />
+  </wsdl:message>
+  <wsdl:message name="decryptMessage">
+    <wsdl:part name="part1" element="xmc:decrypt" />
+  </wsdl:message>
+  <wsdl:message name="decryptResponseMessage">
+    <wsdl:part name="part1" element="xmc:decryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="encryptMessage">
+    <wsdl:part name="part1" element="xmc:encrypt" />
+  </wsdl:message>
+  <wsdl:message name="encryptResponseMessage">
+    <wsdl:part name="part1" element="xmc:encryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="generateCSRMessage">
+    <wsdl:part name="part1" element="xmc:generateCSR" />
+  </wsdl:message>
+  <wsdl:message name="generateCSRResponseMessage">
+    <wsdl:part name="part1" element="xmc:generateCSRResponse" />
+  </wsdl:message>
+  <wsdl:message name="loginMessage">
+    <wsdl:part name="part1" element="xmc:login" />
+  </wsdl:message>
+  <wsdl:message name="loginResponseMessage">
+    <wsdl:part name="part1" element="xmc:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="generateX509CertMessage">
+    <wsdl:part name="part1" element="xmc:generateX509Cert" />
+  </wsdl:message>
+  <wsdl:message name="generateX509CertResponseMessage">
+    <wsdl:part name="part1" element="xmc:generateX509CertResponse" />
+  </wsdl:message>
+  <wsdl:message name="getUserMessage">
+    <wsdl:part name="part1" element="xmc:getUser" />
+  </wsdl:message>
+  <wsdl:message name="getUserResponseMessage">
+    <wsdl:part name="part1" element="xmc:getUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="xmlSignMessage">
+    <wsdl:part name="part1" element="xmc:xmlSign" />
+  </wsdl:message>
+  <wsdl:message name="xmlSignResponseMessage">
+    <wsdl:part name="part1" element="xmc:xmlSignResponse" />
+  </wsdl:message>
+  <wsdl:message name="generateSecretKeyMessage">
+    <wsdl:part name="part1" element="xmc:generateSecretKey" />
+  </wsdl:message>
+  <wsdl:message name="generateSecretKeyResponseMessage">
+    <wsdl:part name="part1" element="xmc:generateSecretKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="injectMessage">
+    <wsdl:part name="part1" element="xmc:inject" />
+  </wsdl:message>
+  <wsdl:message name="injectResponseMessage">
+    <wsdl:part name="part1" element="xmc:injectResponse" />
+  </wsdl:message>
+  <wsdl:message name="extractMessage">
+    <wsdl:part name="part1" element="xmc:extract" />
+  </wsdl:message>
+  <wsdl:message name="extractResponseMessage">
+    <wsdl:part name="part1" element="xmc:extractResponse" />
+  </wsdl:message>
+  <wsdl:message name="signMessage">
+    <wsdl:part name="part1" element="xmc:sign" />
+  </wsdl:message>
+  <wsdl:message name="signResponseMessage">
+    <wsdl:part name="part1" element="xmc:signResponse" />
+  </wsdl:message>
+  <wsdl:message name="xmlVerifyMessage">
+    <wsdl:part name="part1" element="xmc:xmlVerify" />
+  </wsdl:message>
+  <wsdl:message name="xmlVerifyResponseMessage">
+    <wsdl:part name="part1" element="xmc:xmlVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteObjectMessage">
+    <wsdl:part name="part1" element="xmc:deleteObject" />
+  </wsdl:message>
+  <wsdl:message name="deleteObjectResponseMessage">
+    <wsdl:part name="part1" element="xmc:deleteObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="createUserMessage">
+    <wsdl:part name="part1" element="xmc:createUser" />
+  </wsdl:message>
+  <wsdl:message name="createUserResponseMessage">
+    <wsdl:part name="part1" element="xmc:createUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="logoutMessage">
+    <wsdl:part name="part1" element="xmc:logout" />
+  </wsdl:message>
+  <wsdl:message name="logoutResponseMessage">
+    <wsdl:part name="part1" element="xmc:logoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="xmlEncryptMessage">
+    <wsdl:part name="part1" element="xmc:xmlEncrypt" />
+  </wsdl:message>
+  <wsdl:message name="xmlEncryptResponseMessage">
+    <wsdl:part name="part1" element="xmc:xmlEncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="listUsersMessage">
+    <wsdl:part name="part1" element="xmc:listUsers" />
+  </wsdl:message>
+  <wsdl:message name="listUsersResponseMessage">
+    <wsdl:part name="part1" element="xmc:listUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteUserMessage">
+    <wsdl:part name="part1" element="xmc:deleteUser" />
+  </wsdl:message>
+  <wsdl:message name="deleteUserResponseMessage">
+    <wsdl:part name="part1" element="xmc:deleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateUserMessage">
+    <wsdl:part name="part1" element="xmc:updateUser" />
+  </wsdl:message>
+  <wsdl:message name="updateUserResponseMessage">
+    <wsdl:part name="part1" element="xmc:updateUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="xmCryptoServicePortType">
+    <wsdl:operation name="verify">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:verify" message="xmd:verifyMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/verifyResponse" message="xmd:verifyResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xmlDecrypt">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:xmlDecrypt" message="xmd:xmlDecryptMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/xmlDecryptResponse" message="xmd:xmlDecryptResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInfo">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:getObjectInfo" message="xmd:getObjectMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/getObjectInfoResponse" message="xmd:getObjectInfoResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAliasList">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:getAliasList" message="xmd:getAliasListMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/getAliasListResponse" message="xmd:getAliasListResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generateRandom">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:generateRandom" message="xmd:generateRandomMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/generateRandomResponse" message="xmd:generateRandomResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generateKeyPair">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:generateKeyPair" message="xmd:generateKeyPairMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/generateKeyPairResponse" message="xmd:generateKeyPairResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:decrypt" message="xmd:decryptMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/decryptResponse" message="xmd:decryptResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:encrypt" message="xmd:encryptMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/encryptResponse" message="xmd:encryptResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generateCSR">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:generateCSR" message="xmd:generateCSRMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/generateCSRResponse" message="xmd:generateCSRResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:login" message="xmd:loginMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/loginResponse" message="xmd:loginResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generateX509Cert">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:generateX509Cert" message="xmd:generateX509CertMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/generateX509CertResponse" message="xmd:generateX509CertResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:getUser" message="xmd:getUserMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/getUserResponse" message="xmd:getUserResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xmlSign">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:xmlSign" message="xmd:xmlSignMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/xmlSignResponse" message="xmd:xmlSignResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="generateSecretKey">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:generateSecretKey" message="xmd:generateSecretKeyMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/generateSecretKeyResponse" message="xmd:generateSecretKeyResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="inject">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:inject" message="xmd:injectMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/injectResponse" message="xmd:injectResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="extract">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:extract" message="xmd:extractMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/extractResponse" message="xmd:extractResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="sign">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:sign" message="xmd:signMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/signResponse" message="xmd:signResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xmlVerify">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:xmlVerify" message="xmd:xmlVerifyMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/xmlVerifyResponse" message="xmd:xmlVerifyResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteObject">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:deleteObject" message="xmd:deleteObjectMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/deleteObjectResponse" message="xmd:deleteObjectResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:createUser" message="xmd:createUserMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/createUserResponse" message="xmd:createUserResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:logout" message="xmd:logoutMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/logoutResponse" message="xmd:logoutResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="xmlEncrypt">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:xmlEncrypt" message="xmd:xmlEncryptMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/xmlEncryptResponse" message="xmd:xmlEncryptResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listUsers">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:listUsers" message="xmd:listUsersMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/listUsersResponse" message="xmd:listUsersResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:deleteUser" message="xmd:deleteUserMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/deleteUserResponse" message="xmd:deleteUserResponseMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <wsdl:input xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="urn:updateUser" message="xmd:updateUserMessage" />
+      <wsdl:output xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsaw:Action="http://xmCrypto.safenet-inc.com/xmCryptoServicePortType/updateUserResponse" message="xmd:updateUserResponseMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="xmCryptoServiceSOAP11Binding" type="xmd:xmCryptoServicePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="verify">
+      <soap:operation soapAction="urn:verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlDecrypt">
+      <soap:operation soapAction="urn:xmlDecrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInfo">
+      <soap:operation soapAction="urn:getObjectInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAliasList">
+      <soap:operation soapAction="urn:getAliasList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateRandom">
+      <soap:operation soapAction="urn:generateRandom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateKeyPair">
+      <soap:operation soapAction="urn:generateKeyPair" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <soap:operation soapAction="urn:decrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <soap:operation soapAction="urn:encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCSR">
+      <soap:operation soapAction="urn:generateCSR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="urn:login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateX509Cert">
+      <soap:operation soapAction="urn:generateX509Cert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap:operation soapAction="urn:getUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlSign">
+      <soap:operation soapAction="urn:xmlSign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateSecretKey">
+      <soap:operation soapAction="urn:generateSecretKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inject">
+      <soap:operation soapAction="urn:inject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extract">
+      <soap:operation soapAction="urn:extract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sign">
+      <soap:operation soapAction="urn:sign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlVerify">
+      <soap:operation soapAction="urn:xmlVerify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteObject">
+      <soap:operation soapAction="urn:deleteObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <soap:operation soapAction="urn:createUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap:operation soapAction="urn:logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlEncrypt">
+      <soap:operation soapAction="urn:xmlEncrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listUsers">
+      <soap:operation soapAction="urn:listUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap:operation soapAction="urn:deleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="urn:updateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="xmCryptoServiceSOAP12Binding" type="xmd:xmCryptoServicePortType">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="verify">
+      <soap12:operation soapAction="urn:verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlDecrypt">
+      <soap12:operation soapAction="urn:xmlDecrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInfo">
+      <soap12:operation soapAction="urn:getObjectInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAliasList">
+      <soap12:operation soapAction="urn:getAliasList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateRandom">
+      <soap12:operation soapAction="urn:generateRandom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateKeyPair">
+      <soap12:operation soapAction="urn:generateKeyPair" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <soap12:operation soapAction="urn:decrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <soap12:operation soapAction="urn:encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCSR">
+      <soap12:operation soapAction="urn:generateCSR" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap12:operation soapAction="urn:login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateX509Cert">
+      <soap12:operation soapAction="urn:generateX509Cert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <soap12:operation soapAction="urn:getUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlSign">
+      <soap12:operation soapAction="urn:xmlSign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateSecretKey">
+      <soap12:operation soapAction="urn:generateSecretKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inject">
+      <soap12:operation soapAction="urn:inject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extract">
+      <soap12:operation soapAction="urn:extract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sign">
+      <soap12:operation soapAction="urn:sign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlVerify">
+      <soap12:operation soapAction="urn:xmlVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteObject">
+      <soap12:operation soapAction="urn:deleteObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <soap12:operation soapAction="urn:createUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <soap12:operation soapAction="urn:logout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlEncrypt">
+      <soap12:operation soapAction="urn:xmlEncrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listUsers">
+      <soap12:operation soapAction="urn:listUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap12:operation soapAction="urn:deleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap12:operation soapAction="urn:updateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="xmCryptoServiceHttpBinding" type="xmd:xmCryptoServicePortType">
+    <http:binding verb="POST" />
+    <wsdl:operation name="verify">
+      <http:operation location="verify" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlDecrypt">
+      <http:operation location="xmlDecrypt" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getObjectInfo">
+      <http:operation location="getObjectInfo" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAliasList">
+      <http:operation location="getAliasList" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateRandom">
+      <http:operation location="generateRandom" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateKeyPair">
+      <http:operation location="generateKeyPair" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="decrypt">
+      <http:operation location="decrypt" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encrypt">
+      <http:operation location="encrypt" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateCSR">
+      <http:operation location="generateCSR" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <http:operation location="login" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateX509Cert">
+      <http:operation location="generateX509Cert" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUser">
+      <http:operation location="getUser" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlSign">
+      <http:operation location="xmlSign" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="generateSecretKey">
+      <http:operation location="generateSecretKey" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inject">
+      <http:operation location="inject" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="extract">
+      <http:operation location="extract" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sign">
+      <http:operation location="sign" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlVerify">
+      <http:operation location="xmlVerify" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteObject">
+      <http:operation location="deleteObject" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createUser">
+      <http:operation location="createUser" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logout">
+      <http:operation location="logout" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="xmlEncrypt">
+      <http:operation location="xmlEncrypt" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listUsers">
+      <http:operation location="listUsers" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <http:operation location="deleteUser" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <http:operation location="updateUser" />
+      <wsdl:input>
+        <mime:content type="text/xml" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="xmCryptoService">
+    <wsdl:port name="xmCryptoServiceSOAP11port_https" binding="xmd:xmCryptoServiceSOAP11Binding">
+      <soap:address location="https://192.168.4.26:8443/xmc/services/xmCryptoService" />
+    </wsdl:port>
+    <wsdl:port name="xmCryptoServiceSOAP11port_http1" binding="xmd:xmCryptoServiceSOAP11Binding">
+      <soap:address location="http://192.168.4.26:8080/xmc/services/xmCryptoService" />
+    </wsdl:port>
+    <wsdl:port name="xmCryptoServiceSOAP12port_https" binding="xmd:xmCryptoServiceSOAP12Binding">
+      <soap12:address location="https://192.168.4.26:8443/xmc/services/xmCryptoService" />
+    </wsdl:port>
+    <wsdl:port name="xmCryptoServiceSOAP12port_http1" binding="xmd:xmCryptoServiceSOAP12Binding">
+      <soap12:address location="http://192.168.4.26:8080/xmc/services/xmCryptoService" />
+    </wsdl:port>
+    <wsdl:port name="xmCryptoServiceHttpport2" binding="xmd:xmCryptoServiceHttpBinding">
+      <http:address location="http://192.168.4.26:8080/xmc/rest/xmCryptoService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

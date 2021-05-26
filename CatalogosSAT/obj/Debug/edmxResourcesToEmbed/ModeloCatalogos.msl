@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CatalogosModelStoreContainer" CdmEntityContainer="CatalogosEntities1">
+    <EntitySetMapping Name="c_Colonia">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Colonia">
+        <MappingFragment StoreEntitySet="c_Colonia">
+          <ScalarProperty Name="c_Colonia1" ColumnName="c_Colonia" />
+          <ScalarProperty Name="c_CodigoPostal" ColumnName="c_CodigoPostal" />
+          <ScalarProperty Name="Nombredelasentamiento" ColumnName="Nombredelasentamiento" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_Estado">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Estado">
+        <MappingFragment StoreEntitySet="c_Estado">
+          <ScalarProperty Name="c_Estado1" ColumnName="c_Estado" />
+          <ScalarProperty Name="c_Pais" ColumnName="c_Pais" />
+          <ScalarProperty Name="NombredelEstado" ColumnName="NombredelEstado" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_INCOTERM">
+      <EntityTypeMapping TypeName="CatalogosModel.c_INCOTERM">
+        <MappingFragment StoreEntitySet="c_INCOTERM">
+          <ScalarProperty Name="c_INCOTERM1" ColumnName="c_INCOTERM" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_Localidad">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Localidad">
+        <MappingFragment StoreEntitySet="c_Localidad">
+          <ScalarProperty Name="c_Localidad1" ColumnName="c_Localidad" />
+          <ScalarProperty Name="c_Estado" ColumnName="c_Estado" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_Municipio">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Municipio">
+        <MappingFragment StoreEntitySet="c_Municipio">
+          <ScalarProperty Name="c_Municipio1" ColumnName="c_Municipio" />
+          <ScalarProperty Name="c_Estado" ColumnName="c_Estado" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_Pais">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Pais">
+        <MappingFragment StoreEntitySet="c_Pais">
+          <ScalarProperty Name="c_Pais1" ColumnName="c_Pais" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="FormatodeCP" ColumnName="FormatodeCP" />
+          <ScalarProperty Name="FormatodeRIT" ColumnName="FormatodeRIT" />
+          <ScalarProperty Name="ValidaciondelRIT" ColumnName="ValidaciondelRIT" />
+          <ScalarProperty Name="Agrupaciones" ColumnName="Agrupaciones" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_RegimenFiscal">
+      <EntityTypeMapping TypeName="CatalogosModel.c_RegimenFiscal">
+        <MappingFragment StoreEntitySet="c_RegimenFiscal">
+          <ScalarProperty Name="c_RegimenFiscal1" ColumnName="c_RegimenFiscal" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Física" ColumnName="Física" />
+          <ScalarProperty Name="Moral" ColumnName="Moral" />
+          <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnidadMedida">
+      <EntityTypeMapping TypeName="CatalogosModel.UnidadMedida">
+        <MappingFragment StoreEntitySet="UnidadMedida">
+          <ScalarProperty Name="C_UnidadMedida" ColumnName="C_UnidadMedida" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_UsoCFDI">
+      <EntityTypeMapping TypeName="CatalogosModel.c_UsoCFDI">
+        <MappingFragment StoreEntitySet="c_UsoCFDI">
+          <ScalarProperty Name="Fecha_fin_de_vigencia" ColumnName="Fecha fin de vigencia" />
+          <ScalarProperty Name="Fecha_inicio_de_vigencia" ColumnName="Fecha inicio de vigencia" />
+          <ScalarProperty Name="Moral" ColumnName="Moral" />
+          <ScalarProperty Name="Física" ColumnName="Física" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="c_UsoCFDI1" ColumnName="c_UsoCFDI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_Moneda">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Moneda">
+        <MappingFragment StoreEntitySet="c_Moneda">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Variacion" ColumnName="Variacion" />
+          <ScalarProperty Name="Decimales" ColumnName="Decimales" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="c_Moneda1" ColumnName="c_Moneda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_ClaveProdServ">
+      <EntityTypeMapping TypeName="CatalogosModel.c_ClaveProdServ">
+        <MappingFragment StoreEntitySet="c_ClaveProdServ">
+          <ScalarProperty Name="EstimuloFranjaFronteriza" ColumnName="EstimuloFranjaFronteriza" />
+          <ScalarProperty Name="Complemento" ColumnName="Complemento" />
+          <ScalarProperty Name="IncluirIEPStrasladado" ColumnName="IncluirIEPStrasladado" />
+          <ScalarProperty Name="IncluirIVAtrasladado" ColumnName="IncluirIVAtrasladado" />
+          <ScalarProperty Name="FechaFinVigencia" ColumnName="FechaFinVigencia" />
+          <ScalarProperty Name="FechaInicioVigencia" ColumnName="FechaInicioVigencia" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="c_ClaveProdServ1" ColumnName="c_ClaveProdServ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_TipoDeComprobante">
+      <EntityTypeMapping TypeName="CatalogosModel.c_TipoDeComprobante">
+        <MappingFragment StoreEntitySet="c_TipoDeComprobante">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fecha_fin_de_vigencia" ColumnName="Fecha fin de vigencia" />
+          <ScalarProperty Name="Fecha_inicio_de_vigencia" ColumnName="Fecha inicio de vigencia" />
+          <ScalarProperty Name="Valor_máximo" ColumnName="Valor máximo" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="c_TipoDeComprobante1" ColumnName="c_TipoDeComprobante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_TasaOCuota">
+      <EntityTypeMapping TypeName="CatalogosModel.c_TasaOCuota">
+        <MappingFragment StoreEntitySet="c_TasaOCuota">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FechaVigencia" ColumnName="FechaVigencia" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="Retencion" ColumnName="Retencion" />
+          <ScalarProperty Name="Traslado" ColumnName="Traslado" />
+          <ScalarProperty Name="Factor" ColumnName="Factor" />
+          <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
+          <ScalarProperty Name="Maximo" ColumnName="Maximo" />
+          <ScalarProperty Name="Minimo" ColumnName="Minimo" />
+          <ScalarProperty Name="RangoOFijo" ColumnName="RangoOFijo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Divisas">
+      <EntityTypeMapping TypeName="CatalogosModel.Divisas">
+        <MappingFragment StoreEntitySet="Divisas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PesosDivisa" ColumnName="PesosDivisa" />
+          <ScalarProperty Name="Divisa" ColumnName="Divisa" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_FormaPago">
+      <EntityTypeMapping TypeName="CatalogosModel.c_FormaPago">
+        <MappingFragment StoreEntitySet="c_FormaPago">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NombreBancoEncasoextranjero" ColumnName="NombreBancoEncasoextranjero" />
+          <ScalarProperty Name="TipoCadenaPago" ColumnName="TipoCadenaPago" />
+          <ScalarProperty Name="PatroncuentaBeneficiaria" ColumnName="PatroncuentaBeneficiaria" />
+          <ScalarProperty Name="CuentaBenenficiario" ColumnName="CuentaBenenficiario" />
+          <ScalarProperty Name="RFCCuentaBeneficiario" ColumnName="RFCCuentaBeneficiario" />
+          <ScalarProperty Name="Patroncuentaordenante" ColumnName="Patroncuentaordenante" />
+          <ScalarProperty Name="CuentaOrdenante" ColumnName="CuentaOrdenante" />
+          <ScalarProperty Name="RFCcuentaOrdenante" ColumnName="RFCcuentaOrdenante" />
+          <ScalarProperty Name="NumeroOperación" ColumnName="NumeroOperación" />
+          <ScalarProperty Name="Bancarizado" ColumnName="Bancarizado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="c_FormaPago1" ColumnName="c_FormaPago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_ClaveUnidad">
+      <EntityTypeMapping TypeName="CatalogosModel.c_ClaveUnidad">
+        <MappingFragment StoreEntitySet="c_ClaveUnidad">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Símbolo" ColumnName="Símbolo" />
+          <ScalarProperty Name="Fecha_de_fin_de_vigencia" ColumnName="Fecha de fin de vigencia" />
+          <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+          <ScalarProperty Name="Nota" ColumnName="Nota" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="c_ClaveUnidad1" ColumnName="c_ClaveUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_NumPedimentoAduana">
+      <EntityTypeMapping TypeName="CatalogosModel.c_NumPedimentoAduana">
+        <MappingFragment StoreEntitySet="c_NumPedimentoAduana">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fecha_fin_de_vigencia" ColumnName="Fecha fin de vigencia" />
+          <ScalarProperty Name="Fecha_inicio_de_vigencia" ColumnName="Fecha inicio de vigencia" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Ejercicio" ColumnName="Ejercicio" />
+          <ScalarProperty Name="Patente" ColumnName="Patente" />
+          <ScalarProperty Name="c_Aduana" ColumnName="c_Aduana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubActividad">
+      <EntityTypeMapping TypeName="CatalogosModel.SubActividad">
+        <MappingFragment StoreEntitySet="SubActividad">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DescripcionSubActividadPetrolera" ColumnName="DescripcionSubActividadPetrolera" />
+          <ScalarProperty Name="c_SubActividad" ColumnName="c_SubActividad" />
+          <ScalarProperty Name="c_Actividad" ColumnName="c_Actividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tareas">
+      <EntityTypeMapping TypeName="CatalogosModel.Tareas">
+        <MappingFragment StoreEntitySet="Tareas">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DescripcipnTarea" ColumnName="DescripcipnTarea" />
+          <ScalarProperty Name="c_Tarea" ColumnName="c_Tarea" />
+          <ScalarProperty Name="c_SubActividad" ColumnName="c_SubActividad" />
+          <ScalarProperty Name="c_Actividad" ColumnName="c_Actividad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_PatenteAduanal">
+      <EntityTypeMapping TypeName="CatalogosModel.c_PatenteAduanal">
+        <MappingFragment StoreEntitySet="c_PatenteAduanal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fin_de_vigencia_de_la_patente" ColumnName="Fin de vigencia de la patente" />
+          <ScalarProperty Name="Inicio_de_vigencia_de_la_patente" ColumnName="Inicio de vigencia de la patente" />
+          <ScalarProperty Name="C_PatenteAduanal1" ColumnName="C_PatenteAduanal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RangoMensual">
+      <EntityTypeMapping TypeName="CatalogosModel.RangoMensual">
+        <MappingFragment StoreEntitySet="RangoMensual">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fecha_de_fin_de_vigencia" ColumnName="Fecha de fin de vigencia" />
+          <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="ISR" ColumnName="ISR" />
+          <ScalarProperty Name="Valormaximo" ColumnName="Valormaximo" />
+          <ScalarProperty Name="Valorminimo" ColumnName="Valorminimo" />
+          <ScalarProperty Name="c_Rango" ColumnName="c_Rango" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_FraccionArancelaria">
+      <EntityTypeMapping TypeName="CatalogosModel.c_FraccionArancelaria">
+        <MappingFragment StoreEntitySet="c_FraccionArancelaria">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EXP" ColumnName="EXP" />
+          <ScalarProperty Name="IMP" ColumnName="IMP" />
+          <ScalarProperty Name="Unidad_de_Medida" ColumnName="Unidad de Medida" />
+          <ScalarProperty Name="Criterio" ColumnName="Criterio" />
+          <ScalarProperty Name="UMT" ColumnName="UMT" />
+          <ScalarProperty Name="Fecha_de_fin_de_vigencia" ColumnName="Fecha de fin de vigencia" />
+          <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="c_FraccionArancelaria1" ColumnName="c_FraccionArancelaria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_CP">
+      <EntityTypeMapping TypeName="CatalogosModel.c_CP">
+        <MappingFragment StoreEntitySet="c_CP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Diferencia_Horaria_Invierno" ColumnName="Diferencia_Horaria_Invierno" />
+          <ScalarProperty Name="Hora_Inicio_Horario_Invierno" ColumnName="Hora_Inicio_Horario_Invierno" />
+          <ScalarProperty Name="Día_Inicio_Horario_Invierno" ColumnName="Día_Inicio_Horario_Invierno" />
+          <ScalarProperty Name="Mes_Inicio_Horario_Invierno" ColumnName="Mes_Inicio_Horario_Invierno" />
+          <ScalarProperty Name="Diferencia_Horaria_Verano" ColumnName="Diferencia_Horaria_Verano" />
+          <ScalarProperty Name="Hora_Inicio_Horario_Verano" ColumnName="Hora_Inicio_Horario_Verano" />
+          <ScalarProperty Name="Día_Inicio_Horario_Verano" ColumnName="Día_Inicio_Horario_Verano" />
+          <ScalarProperty Name="Mes_Inicio_Horario_Verano" ColumnName="Mes_Inicio_Horario_Verano" />
+          <ScalarProperty Name="DescripcióndelHusoHorario" ColumnName="DescripcióndelHusoHorario" />
+          <ScalarProperty Name="Fechafindevigencia" ColumnName="Fechafindevigencia" />
+          <ScalarProperty Name="Fechainiciodevigencia" ColumnName="Fechainiciodevigencia" />
+          <ScalarProperty Name="EstímuloFranjaFronteriza" ColumnName="EstímuloFranjaFronteriza" />
+          <ScalarProperty Name="c_Localidad" ColumnName="c_Localidad" />
+          <ScalarProperty Name="c_Municipio" ColumnName="c_Municipio" />
+          <ScalarProperty Name="c_Estado" ColumnName="c_Estado" />
+          <ScalarProperty Name="c_CP1" ColumnName="c_CP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RangoSemanal">
+      <EntityTypeMapping TypeName="CatalogosModel.RangoSemanal">
+        <MappingFragment StoreEntitySet="RangoSemanal">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fecha_de_fin_de_vigencia" ColumnName="Fecha de fin de vigencia" />
+          <ScalarProperty Name="Fecha_de_inicio_de_vigencia" ColumnName="Fecha de inicio de vigencia" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="ISR" ColumnName="ISR" />
+          <ScalarProperty Name="Valormaximo" ColumnName="Valormaximo" />
+          <ScalarProperty Name="Valorminimo" ColumnName="Valorminimo" />
+          <ScalarProperty Name="c_Rango" ColumnName="c_Rango" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="c_ClaveProdServCP">
+      <EntityTypeMapping TypeName="CatalogosModel.c_ClaveProdServCP">
+        <MappingFragment StoreEntitySet="c_ClaveProdServCP">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaterialPeligroso" ColumnName="MaterialPeligroso" />
+          <ScalarProperty Name="PalabrasSimilares" ColumnName="PalabrasSimilares" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="ClaveProdructo" ColumnName="ClaveProdructo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

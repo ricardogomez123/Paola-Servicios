@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DescargasSatModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DescargasSatModelStoreContainer">
+    <EntitySet Name="I_RFC_ACTUAL" EntityType="DescargasSatModel.Store.I_RFC_ACTUAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="I_RFC0" EntityType="DescargasSatModel.Store.I_RFC0" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="I_RFC1" EntityType="DescargasSatModel.Store.I_RFC1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LCO_ACTUAL" EntityType="DescargasSatModel.Store.LCO_ACTUAL" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LCO0" EntityType="DescargasSatModel.Store.LCO0" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LCO1" EntityType="DescargasSatModel.Store.LCO1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogI_RFC" EntityType="DescargasSatModel.Store.LogI_RFC" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LogLCO" EntityType="DescargasSatModel.Store.LogLCO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="vI_RFC" EntityType="DescargasSatModel.Store.vI_RFC" store:Type="Views" store:Schema="dbo" store:Name="vI_RFC">
+      <DefiningQuery>SELECT 
+      [vI_RFC].[ID] AS [ID], 
+      [vI_RFC].[RFC] AS [RFC], 
+      [vI_RFC].[SNCF] AS [SNCF], 
+      [vI_RFC].[SUBCONTRATACION] AS [SUBCONTRATACION]
+      FROM [dbo].[vI_RFC] AS [vI_RFC]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vI_RFC_Carga" EntityType="DescargasSatModel.Store.vI_RFC_Carga" store:Type="Views" store:Schema="dbo" store:Name="vI_RFC_Carga">
+      <DefiningQuery>SELECT 
+      [vI_RFC_Carga].[RFC] AS [RFC], 
+      [vI_RFC_Carga].[SNCF] AS [SNCF], 
+      [vI_RFC_Carga].[SUBCONTRATACION] AS [SUBCONTRATACION]
+      FROM [dbo].[vI_RFC_Carga] AS [vI_RFC_Carga]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vLCO" EntityType="DescargasSatModel.Store.vLCO" store:Type="Views" store:Schema="dbo" store:Name="vLCO">
+      <DefiningQuery>SELECT 
+      [vLCO].[IdRfcLco] AS [IdRfcLco], 
+      [vLCO].[Rfc] AS [Rfc], 
+      [vLCO].[ValidezObligaciones] AS [ValidezObligaciones], 
+      [vLCO].[EstatusCertificado] AS [EstatusCertificado], 
+      [vLCO].[noCertificado] AS [noCertificado], 
+      [vLCO].[FechaFinal] AS [FechaFinal], 
+      [vLCO].[FechaInicio] AS [FechaInicio]
+      FROM [dbo].[vLCO] AS [vLCO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vLCO_Carga" EntityType="DescargasSatModel.Store.vLCO_Carga" store:Type="Views" store:Schema="dbo" store:Name="vLCO_Carga">
+      <DefiningQuery>SELECT 
+      [vLCO_Carga].[Rfc] AS [Rfc], 
+      [vLCO_Carga].[ValidezObligaciones] AS [ValidezObligaciones], 
+      [vLCO_Carga].[EstatusCertificado] AS [EstatusCertificado], 
+      [vLCO_Carga].[noCertificado] AS [noCertificado], 
+      [vLCO_Carga].[FechaFinal] AS [FechaFinal], 
+      [vLCO_Carga].[FechaInicio] AS [FechaInicio]
+      FROM [dbo].[vLCO_Carga] AS [vLCO_Carga]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="I_RFC_ACTUAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FechaUltimaActualizacion" Type="datetime" />
+    <Property Name="NombreTabla" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="I_RFC0">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="SNCF" Type="varchar" MaxLength="5" />
+    <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="I_RFC1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="SNCF" Type="varchar" MaxLength="5" />
+    <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="LCO_ACTUAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="FechaUltimaActualizacion" Type="datetime" />
+    <Property Name="NombreTabla" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LCO0">
+    <Key>
+      <PropertyRef Name="IdRfcLco" />
+    </Key>
+    <Property Name="IdRfcLco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+    <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+    <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaFinal" Type="datetime" />
+    <Property Name="FechaInicio" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LCO1">
+    <Key>
+      <PropertyRef Name="IdRfcLco" />
+    </Key>
+    <Property Name="IdRfcLco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+    <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+    <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaFinal" Type="datetime" />
+    <Property Name="FechaInicio" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LogI_RFC">
+    <Key>
+      <PropertyRef Name="IdLogRFC" />
+    </Key>
+    <Property Name="IdLogRFC" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="NoRegistros" Type="int" Nullable="false" />
+    <Property Name="Error" Type="text" />
+    <Property Name="Tabla" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="LogLCO">
+    <Key>
+      <PropertyRef Name="IdLogRFC" />
+    </Key>
+    <Property Name="IdLogRFC" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="NoRegistros" Type="int" Nullable="false" />
+    <Property Name="Error" Type="text" />
+    <Property Name="Tabla" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vI_RFC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vI_RFC">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RFC" />
+    </Key>
+    <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="SNCF" Type="varchar" MaxLength="5" />
+    <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vI_RFC_Carga' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vI_RFC_Carga">
+    <Key>
+      <PropertyRef Name="RFC" />
+    </Key>
+    <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="SNCF" Type="varchar" MaxLength="5" />
+    <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vLCO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vLCO">
+    <Key>
+      <PropertyRef Name="IdRfcLco" />
+      <PropertyRef Name="Rfc" />
+      <PropertyRef Name="noCertificado" />
+    </Key>
+    <Property Name="IdRfcLco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+    <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+    <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaFinal" Type="datetime" />
+    <Property Name="FechaInicio" Type="datetime" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vLCO_Carga' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vLCO_Carga">
+    <Key>
+      <PropertyRef Name="Rfc" />
+      <PropertyRef Name="noCertificado" />
+    </Key>
+    <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+    <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+    <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+    <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FechaFinal" Type="datetime" />
+    <Property Name="FechaInicio" Type="datetime" />
+  </EntityType>
+  <Function Name="LiberarLogRFC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_Inserta_I_RFC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rutaArchivo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="nombreTabla" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="proc_Inserta_LCO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rutaArchivo" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="nombreTabla" Type="nvarchar" Mode="In" />
+  </Function>
+</Schema>

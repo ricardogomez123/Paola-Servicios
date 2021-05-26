@@ -1,0 +1,3 @@
+﻿2017-07-19 18:47:45,639-940-ERROR-CertificadorAppsNtLink.CertificadorApps.TimbraCfdi.265: System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en ServicioLocal.Business.ValidarCFDI33.ProcesarCFDI33(Comprobante com, String xml, Boolean pago10, Boolean ComerExt, ImpuestosLocales IL) en C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ServicioLocal.Business\ValidarCFDI33.cs:línea 119
+   en CertificadorAppsNtLink.CertificadorApps.TimbraCfdi(String userName, String password, String comprobante) en C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\CertificadorAppsNtLink\CertificadorApps.svc.cs:línea 134

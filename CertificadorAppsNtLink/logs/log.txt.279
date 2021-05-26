@@ -1,0 +1,4 @@
+﻿2016-06-01 10:02:54,383-7068-INFO-CertificadorWs.Business.TimbradoUtils.ValidarUsuario.286: Saldo: 0
+2016-06-01 10:03:13,412-7068-ERROR-CertificadorAppsNtLink.CertificadorApps.TimbraCfdi.184: System.ServiceModel.FaultException: No cuentas con saldo suficiente para timbrar documentos, contacta a tu ejecutivo de ventas
+   en CertificadorWs.Business.TimbradoUtils.ValidarUsuario(String rfc) en C:\documentos\pruebas\certificador\Certificador\CertificadorWs.Business\TimbradoUtils.cs:línea 287
+   en CertificadorAppsNtLink.CertificadorApps.TimbraCfdi(String userName, String password, String comprobante) en C:\documentos\pruebas\certificador\Certificador\CertificadorAppsNtLink\CertificadorApps.svc.cs:línea 111

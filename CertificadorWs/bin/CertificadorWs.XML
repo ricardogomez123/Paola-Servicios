@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CertificadorWs</name>
+    </assembly>
+    <members>
+        <member name="F:CertificadorWs.ServicioTimbradoMovil.Logger">
+            <summary>
+            Obtiene un listado con las empresas que estan dadas de alta en el sistema de timbrado
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <returns></returns>
+        </member>
+        <member name="F:CertificadorWs.ServicioTimbradoMovil._ns7">
+            <summary>
+            Timbra un comprobante
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="comprobante">String con el contenido del CFDi codificado en UTF-8</param>
+            <returns>El String con el complemento de certificacion (TimbreFiscalDigital)</returns>
+        </member>
+        <member name="M:CertificadorWs.CertificadorService.TimbraCfdi(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Timbra un comprobante
+            </summary>
+            <param name="comprobante">Documento para validar y timbrar</param>
+            <returns>Una cadena con el timbre fiscal digital (TFD)</returns>
+        </member>
+        <member name="M:CertificadorWs.CertificadorService.CancelaCfdi(System.String,System.String,System.String,System.String)">
+            <summary>
+            Cancela un cfdi
+            </summary>
+            <param name="uuid">uuid del comprobante a cancelar</param>
+            <param name="rfc">RFC del emisor</param>
+            <returns>Acuse de cancelación del SAT</returns>
+        </member>
+        <member name="F:CertificadorWs.ServicioTimbrado._ns">
+            <summary>
+            Regresa el saldo de timbrado del cliente
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.RegistraEmpresa(System.String,System.String,CertificadorWs.Business.EmpresaNtLink)">
+            <summary>
+            Registro de una empresa en el sistema de timbrado
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="nuevaEmpresa">Objeto de tipo Empresa para dar de alta</param>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.BajaEmpresa(System.String,System.String,System.String)">
+            <summary>
+            Para dar de baja una empresa en el sistema de timbrado
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="rfcEmpresa">RFC de la empresa que se dará de baja</param>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.ObtenerDatosCliente(System.String,System.String)">
+            <summary>
+            Obtiene los datos del cliente de timbrado
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <returns>Un objeto de tipo ClienteNtLink</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.ObtenerEmpresas(System.String,System.String)">
+            <summary>
+            Obtiene un listado con las empresas que estan dadas de alta en el sistema de timbrado
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <returns></returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.TimbraCfdiQr(System.String,System.String,System.String)">
+            <summary>
+            Timbra un comprobante  
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="comprobante">String UTF-8 con el contenido del comprobante</param>
+            <returns>El CFDi Timbrado, la cadena original del complemento de certificación y el QrCode codificado en 4 bits</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.TimbraCfdiQrSinSello(System.String,System.String,System.String)">
+            <summary>
+            Timbra un comprobante  sin sello
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="comprobante">String UTF-8 con el contenido del comprobante</param>
+            <returns>El CFDi Timbrado, la cadena original del complemento de certificación y el QrCode codificado en 4 bits</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.TimbraCfdi(System.String,System.String,System.String)">
+            <summary>
+            Timbra un comprobante
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="comprobante">String con el contenido del CFDi codificado en UTF-8</param>
+            <returns>El String con el complemento de certificacion (TimbreFiscalDigital)</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.TimbraCfdiSinSello(System.String,System.String,System.String)">
+            <summary>
+            Timbra un comprobante sin sello
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="comprobante">String con el contenido del CFDi codificado en UTF-8</param>
+            <returns>El String con el complemento de certificacion (TimbreFiscalDigital)</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.TimbraRetencion(System.String,System.String,System.String)">
+            <summary>
+            Timbrar comprobante de retenciones 
+            </summary>
+            <param name="userName">Usuario del sistema de timbrado </param>
+            <param name="password">Contraseña del usuario </param>
+            <param name="comprobante">Comprobante de retenciones e información de pagos</param>
+            <returns>Objeto que consta de los siguientes campos
+            Timbre fiscal digital del comprobante recibido en caso de ser valido, o en su defecto la cadena
+            </returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.TimbraRetencionQr(System.String,System.String,System.String)">
+            <summary>
+            Timbrar comprobante de retenciones 
+            </summary>
+            <param name="userName">Usuario del sistema de timbrado </param>
+            <param name="password">Contraseña del usuario </param>
+            <param name="comprobante">Comprobante de retenciones e información de pagos</param>
+            <returns>Objeto que consta de los siguientes campos
+            <br />
+             Valido: Boolean - Si el comprobante es valido, true
+            <br />
+                               QrCodeBase64: Arreglo de bytes del Qr Code en formato png, codificado en base 64
+            <br />
+                               CadenaTimbre: Cadena original del timbre fiscal digital
+            <br />
+                               Cfdi: Comprobante de retenciones con el timbre en el campo Complemento
+            </returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.CancelaCfdiRequest(System.String,System.String,System.String,System.String,System.String,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+             <param name="password">Contraseña (proporcionado por NT LINK)</param>
+             <param name="requestCancelacion">Request firmado para cancelar el comprobante, debe seguir el standard 
+             <br />
+             https://pruebacfdicancelacion.cloudapp.net/Cancelacion/CancelaCFDService.svc?xsd=xsd0
+             <br />
+             https://pruebacfdicancelacion.cloudk,.app.net/Cancelacion/CancelaCFDService.svc?xsd=xsd1
+             </param>
+             <returns>Acuse de cancelacion, Mensajes de error y el status de cada UUID enviado</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.ObtenerStatusUuid(System.String,System.String,System.String)">
+            <summary>
+            Regresa el status de un comprobante por su UUID
+            </summary>
+            <param name="userName">Usuario de la aplicación</param>
+            <param name="password">Contraseña de la aplicación</param>
+            <param name="uuid">UUID del comprobante a consultar</param>
+            <returns>Status del UUID, acuses de envio y cancelacion en caso de estar cancelado</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.ObtenerStatusHash(System.String,System.String,System.String)">
+            <summary>
+            Regresa el status de un comprobante por su Hash
+            </summary>
+            <param name="userName">Usuario de la aplicación</param>
+            <param name="password">Contraseña de la aplicación</param>
+            <param name="uuid">Hash del comprobante a consultar</param>
+            <returns>Status del Hash, acuses de envio y cancelacion en caso de estar cancelado</returns>
+        </member>
+        <member name="M:CertificadorWs.ServicioTimbrado.CancelaCfdi(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Cancela un CFDi
+            </summary>
+            <param name="userName">Usuario del sistema (con el que se accede a la pagina de administracion de empresas)</param>
+            <param name="password">Contraseña del sistema</param>
+            <param name="uuid">Folio Fiscal (UUID) del comprobante a cancelar</param>
+            <param name="rfc">RFC del emisor del comprobante a cancelar</param>
+            <returns></returns>
+        </member>
+        <member name="T:CertificadorWs.TimbradoResponse">
+            <summary>
+            Estructura de regreso del metodo TimbraCfdiQr
+            </summary>
+        </member>
+        <member name="P:CertificadorWs.TimbradoResponse.Cfdi">
+            <summary>
+            El comprobante timbrado
+            </summary>
+        </member>
+        <member name="P:CertificadorWs.TimbradoResponse.CadenaTimbre">
+            <summary>
+            Cadena Original del complemento de certificación
+            </summary>
+        </member>
+        <member name="P:CertificadorWs.TimbradoResponse.QrCodeBase64">
+            <summary>
+            QrCode codificado en BMP de 4 bits de color, expresado en BASE64
+            </summary>
+        </member>
+        <member name="P:CertificadorWs.TimbradoResponse.Valido">
+            <summary>
+            Para indicar si el comprobante es válido
+            </summary>
+        </member>
+        <member name="P:CertificadorWs.TimbradoResponse.DescripcionError">
+            <summary>
+            Descripcion del error 
+            </summary>
+        </member>
+    </members>
+</doc>

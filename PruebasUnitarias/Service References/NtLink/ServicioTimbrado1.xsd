@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CertificadorWs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CertificadorWs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="TimbradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CadenaTimbre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cfdi" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DescripcionError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QrCodeBase64" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valido" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TimbradoResponse" nillable="true" type="tns:TimbradoResponse" />
+  <xs:complexType name="ResultadoConsulta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcuseCancelacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AcuseEnvio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comprobante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:StatusComprobante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResultadoConsulta" nillable="true" type="tns:ResultadoConsulta" />
+  <xs:simpleType name="StatusComprobante">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NoEncontrado" />
+      <xs:enumeration value="EnProceso" />
+      <xs:enumeration value="Enviado" />
+      <xs:enumeration value="Cancelado" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StatusComprobante" nillable="true" type="tns:StatusComprobante" />
+</xs:schema>

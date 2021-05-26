@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DescargasSatModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DescargasSatModelStoreContainer">
+          <EntitySet Name="I_RFC_ACTUAL" EntityType="DescargasSatModel.Store.I_RFC_ACTUAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="I_RFC0" EntityType="DescargasSatModel.Store.I_RFC0" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="I_RFC1" EntityType="DescargasSatModel.Store.I_RFC1" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LCO_ACTUAL" EntityType="DescargasSatModel.Store.LCO_ACTUAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LCO0" EntityType="DescargasSatModel.Store.LCO0" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LCO1" EntityType="DescargasSatModel.Store.LCO1" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LogI_RFC" EntityType="DescargasSatModel.Store.LogI_RFC" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LogLCO" EntityType="DescargasSatModel.Store.LogLCO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vI_RFC" EntityType="DescargasSatModel.Store.vI_RFC" store:Type="Views" store:Schema="dbo" store:Name="vI_RFC">
+            <DefiningQuery>SELECT 
+      [vI_RFC].[ID] AS [ID], 
+      [vI_RFC].[RFC] AS [RFC], 
+      [vI_RFC].[SNCF] AS [SNCF], 
+      [vI_RFC].[SUBCONTRATACION] AS [SUBCONTRATACION]
+      FROM [dbo].[vI_RFC] AS [vI_RFC]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vI_RFC_Carga" EntityType="DescargasSatModel.Store.vI_RFC_Carga" store:Type="Views" store:Schema="dbo" store:Name="vI_RFC_Carga">
+            <DefiningQuery>SELECT 
+      [vI_RFC_Carga].[RFC] AS [RFC], 
+      [vI_RFC_Carga].[SNCF] AS [SNCF], 
+      [vI_RFC_Carga].[SUBCONTRATACION] AS [SUBCONTRATACION]
+      FROM [dbo].[vI_RFC_Carga] AS [vI_RFC_Carga]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLCO" EntityType="DescargasSatModel.Store.vLCO" store:Type="Views" store:Schema="dbo" store:Name="vLCO">
+            <DefiningQuery>SELECT 
+      [vLCO].[IdRfcLco] AS [IdRfcLco], 
+      [vLCO].[Rfc] AS [Rfc], 
+      [vLCO].[ValidezObligaciones] AS [ValidezObligaciones], 
+      [vLCO].[EstatusCertificado] AS [EstatusCertificado], 
+      [vLCO].[noCertificado] AS [noCertificado], 
+      [vLCO].[FechaFinal] AS [FechaFinal], 
+      [vLCO].[FechaInicio] AS [FechaInicio]
+      FROM [dbo].[vLCO] AS [vLCO]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vLCO_Carga" EntityType="DescargasSatModel.Store.vLCO_Carga" store:Type="Views" store:Schema="dbo" store:Name="vLCO_Carga">
+            <DefiningQuery>SELECT 
+      [vLCO_Carga].[Rfc] AS [Rfc], 
+      [vLCO_Carga].[ValidezObligaciones] AS [ValidezObligaciones], 
+      [vLCO_Carga].[EstatusCertificado] AS [EstatusCertificado], 
+      [vLCO_Carga].[noCertificado] AS [noCertificado], 
+      [vLCO_Carga].[FechaFinal] AS [FechaFinal], 
+      [vLCO_Carga].[FechaInicio] AS [FechaInicio]
+      FROM [dbo].[vLCO_Carga] AS [vLCO_Carga]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="I_RFC_ACTUAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FechaUltimaActualizacion" Type="datetime" />
+          <Property Name="NombreTabla" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="I_RFC0">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="SNCF" Type="varchar" MaxLength="5" />
+          <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="I_RFC1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="SNCF" Type="varchar" MaxLength="5" />
+          <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="LCO_ACTUAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="FechaUltimaActualizacion" Type="datetime" />
+          <Property Name="NombreTabla" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LCO0">
+          <Key>
+            <PropertyRef Name="IdRfcLco" />
+          </Key>
+          <Property Name="IdRfcLco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+          <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+          <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FechaFinal" Type="datetime" />
+          <Property Name="FechaInicio" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LCO1">
+          <Key>
+            <PropertyRef Name="IdRfcLco" />
+          </Key>
+          <Property Name="IdRfcLco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+          <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+          <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FechaFinal" Type="datetime" />
+          <Property Name="FechaInicio" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LogI_RFC">
+          <Key>
+            <PropertyRef Name="IdLogRFC" />
+          </Key>
+          <Property Name="IdLogRFC" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="NoRegistros" Type="int" Nullable="false" />
+          <Property Name="Error" Type="text" />
+          <Property Name="Tabla" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="LogLCO">
+          <Key>
+            <PropertyRef Name="IdLogRFC" />
+          </Key>
+          <Property Name="IdLogRFC" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="NoRegistros" Type="int" Nullable="false" />
+          <Property Name="Error" Type="text" />
+          <Property Name="Tabla" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vI_RFC' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vI_RFC">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="RFC" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="SNCF" Type="varchar" MaxLength="5" />
+          <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vI_RFC_Carga' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vI_RFC_Carga">
+          <Key>
+            <PropertyRef Name="RFC" />
+          </Key>
+          <Property Name="RFC" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="SNCF" Type="varchar" MaxLength="5" />
+          <Property Name="SUBCONTRATACION" Type="varchar" MaxLength="5" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vLCO' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vLCO">
+          <Key>
+            <PropertyRef Name="IdRfcLco" />
+            <PropertyRef Name="Rfc" />
+            <PropertyRef Name="noCertificado" />
+          </Key>
+          <Property Name="IdRfcLco" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+          <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+          <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FechaFinal" Type="datetime" />
+          <Property Name="FechaInicio" Type="datetime" />
+        </EntityType>
+        <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'DescargasSat.dbo.vLCO_Carga' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+        <EntityType Name="vLCO_Carga">
+          <Key>
+            <PropertyRef Name="Rfc" />
+            <PropertyRef Name="noCertificado" />
+          </Key>
+          <Property Name="Rfc" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="ValidezObligaciones" Type="varchar" MaxLength="5" />
+          <Property Name="EstatusCertificado" Type="varchar" MaxLength="5" />
+          <Property Name="noCertificado" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FechaFinal" Type="datetime" />
+          <Property Name="FechaInicio" Type="datetime" />
+        </EntityType>
+        <Function Name="LiberarLogRFC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="proc_Inserta_I_RFC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="rutaArchivo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="nombreTabla" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="proc_Inserta_LCO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="rutaArchivo" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="nombreTabla" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DescargasSatModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DescargasSatEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="I_RFC_ACTUAL" EntityType="DescargasSatModel.I_RFC_ACTUAL" />
+          <EntitySet Name="I_RFC0" EntityType="DescargasSatModel.I_RFC0" />
+          <EntitySet Name="I_RFC1" EntityType="DescargasSatModel.I_RFC1" />
+          <EntitySet Name="LogI_RFC" EntityType="DescargasSatModel.LogI_RFC" />
+          <EntitySet Name="vI_RFC" EntityType="DescargasSatModel.vI_RFC" />
+          <EntitySet Name="vI_RFC_Carga" EntityType="DescargasSatModel.vI_RFC_Carga" />
+          <EntitySet Name="LCO_ACTUAL" EntityType="DescargasSatModel.LCO_ACTUAL" />
+          <EntitySet Name="LCO0" EntityType="DescargasSatModel.LCO0" />
+          <EntitySet Name="LCO1" EntityType="DescargasSatModel.LCO1" />
+          <EntitySet Name="LogLCO" EntityType="DescargasSatModel.LogLCO" />
+          <EntitySet Name="vLCO" EntityType="DescargasSatModel.vLCO" />
+          <EntitySet Name="vLCO_Carga" EntityType="DescargasSatModel.vLCO_Carga" />
+        </EntityContainer>
+        <EntityType Name="I_RFC_ACTUAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="FechaUltimaActualizacion" Type="DateTime" />
+          <Property Name="NombreTabla" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="I_RFC0">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="I_RFC1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="LogI_RFC">
+          <Key>
+            <PropertyRef Name="IdLogRFC" />
+          </Key>
+          <Property Name="IdLogRFC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" />
+          <Property Name="NoRegistros" Type="Int32" Nullable="false" />
+          <Property Name="Error" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Tabla" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vI_RFC">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="RFC" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="vI_RFC_Carga">
+          <Key>
+            <PropertyRef Name="RFC" />
+          </Key>
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LCO_ACTUAL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="DateTime" Name="FechaUltimaActualizacion" />
+          <Property Type="String" Name="NombreTabla" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LCO0">
+          <Key>
+            <PropertyRef Name="IdRfcLco" />
+          </Key>
+          <Property Type="Int64" Name="IdRfcLco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaFinal" />
+          <Property Type="DateTime" Name="FechaInicio" />
+        </EntityType>
+        <EntityType Name="LCO1">
+          <Key>
+            <PropertyRef Name="IdRfcLco" />
+          </Key>
+          <Property Type="Int64" Name="IdRfcLco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaFinal" />
+          <Property Type="DateTime" Name="FechaInicio" />
+        </EntityType>
+        <EntityType Name="LogLCO">
+          <Key>
+            <PropertyRef Name="IdLogRFC" />
+          </Key>
+          <Property Type="Int32" Name="IdLogRFC" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Fecha" Nullable="false" />
+          <Property Type="Int32" Name="NoRegistros" Nullable="false" />
+          <Property Type="String" Name="Error" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tabla" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vLCO">
+          <Key>
+            <PropertyRef Name="IdRfcLco" />
+            <PropertyRef Name="Rfc" />
+            <PropertyRef Name="noCertificado" />
+          </Key>
+          <Property Type="Int64" Name="IdRfcLco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaFinal" />
+          <Property Type="DateTime" Name="FechaInicio" />
+        </EntityType>
+        <EntityType Name="vLCO_Carga">
+          <Key>
+            <PropertyRef Name="Rfc" />
+            <PropertyRef Name="noCertificado" />
+          </Key>
+          <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FechaFinal" />
+          <Property Type="DateTime" Name="FechaInicio" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DescargasSatModelStoreContainer" CdmEntityContainer="DescargasSatEntities">
+          <EntitySetMapping Name="I_RFC_ACTUAL">
+            <EntityTypeMapping TypeName="DescargasSatModel.I_RFC_ACTUAL">
+              <MappingFragment StoreEntitySet="I_RFC_ACTUAL">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FechaUltimaActualizacion" ColumnName="FechaUltimaActualizacion" />
+                <ScalarProperty Name="NombreTabla" ColumnName="NombreTabla" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="I_RFC0">
+            <EntityTypeMapping TypeName="DescargasSatModel.I_RFC0">
+              <MappingFragment StoreEntitySet="I_RFC0">
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+                <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="I_RFC1">
+            <EntityTypeMapping TypeName="DescargasSatModel.I_RFC1">
+              <MappingFragment StoreEntitySet="I_RFC1">
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+                <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogI_RFC">
+            <EntityTypeMapping TypeName="DescargasSatModel.LogI_RFC">
+              <MappingFragment StoreEntitySet="LogI_RFC">
+                <ScalarProperty Name="IdLogRFC" ColumnName="IdLogRFC" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="NoRegistros" ColumnName="NoRegistros" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vI_RFC">
+            <EntityTypeMapping TypeName="DescargasSatModel.vI_RFC">
+              <MappingFragment StoreEntitySet="vI_RFC">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+                <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vI_RFC_Carga">
+            <EntityTypeMapping TypeName="DescargasSatModel.vI_RFC_Carga">
+              <MappingFragment StoreEntitySet="vI_RFC_Carga">
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+                <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LCO_ACTUAL">
+            <EntityTypeMapping TypeName="DescargasSatModel.LCO_ACTUAL">
+              <MappingFragment StoreEntitySet="LCO_ACTUAL">
+                <ScalarProperty Name="NombreTabla" ColumnName="NombreTabla" />
+                <ScalarProperty Name="FechaUltimaActualizacion" ColumnName="FechaUltimaActualizacion" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LCO0">
+            <EntityTypeMapping TypeName="DescargasSatModel.LCO0">
+              <MappingFragment StoreEntitySet="LCO0">
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+                <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+                <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+                <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+                <ScalarProperty Name="IdRfcLco" ColumnName="IdRfcLco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LCO1">
+            <EntityTypeMapping TypeName="DescargasSatModel.LCO1">
+              <MappingFragment StoreEntitySet="LCO1">
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+                <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+                <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+                <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+                <ScalarProperty Name="IdRfcLco" ColumnName="IdRfcLco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogLCO">
+            <EntityTypeMapping TypeName="DescargasSatModel.LogLCO">
+              <MappingFragment StoreEntitySet="LogLCO">
+                <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+                <ScalarProperty Name="Error" ColumnName="Error" />
+                <ScalarProperty Name="NoRegistros" ColumnName="NoRegistros" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="IdLogRFC" ColumnName="IdLogRFC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLCO">
+            <EntityTypeMapping TypeName="DescargasSatModel.vLCO">
+              <MappingFragment StoreEntitySet="vLCO">
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+                <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+                <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+                <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+                <ScalarProperty Name="IdRfcLco" ColumnName="IdRfcLco" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vLCO_Carga">
+            <EntityTypeMapping TypeName="DescargasSatModel.vLCO_Carga">
+              <MappingFragment StoreEntitySet="vLCO_Carga">
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+                <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+                <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+                <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+                <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="DescargasSatModel.I_RFC_ACTUAL" Width="1.5" PointX="0.75" PointY="0.75" Height="1.427958984375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DescargasSatModel.I_RFC0" Width="1.5" PointX="2.75" PointY="0.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="DescargasSatModel.I_RFC1" Width="1.5" PointX="0.75" PointY="3.75" Height="1.592306315104167" IsExpanded="true" />
+        <EntityTypeShape EntityType="DescargasSatModel.LogI_RFC" Width="1.5" PointX="2.75" PointY="3.75" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="DescargasSatModel.vI_RFC" Width="1.5" PointX="4.75" PointY="0.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="DescargasSatModel.vI_RFC_Carga" Width="1.5" PointX="4.75" PointY="3.75" Height="1.4279589843749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DescargasSatModel.LCO_ACTUAL" Width="1.5" PointX="0.75" PointY="6.75" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="DescargasSatModel.LCO0" Width="1.5" PointX="2.75" PointY="6.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="DescargasSatModel.LCO1" Width="1.5" PointX="4.75" PointY="6.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="DescargasSatModel.LogLCO" Width="1.5" PointX="6.75" PointY="6.75" Height="1.9802864583333317" />
+        <EntityTypeShape EntityType="DescargasSatModel.vLCO" Width="1.5" PointX="7.75" PointY="0.75" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="DescargasSatModel.vLCO_Carga" Width="1.5" PointX="8.75" PointY="4.75" Height="2.1725878906250031" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

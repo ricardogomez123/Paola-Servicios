@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://cancelacfd.sat.gob.mx" elementFormDefault="qualified" targetNamespace="http://cancelacfd.sat.gob.mx" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://pruebacfdicancelacion.cloudapp.net/Cancelacion/CancelaCFDService.svc?xsd=xsd1" namespace="http://www.w3.org/2000/09/xmldsig#" />
+  <xs:element name="CancelaCFD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Cancelacion" type="tns:Cancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Cancelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Folios">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="UUID" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q1="http://www.w3.org/2000/09/xmldsig#" minOccurs="0" maxOccurs="1" ref="q1:Signature" />
+    </xs:sequence>
+    <xs:attribute name="RfcEmisor" type="xs:string" />
+    <xs:attribute name="Fecha" type="xs:dateTime" use="required" />
+  </xs:complexType>
+  <xs:element name="CancelaCFDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="CancelaCFDResult" type="tns:Acuse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Acuse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Folios">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="UUID" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="EstatusUUID" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q2="http://www.w3.org/2000/09/xmldsig#" minOccurs="0" maxOccurs="1" ref="q2:Signature" />
+    </xs:sequence>
+    <xs:attribute name="CodEstatus" type="xs:string" />
+    <xs:attribute name="Fecha" type="xs:dateTime" use="required" />
+    <xs:attribute name="RfcEmisor" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

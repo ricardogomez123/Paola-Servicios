@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DescargasSatModelStoreContainer" CdmEntityContainer="DescargasSatEntities">
+    <EntitySetMapping Name="I_RFC_ACTUAL">
+      <EntityTypeMapping TypeName="DescargasSatModel.I_RFC_ACTUAL">
+        <MappingFragment StoreEntitySet="I_RFC_ACTUAL">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FechaUltimaActualizacion" ColumnName="FechaUltimaActualizacion" />
+          <ScalarProperty Name="NombreTabla" ColumnName="NombreTabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="I_RFC0">
+      <EntityTypeMapping TypeName="DescargasSatModel.I_RFC0">
+        <MappingFragment StoreEntitySet="I_RFC0">
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+          <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="I_RFC1">
+      <EntityTypeMapping TypeName="DescargasSatModel.I_RFC1">
+        <MappingFragment StoreEntitySet="I_RFC1">
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+          <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogI_RFC">
+      <EntityTypeMapping TypeName="DescargasSatModel.LogI_RFC">
+        <MappingFragment StoreEntitySet="LogI_RFC">
+          <ScalarProperty Name="IdLogRFC" ColumnName="IdLogRFC" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="NoRegistros" ColumnName="NoRegistros" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vI_RFC">
+      <EntityTypeMapping TypeName="DescargasSatModel.vI_RFC">
+        <MappingFragment StoreEntitySet="vI_RFC">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+          <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vI_RFC_Carga">
+      <EntityTypeMapping TypeName="DescargasSatModel.vI_RFC_Carga">
+        <MappingFragment StoreEntitySet="vI_RFC_Carga">
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="SNCF" ColumnName="SNCF" />
+          <ScalarProperty Name="SUBCONTRATACION" ColumnName="SUBCONTRATACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LCO_ACTUAL">
+      <EntityTypeMapping TypeName="DescargasSatModel.LCO_ACTUAL">
+        <MappingFragment StoreEntitySet="LCO_ACTUAL">
+          <ScalarProperty Name="NombreTabla" ColumnName="NombreTabla" />
+          <ScalarProperty Name="FechaUltimaActualizacion" ColumnName="FechaUltimaActualizacion" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LCO0">
+      <EntityTypeMapping TypeName="DescargasSatModel.LCO0">
+        <MappingFragment StoreEntitySet="LCO0">
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+          <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+          <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="IdRfcLco" ColumnName="IdRfcLco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LCO1">
+      <EntityTypeMapping TypeName="DescargasSatModel.LCO1">
+        <MappingFragment StoreEntitySet="LCO1">
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+          <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+          <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="IdRfcLco" ColumnName="IdRfcLco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LogLCO">
+      <EntityTypeMapping TypeName="DescargasSatModel.LogLCO">
+        <MappingFragment StoreEntitySet="LogLCO">
+          <ScalarProperty Name="Tabla" ColumnName="Tabla" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="NoRegistros" ColumnName="NoRegistros" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="IdLogRFC" ColumnName="IdLogRFC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vLCO">
+      <EntityTypeMapping TypeName="DescargasSatModel.vLCO">
+        <MappingFragment StoreEntitySet="vLCO">
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+          <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+          <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="IdRfcLco" ColumnName="IdRfcLco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vLCO_Carga">
+      <EntityTypeMapping TypeName="DescargasSatModel.vLCO_Carga">
+        <MappingFragment StoreEntitySet="vLCO_Carga">
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="noCertificado" ColumnName="noCertificado" />
+          <ScalarProperty Name="EstatusCertificado" ColumnName="EstatusCertificado" />
+          <ScalarProperty Name="ValidezObligaciones" ColumnName="ValidezObligaciones" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

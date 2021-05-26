@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/CertificadorWs.Business" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CertificadorWs.Business" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="EmpresaNtLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Colonia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Curp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Folios" type="xs:int" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegimenFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rfc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursales" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimbresContratados" type="xs:int" />
+      <xs:element minOccurs="0" name="Usuarios" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmpresaNtLink" nillable="true" type="tns:EmpresaNtLink" />
+  <xs:complexType name="ClienteNtLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Colonia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cp" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Empresas" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RazonSocial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RegimenFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rfc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sucursales" type="xs:int" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimbresConsumidos" type="xs:int" />
+      <xs:element minOccurs="0" name="TimbresContratados" type="xs:int" />
+      <xs:element minOccurs="0" name="Usuarios" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClienteNtLink" nillable="true" type="tns:ClienteNtLink" />
+  <xs:complexType name="ArrayOfEmpresaNtLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmpresaNtLink" nillable="true" type="tns:EmpresaNtLink" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpresaNtLink" nillable="true" type="tns:ArrayOfEmpresaNtLink" />
+  <xs:complexType name="RespuestaCancelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Acuse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeError" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusUuids" nillable="true" type="tns:ArrayOfStatusUuid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespuestaCancelacion" nillable="true" type="tns:RespuestaCancelacion" />
+  <xs:complexType name="ArrayOfStatusUuid">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusUuid" nillable="true" type="tns:StatusUuid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusUuid" nillable="true" type="tns:ArrayOfStatusUuid" />
+  <xs:complexType name="StatusUuid">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Uuid" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusUuid" nillable="true" type="tns:StatusUuid" />
+</xs:schema>

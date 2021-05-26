@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://recibecfdi.sat.gob.mx" elementFormDefault="qualified" targetNamespace="http://recibecfdi.sat.gob.mx" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?xsd=xsd1" namespace="http://microsoft.com/wsdl/types/" />
+  <xs:import schemaLocation="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?xsd=xsd2" namespace="http://www.w3.org/2000/09/xmldsig#" />
+  <xs:element name="CFDI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="RutaCFDI" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncabezadoCFDI" type="tns:EncabezadoCFDI" />
+  <xs:complexType name="EncabezadoCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="RfcEmisor" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="UUID" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NumeroCertificado" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="VersionComprobante" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AcuseRecepcion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="AcuseRecepcionCFDI" type="tns:Acuse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Acuse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Incidencia" type="tns:IncidenciaAcuseRecepcion" />
+      <xs:element xmlns:q1="http://www.w3.org/2000/09/xmldsig#" minOccurs="0" maxOccurs="1" ref="q1:Signature" />
+    </xs:sequence>
+    <xs:attribute name="UUID" type="xs:string" />
+    <xs:attribute name="CodEstatus" type="xs:string" />
+    <xs:attribute name="Fecha" type="xs:dateTime" use="required" />
+    <xs:attribute name="NoCertificadoSAT" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="IncidenciaAcuseRecepcion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="MensajeIncidencia" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NoCertificadoPac" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CodigoError" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RfcEmisor" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="RfcReceptor" type="xs:string" />
+      <xs:element xmlns:q2="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="IdIncidencia" type="q2:guid" />
+      <xs:element xmlns:q3="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="Uuid" type="q3:guid" />
+      <xs:element xmlns:q4="http://microsoft.com/wsdl/types/" minOccurs="1" maxOccurs="1" name="WorkProcessId" type="q4:guid" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FechaRegistro" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

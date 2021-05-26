@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://192.168.4.26:8443/xmc/services/xmCryptoService?wsdl" filename="xmCryptoService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://192.168.4.26:8443/xmc/services/xmCryptoService?xsd=xsd3" filename="xmCryptoService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://192.168.4.26:8443/xmc/services/xmCryptoService?xsd=xsd0" filename="xmCryptoService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://192.168.4.26:8443/xmc/services/xmCryptoService?xsd=xsd2" filename="xmCryptoService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://192.168.4.26:8443/xmc/services/xmCryptoService?xsd=xsd1" filename="xmCryptoService2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

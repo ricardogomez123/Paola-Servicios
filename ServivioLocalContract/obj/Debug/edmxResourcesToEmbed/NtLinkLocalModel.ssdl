@@ -1,0 +1,3294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProduccionNtLinkModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ProduccionNtLinkModelStoreContainer">
+    <EntitySet Name="accesos" EntityType="ProduccionNtLinkModel.Store.accesos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActivacionConvertidor" EntityType="ProduccionNtLinkModel.Store.ActivacionConvertidor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="adminPantallas" EntityType="ProduccionNtLinkModel.Store.adminPantallas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="apartados" EntityType="ProduccionNtLinkModel.Store.apartados" store:Type="Tables" store:Schema="dbo" store:Name="apartados">
+      <DefiningQuery>SELECT 
+      [apartados].[idproducto] AS [idproducto], 
+      [apartados].[Color] AS [Color], 
+      [apartados].[talla] AS [talla], 
+      [apartados].[idAlmacen] AS [idAlmacen], 
+      [apartados].[cantidad] AS [cantidad], 
+      [apartados].[Documento] AS [Documento], 
+      [apartados].[TipoDoc] AS [TipoDoc]
+      FROM [dbo].[apartados] AS [apartados]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="aspnet_Applications" EntityType="ProduccionNtLinkModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Membership" EntityType="ProduccionNtLinkModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Paths" EntityType="ProduccionNtLinkModel.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="ProduccionNtLinkModel.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="ProduccionNtLinkModel.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Profile" EntityType="ProduccionNtLinkModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Roles" EntityType="ProduccionNtLinkModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="ProduccionNtLinkModel.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Users" EntityType="ProduccionNtLinkModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="ProduccionNtLinkModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="ProduccionNtLinkModel.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BitacoraSistemasTotales" EntityType="ProduccionNtLinkModel.Store.BitacoraSistemasTotales" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cheques" EntityType="ProduccionNtLinkModel.Store.cheques" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="clientes" EntityType="ProduccionNtLinkModel.Store.clientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClientesPromotores" EntityType="ProduccionNtLinkModel.Store.ClientesPromotores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comision_Distribuidores" EntityType="ProduccionNtLinkModel.Store.Comision_Distribuidores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comisionistas" EntityType="ProduccionNtLinkModel.Store.Comisionistas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="compras" EntityType="ProduccionNtLinkModel.Store.compras" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="comprasdetalle" EntityType="ProduccionNtLinkModel.Store.comprasdetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ComprobantePdf" EntityType="ProduccionNtLinkModel.Store.ComprobantePdf" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoPdf" EntityType="ProduccionNtLinkModel.Store.ConceptoPdf" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptoPdfAddenda" EntityType="ProduccionNtLinkModel.Store.ConceptoPdfAddenda" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConceptosCartaPorte" EntityType="ProduccionNtLinkModel.Store.ConceptosCartaPorte" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="condcompras" EntityType="ProduccionNtLinkModel.Store.condcompras" store:Type="Tables" store:Schema="dbo" store:Name="condcompras">
+      <DefiningQuery>SELECT 
+      [condcompras].[idMarca] AS [idMarca], 
+      [condcompras].[Nombre] AS [Nombre], 
+      [condcompras].[Dias] AS [Dias], 
+      [condcompras].[Descuento] AS [Descuento], 
+      [condcompras].[Cascada] AS [Cascada]
+      FROM [dbo].[condcompras] AS [condcompras]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ConfirmacionTimbreWs33" EntityType="ProduccionNtLinkModel.Store.ConfirmacionTimbreWs33" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Contratos" EntityType="ProduccionNtLinkModel.Store.Contratos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cotizacion" EntityType="ProduccionNtLinkModel.Store.cotizacion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="cotizaciondetalle" EntityType="ProduccionNtLinkModel.Store.cotizaciondetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Csd" EntityType="ProduccionNtLinkModel.Store.Csd" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ctdistribuidores" EntityType="ProduccionNtLinkModel.Store.Ctdistribuidores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DatosNomina" EntityType="ProduccionNtLinkModel.Store.DatosNomina" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DistContratos" EntityType="ProduccionNtLinkModel.Store.DistContratos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Distribuidores" EntityType="ProduccionNtLinkModel.Store.Distribuidores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="empleados" EntityType="ProduccionNtLinkModel.Store.empleados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="empresa" EntityType="ProduccionNtLinkModel.Store.empresa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="empresaPantalla" EntityType="ProduccionNtLinkModel.Store.empresaPantalla" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="facturas" EntityType="ProduccionNtLinkModel.Store.facturas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="facturasdetalle" EntityType="ProduccionNtLinkModel.Store.facturasdetalle" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FacturasPagos" EntityType="ProduccionNtLinkModel.Store.FacturasPagos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FoliosCfd" EntityType="ProduccionNtLinkModel.Store.FoliosCfd" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="funciones" EntityType="ProduccionNtLinkModel.Store.funciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="lineas" EntityType="ProduccionNtLinkModel.Store.lineas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Logger" EntityType="ProduccionNtLinkModel.Store.Logger" store:Type="Tables" store:Schema="dbo" store:Name="Logger">
+      <DefiningQuery>SELECT 
+      [Logger].[Id] AS [Id], 
+      [Logger].[Date] AS [Date], 
+      [Logger].[Thread] AS [Thread], 
+      [Logger].[Level] AS [Level], 
+      [Logger].[Logger] AS [Logger], 
+      [Logger].[Message] AS [Message], 
+      [Logger].[Exception] AS [Exception]
+      FROM [dbo].[Logger] AS [Logger]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LogLco" EntityType="ProduccionNtLinkModel.Store.LogLco" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="marcas" EntityType="ProduccionNtLinkModel.Store.marcas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="modelos" EntityType="ProduccionNtLinkModel.Store.modelos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="modulos" EntityType="ProduccionNtLinkModel.Store.modulos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="movimientos" EntityType="ProduccionNtLinkModel.Store.movimientos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="movimientosdetalle" EntityType="ProduccionNtLinkModel.Store.movimientosdetalle" store:Type="Tables" store:Schema="dbo" store:Name="movimientosdetalle">
+      <DefiningQuery>SELECT 
+      [movimientosdetalle].[idMovimiento] AS [idMovimiento], 
+      [movimientosdetalle].[idproducto] AS [idproducto], 
+      [movimientosdetalle].[Cantidad] AS [Cantidad], 
+      [movimientosdetalle].[Codigo] AS [Codigo], 
+      [movimientosdetalle].[Descripcion] AS [Descripcion], 
+      [movimientosdetalle].[Precio] AS [Precio], 
+      [movimientosdetalle].[Descuento] AS [Descuento], 
+      [movimientosdetalle].[Descuento1] AS [Descuento1], 
+      [movimientosdetalle].[Total] AS [Total], 
+      [movimientosdetalle].[Observaciones] AS [Observaciones], 
+      [movimientosdetalle].[IVA] AS [IVA]
+      FROM [dbo].[movimientosdetalle] AS [movimientosdetalle]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="nivelusuarios" EntityType="ProduccionNtLinkModel.Store.nivelusuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ordenes" EntityType="ProduccionNtLinkModel.Store.ordenes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pagos" EntityType="ProduccionNtLinkModel.Store.Pagos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Paquetes" EntityType="ProduccionNtLinkModel.Store.Paquetes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pedidos" EntityType="ProduccionNtLinkModel.Store.pedidos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pedidosdetalle" EntityType="ProduccionNtLinkModel.Store.pedidosdetalle" store:Type="Tables" store:Schema="dbo" store:Name="pedidosdetalle">
+      <DefiningQuery>SELECT 
+      [pedidosdetalle].[Pedido] AS [Pedido], 
+      [pedidosdetalle].[idProducto] AS [idProducto], 
+      [pedidosdetalle].[Talla] AS [Talla], 
+      [pedidosdetalle].[Color] AS [Color], 
+      [pedidosdetalle].[Precio] AS [Precio], 
+      [pedidosdetalle].[Cantidad] AS [Cantidad], 
+      [pedidosdetalle].[Partida] AS [Partida], 
+      [pedidosdetalle].[Descuento] AS [Descuento], 
+      [pedidosdetalle].[idcorrida] AS [idcorrida]
+      FROM [dbo].[pedidosdetalle] AS [pedidosdetalle]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="pedidosucursal" EntityType="ProduccionNtLinkModel.Store.pedidosucursal" store:Type="Tables" store:Schema="dbo" store:Name="pedidosucursal">
+      <DefiningQuery>SELECT 
+      [pedidosucursal].[Pedido] AS [Pedido], 
+      [pedidosucursal].[Total] AS [Total], 
+      [pedidosucursal].[Importe] AS [Importe], 
+      [pedidosucursal].[idSucursal] AS [idSucursal], 
+      [pedidosucursal].[Partida] AS [Partida], 
+      [pedidosucursal].[Observaciones] AS [Observaciones], 
+      [pedidosucursal].[Referencia] AS [Referencia], 
+      [pedidosucursal].[Folio] AS [Folio], 
+      [pedidosucursal].[FechaEntrega] AS [FechaEntrega], 
+      [pedidosucursal].[Status] AS [Status]
+      FROM [dbo].[pedidosucursal] AS [pedidosucursal]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="permisos" EntityType="ProduccionNtLinkModel.Store.permisos" store:Type="Tables" store:Schema="dbo" store:Name="permisos">
+      <DefiningQuery>SELECT 
+      [permisos].[idUsuario] AS [idUsuario], 
+      [permisos].[Altas] AS [Altas], 
+      [permisos].[Bajas] AS [Bajas], 
+      [permisos].[Cambios] AS [Cambios], 
+      [permisos].[Cancela] AS [Cancela], 
+      [permisos].[Autoriza] AS [Autoriza]
+      FROM [dbo].[permisos] AS [permisos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="precios" EntityType="ProduccionNtLinkModel.Store.precios" store:Type="Tables" store:Schema="dbo" store:Name="precios">
+      <DefiningQuery>SELECT 
+      [precios].[idProducto] AS [idProducto], 
+      [precios].[idProveedor] AS [idProveedor], 
+      [precios].[Precio] AS [Precio], 
+      [precios].[Observaciones] AS [Observaciones]
+      FROM [dbo].[precios] AS [precios]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="producto" EntityType="ProduccionNtLinkModel.Store.producto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Promotores" EntityType="ProduccionNtLinkModel.Store.Promotores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="proveedores" EntityType="ProduccionNtLinkModel.Store.proveedores" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Retencion" EntityType="ProduccionNtLinkModel.Store.Retencion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RetencionesItem" EntityType="ProduccionNtLinkModel.Store.RetencionesItem" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="septiembre" EntityType="ProduccionNtLinkModel.Store.septiembre" store:Type="Tables" store:Schema="dbo" store:Name="septiembre">
+      <DefiningQuery>SELECT 
+      [septiembre].[IdTimbre] AS [IdTimbre], 
+      [septiembre].[FechaFactura] AS [FechaFactura], 
+      [septiembre].[FechaEnvio] AS [FechaEnvio], 
+      [septiembre].[FechaCancelacion] AS [FechaCancelacion], 
+      [septiembre].[RfcEmisor] AS [RfcEmisor], 
+      [septiembre].[RfcReceptor] AS [RfcReceptor], 
+      [septiembre].[Xml] AS [Xml], 
+      [septiembre].[Acuse] AS [Acuse], 
+      [septiembre].[Uuid] AS [Uuid], 
+      [septiembre].[Status] AS [Status], 
+      [septiembre].[Error] AS [Error], 
+      [septiembre].[AcuseCancelacion] AS [AcuseCancelacion], 
+      [septiembre].[StrError] AS [StrError], 
+      [septiembre].[Hash] AS [Hash], 
+      [septiembre].[procesado] AS [procesado], 
+      [septiembre].[Retenciones] AS [Retenciones]
+      FROM [dbo].[septiembre] AS [septiembre]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sistemas" EntityType="ProduccionNtLinkModel.Store.Sistemas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="solicitantes" EntityType="ProduccionNtLinkModel.Store.solicitantes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="statusprod" EntityType="ProduccionNtLinkModel.Store.statusprod" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="subfunciones" EntityType="ProduccionNtLinkModel.Store.subfunciones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sublineas" EntityType="ProduccionNtLinkModel.Store.sublineas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sucursales" EntityType="ProduccionNtLinkModel.Store.Sucursales" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbradoEmpresaMensual" EntityType="ProduccionNtLinkModel.Store.TimbradoEmpresaMensual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbradoSistemaMensual" EntityType="ProduccionNtLinkModel.Store.TimbradoSistemaMensual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbresEmpresa" EntityType="ProduccionNtLinkModel.Store.TimbresEmpresa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbresSistema" EntityType="ProduccionNtLinkModel.Store.TimbresSistema" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbresSistemaHistorico" EntityType="ProduccionNtLinkModel.Store.TimbresSistemaHistorico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbresSistemaHistoricoMensual" EntityType="ProduccionNtLinkModel.Store.TimbresSistemaHistoricoMensual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbreWs" EntityType="ProduccionNtLinkModel.Store.TimbreWs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbreWs33" EntityType="ProduccionNtLinkModel.Store.TimbreWs33" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TimbreWsHistorico" EntityType="ProduccionNtLinkModel.Store.TimbreWsHistorico" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipoempleados" EntityType="ProduccionNtLinkModel.Store.tipoempleados" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipomovimiento" EntityType="ProduccionNtLinkModel.Store.tipomovimiento" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipoprod" EntityType="ProduccionNtLinkModel.Store.tipoprod" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tipostienda" EntityType="ProduccionNtLinkModel.Store.tipostienda" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tubo" EntityType="ProduccionNtLinkModel.Store.tubo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="usuarios" EntityType="ProduccionNtLinkModel.Store.usuarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="usuarios_distribuidor" EntityType="ProduccionNtLinkModel.Store.usuarios_distribuidor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="usuarios_empresas" EntityType="ProduccionNtLinkModel.Store.usuarios_empresas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TotalesContratos" EntityType="ProduccionNtLinkModel.Store.TotalesContratos" store:Type="Views" store:Schema="dbo" store:Name="TotalesContratos">
+      <DefiningQuery>SELECT 
+      [TotalesContratos].[IdSistema] AS [IdSistema], 
+      [TotalesContratos].[Timbres] AS [Timbres]
+      FROM [dbo].[TotalesContratos] AS [TotalesContratos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TotalesTimbrado" EntityType="ProduccionNtLinkModel.Store.TotalesTimbrado" store:Type="Views" store:Schema="dbo" store:Name="TotalesTimbrado">
+      <DefiningQuery>SELECT 
+      [TotalesTimbrado].[idSistema] AS [idSistema], 
+      [TotalesTimbrado].[Timbres] AS [Timbres]
+      FROM [dbo].[TotalesTimbrado] AS [TotalesTimbrado]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vClientesPromotores" EntityType="ProduccionNtLinkModel.Store.vClientesPromotores" store:Type="Views" store:Schema="dbo" store:Name="vClientesPromotores">
+      <DefiningQuery>SELECT 
+      [vClientesPromotores].[IdCP] AS [IdCP], 
+      [vClientesPromotores].[IdPromotor] AS [IdPromotor], 
+      [vClientesPromotores].[idCliente] AS [idCliente], 
+      [vClientesPromotores].[Promotor] AS [Promotor], 
+      [vClientesPromotores].[Cliente] AS [Cliente]
+      FROM [dbo].[vClientesPromotores] AS [vClientesPromotores]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vCsd" EntityType="ProduccionNtLinkModel.Store.vCsd" store:Type="Views" store:Schema="dbo" store:Name="vCsd">
+      <DefiningQuery>SELECT 
+      [vCsd].[no_serie] AS [no_serie], 
+      [vCsd].[FechaInicial] AS [FechaInicial], 
+      [vCsd].[FechaFinal] AS [FechaFinal], 
+      [vCsd].[Rfc] AS [Rfc], 
+      [vCsd].[Estado] AS [Estado]
+      FROM [dbo].[vCsd] AS [vCsd]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vFoliosCfd" EntityType="ProduccionNtLinkModel.Store.vFoliosCfd" store:Type="Views" store:Schema="dbo" store:Name="vFoliosCfd">
+      <DefiningQuery>SELECT 
+      [vFoliosCfd].[RFC] AS [RFC], 
+      [vFoliosCfd].[NoAprobacion] AS [NoAprobacion], 
+      [vFoliosCfd].[AnoAprobacion] AS [AnoAprobacion], 
+      [vFoliosCfd].[Serie] AS [Serie], 
+      [vFoliosCfd].[FolioInicial] AS [FolioInicial], 
+      [vFoliosCfd].[FolioFinal] AS [FolioFinal]
+      FROM [dbo].[vFoliosCfd] AS [vFoliosCfd]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vListaTimbre" EntityType="ProduccionNtLinkModel.Store.vListaTimbre" store:Type="Views" store:Schema="dbo" store:Name="vListaTimbre">
+      <DefiningQuery>SELECT 
+      [vListaTimbre].[IdSistema] AS [IdSistema], 
+      [vListaTimbre].[RazonSocial] AS [RazonSocial], 
+      [vListaTimbre].[Rfc] AS [Rfc], 
+      [vListaTimbre].[Contratados] AS [Contratados], 
+      [vListaTimbre].[Consumidos] AS [Consumidos], 
+      [vListaTimbre].[porcentaje] AS [porcentaje]
+      FROM [dbo].[vListaTimbre] AS [vListaTimbre]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vPagos" EntityType="ProduccionNtLinkModel.Store.vPagos" store:Type="Views" store:Schema="dbo" store:Name="vPagos">
+      <DefiningQuery>SELECT 
+      [vPagos].[idventa] AS [idventa], 
+      [vPagos].[idcliente] AS [idcliente], 
+      [vPagos].[Moneda] AS [Moneda], 
+      [vPagos].[EmpresaEmisora] AS [EmpresaEmisora], 
+      [vPagos].[Fecha] AS [Fecha], 
+      [vPagos].[folio] AS [folio], 
+      [vPagos].[Solicitud] AS [Solicitud], 
+      [vPagos].[Importe] AS [Importe], 
+      [vPagos].[cliente] AS [cliente], 
+      [vPagos].[Acuenta] AS [Acuenta], 
+      [vPagos].[resta] AS [resta], 
+      [vPagos].[Referencia] AS [Referencia], 
+      [vPagos].[Observaciones] AS [Observaciones]
+      FROM [dbo].[vPagos] AS [vPagos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbradoAnualSistema" EntityType="ProduccionNtLinkModel.Store.vTimbradoAnualSistema" store:Type="Views" store:Schema="dbo" store:Name="vTimbradoAnualSistema">
+      <DefiningQuery>SELECT 
+      [vTimbradoAnualSistema].[id] AS [id], 
+      [vTimbradoAnualSistema].[Anio] AS [Anio], 
+      [vTimbradoAnualSistema].[Timbres] AS [Timbres], 
+      [vTimbradoAnualSistema].[idSistema] AS [idSistema], 
+      [vTimbradoAnualSistema].[RazonSocial] AS [RazonSocial], 
+      [vTimbradoAnualSistema].[RFC] AS [RFC]
+      FROM [dbo].[vTimbradoAnualSistema] AS [vTimbradoAnualSistema]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbradoMensualSistema" EntityType="ProduccionNtLinkModel.Store.vTimbradoMensualSistema" store:Type="Views" store:Schema="dbo" store:Name="vTimbradoMensualSistema">
+      <DefiningQuery>SELECT 
+      [vTimbradoMensualSistema].[Anio] AS [Anio], 
+      [vTimbradoMensualSistema].[Mes] AS [Mes], 
+      [vTimbradoMensualSistema].[Timbres] AS [Timbres], 
+      [vTimbradoMensualSistema].[idSistema] AS [idSistema], 
+      [vTimbradoMensualSistema].[RazonSocial] AS [RazonSocial], 
+      [vTimbradoMensualSistema].[RFC] AS [RFC]
+      FROM [dbo].[vTimbradoMensualSistema] AS [vTimbradoMensualSistema]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresAnual" EntityType="ProduccionNtLinkModel.Store.vTimbresAnual" store:Type="Views" store:Schema="dbo" store:Name="vTimbresAnual">
+      <DefiningQuery>SELECT 
+      [vTimbresAnual].[IdSistema] AS [IdSistema], 
+      [vTimbresAnual].[Rfc] AS [Rfc], 
+      [vTimbresAnual].[RazonSocial] AS [RazonSocial], 
+      [vTimbresAnual].[Mes] AS [Mes], 
+      [vTimbresAnual].[Anio] AS [Anio], 
+      [vTimbresAnual].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresAnual] AS [vTimbresAnual]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresAnualEmpresa" EntityType="ProduccionNtLinkModel.Store.vTimbresAnualEmpresa" store:Type="Views" store:Schema="dbo" store:Name="vTimbresAnualEmpresa">
+      <DefiningQuery>SELECT 
+      [vTimbresAnualEmpresa].[IdEmpresa] AS [IdEmpresa], 
+      [vTimbresAnualEmpresa].[Mes] AS [Mes], 
+      [vTimbresAnualEmpresa].[Anio] AS [Anio], 
+      [vTimbresAnualEmpresa].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresAnualEmpresa] AS [vTimbresAnualEmpresa]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresEmpresa" EntityType="ProduccionNtLinkModel.Store.vTimbresEmpresa" store:Type="Views" store:Schema="dbo" store:Name="vTimbresEmpresa">
+      <DefiningQuery>SELECT 
+      [vTimbresEmpresa].[IdEmpresa] AS [IdEmpresa], 
+      [vTimbresEmpresa].[IdSistema] AS [IdSistema], 
+      [vTimbresEmpresa].[rfc] AS [rfc], 
+      [vTimbresEmpresa].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresEmpresa] AS [vTimbresEmpresa]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresEmpresaOld" EntityType="ProduccionNtLinkModel.Store.vTimbresEmpresaOld" store:Type="Views" store:Schema="dbo" store:Name="vTimbresEmpresaOld">
+      <DefiningQuery>SELECT 
+      [vTimbresEmpresaOld].[IdEmpresa] AS [IdEmpresa], 
+      [vTimbresEmpresaOld].[Mes] AS [Mes], 
+      [vTimbresEmpresaOld].[Anio] AS [Anio], 
+      [vTimbresEmpresaOld].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresEmpresaOld] AS [vTimbresEmpresaOld]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresEmpresaRazonSocial" EntityType="ProduccionNtLinkModel.Store.vTimbresEmpresaRazonSocial" store:Type="Views" store:Schema="dbo" store:Name="vTimbresEmpresaRazonSocial">
+      <DefiningQuery>SELECT 
+      [vTimbresEmpresaRazonSocial].[IdEmpresa] AS [IdEmpresa], 
+      [vTimbresEmpresaRazonSocial].[IdSistema] AS [IdSistema], 
+      [vTimbresEmpresaRazonSocial].[RazonSocial] AS [RazonSocial], 
+      [vTimbresEmpresaRazonSocial].[rfc] AS [rfc], 
+      [vTimbresEmpresaRazonSocial].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresEmpresaRazonSocial] AS [vTimbresEmpresaRazonSocial]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresMensual" EntityType="ProduccionNtLinkModel.Store.vTimbresMensual" store:Type="Views" store:Schema="dbo" store:Name="vTimbresMensual">
+      <DefiningQuery>SELECT 
+      [vTimbresMensual].[IdSistema] AS [IdSistema], 
+      [vTimbresMensual].[Rfc] AS [Rfc], 
+      [vTimbresMensual].[RazonSocial] AS [RazonSocial], 
+      [vTimbresMensual].[Mes] AS [Mes], 
+      [vTimbresMensual].[Anio] AS [Anio], 
+      [vTimbresMensual].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresMensual] AS [vTimbresMensual]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresSistema" EntityType="ProduccionNtLinkModel.Store.vTimbresSistema" store:Type="Views" store:Schema="dbo" store:Name="vTimbresSistema">
+      <DefiningQuery>SELECT 
+      [vTimbresSistema].[IdSistema] AS [IdSistema], 
+      [vTimbresSistema].[Rfc] AS [Rfc], 
+      [vTimbresSistema].[RazonSocial] AS [RazonSocial], 
+      [vTimbresSistema].[Mes] AS [Mes], 
+      [vTimbresSistema].[Anio] AS [Anio], 
+      [vTimbresSistema].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresSistema] AS [vTimbresSistema]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresSistemaAnio" EntityType="ProduccionNtLinkModel.Store.vTimbresSistemaAnio" store:Type="Views" store:Schema="dbo" store:Name="vTimbresSistemaAnio">
+      <DefiningQuery>SELECT 
+      [vTimbresSistemaAnio].[IdSistema] AS [IdSistema], 
+      [vTimbresSistemaAnio].[Rfc] AS [Rfc], 
+      [vTimbresSistemaAnio].[RazonSocial] AS [RazonSocial], 
+      [vTimbresSistemaAnio].[Anio] AS [Anio], 
+      [vTimbresSistemaAnio].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresSistemaAnio] AS [vTimbresSistemaAnio]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresSistemaAnioOld" EntityType="ProduccionNtLinkModel.Store.vTimbresSistemaAnioOld" store:Type="Views" store:Schema="dbo" store:Name="vTimbresSistemaAnioOld">
+      <DefiningQuery>SELECT 
+      [vTimbresSistemaAnioOld].[IdSistema] AS [IdSistema], 
+      [vTimbresSistemaAnioOld].[Rfc] AS [Rfc], 
+      [vTimbresSistemaAnioOld].[RazonSocial] AS [RazonSocial], 
+      [vTimbresSistemaAnioOld].[Anio] AS [Anio], 
+      [vTimbresSistemaAnioOld].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresSistemaAnioOld] AS [vTimbresSistemaAnioOld]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresSistemaAnual" EntityType="ProduccionNtLinkModel.Store.vTimbresSistemaAnual" store:Type="Views" store:Schema="dbo" store:Name="vTimbresSistemaAnual">
+      <DefiningQuery>SELECT 
+      [vTimbresSistemaAnual].[IdSistema] AS [IdSistema], 
+      [vTimbresSistemaAnual].[Rfc] AS [Rfc], 
+      [vTimbresSistemaAnual].[RazonSocial] AS [RazonSocial], 
+      [vTimbresSistemaAnual].[Anio] AS [Anio], 
+      [vTimbresSistemaAnual].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresSistemaAnual] AS [vTimbresSistemaAnual]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vTimbresSistemaOld" EntityType="ProduccionNtLinkModel.Store.vTimbresSistemaOld" store:Type="Views" store:Schema="dbo" store:Name="vTimbresSistemaOld">
+      <DefiningQuery>SELECT 
+      [vTimbresSistemaOld].[IdSistema] AS [IdSistema], 
+      [vTimbresSistemaOld].[Rfc] AS [Rfc], 
+      [vTimbresSistemaOld].[RazonSocial] AS [RazonSocial], 
+      [vTimbresSistemaOld].[Mes] AS [Mes], 
+      [vTimbresSistemaOld].[Anio] AS [Anio], 
+      [vTimbresSistemaOld].[Timbres] AS [Timbres]
+      FROM [dbo].[vTimbresSistemaOld] AS [vTimbresSistemaOld]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vUsuariosSistema" EntityType="ProduccionNtLinkModel.Store.vUsuariosSistema" store:Type="Views" store:Schema="dbo" store:Name="vUsuariosSistema">
+      <DefiningQuery>SELECT 
+      [vUsuariosSistema].[ApplicationId] AS [ApplicationId], 
+      [vUsuariosSistema].[UserId] AS [UserId], 
+      [vUsuariosSistema].[Password] AS [Password], 
+      [vUsuariosSistema].[PasswordFormat] AS [PasswordFormat], 
+      [vUsuariosSistema].[PasswordSalt] AS [PasswordSalt], 
+      [vUsuariosSistema].[MobilePIN] AS [MobilePIN], 
+      [vUsuariosSistema].[Email] AS [Email], 
+      [vUsuariosSistema].[LoweredEmail] AS [LoweredEmail], 
+      [vUsuariosSistema].[PasswordQuestion] AS [PasswordQuestion], 
+      [vUsuariosSistema].[PasswordAnswer] AS [PasswordAnswer], 
+      [vUsuariosSistema].[IsApproved] AS [IsApproved], 
+      [vUsuariosSistema].[IsLockedOut] AS [IsLockedOut], 
+      [vUsuariosSistema].[CreateDate] AS [CreateDate], 
+      [vUsuariosSistema].[LastLoginDate] AS [LastLoginDate], 
+      [vUsuariosSistema].[LastPasswordChangedDate] AS [LastPasswordChangedDate], 
+      [vUsuariosSistema].[LastLockoutDate] AS [LastLockoutDate], 
+      [vUsuariosSistema].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount], 
+      [vUsuariosSistema].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart], 
+      [vUsuariosSistema].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount], 
+      [vUsuariosSistema].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart], 
+      [vUsuariosSistema].[Comment] AS [Comment], 
+      [vUsuariosSistema].[RazonSocial] AS [RazonSocial], 
+      [vUsuariosSistema].[Rfc] AS [Rfc]
+      FROM [dbo].[vUsuariosSistema] AS [vUsuariosSistema]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vventaRetenciones" EntityType="ProduccionNtLinkModel.Store.vventaRetenciones" store:Type="Views" store:Schema="dbo" store:Name="vventaRetenciones">
+      <DefiningQuery>SELECT 
+      [vventaRetenciones].[Id] AS [Id], 
+      [vventaRetenciones].[Folio] AS [Folio], 
+      [vventaRetenciones].[FechaFactura] AS [FechaFactura], 
+      [vventaRetenciones].[Guid] AS [Guid], 
+      [vventaRetenciones].[Cliente] AS [Cliente], 
+      [vventaRetenciones].[RFC] AS [RFC], 
+      [vventaRetenciones].[Status] AS [Status], 
+      [vventaRetenciones].[idCliente] AS [idCliente], 
+      [vventaRetenciones].[IdEmpresa] AS [IdEmpresa], 
+      [vventaRetenciones].[EmpresaEmisora] AS [EmpresaEmisora], 
+      [vventaRetenciones].[Linea] AS [Linea], 
+      [vventaRetenciones].[RfcEmisor] AS [RfcEmisor], 
+      [vventaRetenciones].[FechaCancelacion] AS [FechaCancelacion], 
+      [vventaRetenciones].[EstatusCancelacion] AS [EstatusCancelacion], 
+      [vventaRetenciones].[SelloCancelacion] AS [SelloCancelacion], 
+      [vventaRetenciones].[Expr1] AS [Expr1]
+      FROM [dbo].[vventaRetenciones] AS [vventaRetenciones]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vventas" EntityType="ProduccionNtLinkModel.Store.vventas" store:Type="Views" store:Schema="dbo" store:Name="vventas">
+      <DefiningQuery>SELECT 
+      [vventas].[idVenta] AS [idVenta], 
+      [vventas].[Fecha] AS [Fecha], 
+      [vventas].[Guid] AS [Guid], 
+      [vventas].[Importe] AS [Importe], 
+      [vventas].[IVA] AS [IVA], 
+      [vventas].[PorcentajeIva] AS [PorcentajeIva], 
+      [vventas].[Total] AS [Total], 
+      [vventas].[SubTotal] AS [SubTotal], 
+      [vventas].[nProducto] AS [nProducto], 
+      [vventas].[Cliente] AS [Cliente], 
+      [vventas].[RFC] AS [RFC], 
+      [vventas].[Observaciones] AS [Observaciones], 
+      [vventas].[Folio] AS [Folio], 
+      [vventas].[Cancelado] AS [Cancelado], 
+      [vventas].[idcliente] AS [idcliente], 
+      [vventas].[Vencimiento] AS [Vencimiento], 
+      [vventas].[Saldo] AS [Saldo], 
+      [vventas].[Cuenta] AS [Cuenta], 
+      [vventas].[Proyecto] AS [Proyecto], 
+      [vventas].[ReferenciaPago] AS [ReferenciaPago], 
+      [vventas].[FechaPago] AS [FechaPago], 
+      [vventas].[IdEmpresa] AS [IdEmpresa], 
+      [vventas].[Usuario] AS [Usuario], 
+      [vventas].[Pagado] AS [Pagado], 
+      [vventas].[Resta] AS [Resta], 
+      [vventas].[IdPromotor] AS [IdPromotor], 
+      [vventas].[FolioPreFactura] AS [FolioPreFactura], 
+      [vventas].[Nombre] AS [Nombre], 
+      [vventas].[EmpresaEmisora] AS [EmpresaEmisora], 
+      [vventas].[Linea] AS [Linea], 
+      [vventas].[RfcEmisor] AS [RfcEmisor], 
+      [vventas].[Moneda] AS [Moneda], 
+      [vventas].[SelloCancelacion] AS [SelloCancelacion], 
+      [vventas].[FechaCancelacion] AS [FechaCancelacion], 
+      [vventas].[EstatusCancelacion] AS [EstatusCancelacion], 
+      [vventas].[Tipo] AS [Tipo], 
+      [vventas].[RetIva] AS [RetIva], 
+      [vventas].[RetIsr] AS [RetIsr], 
+      [vventas].[Ieps] AS [Ieps]
+      FROM [dbo].[vventas] AS [vventas]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Applications" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_Applications" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Applications">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_Applications].[ApplicationName] AS [ApplicationName], 
+      [vw_aspnet_Applications].[LoweredApplicationName] AS [LoweredApplicationName], 
+      [vw_aspnet_Applications].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_Applications].[Description] AS [Description]
+      FROM [dbo].[vw_aspnet_Applications] AS [vw_aspnet_Applications]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_MembershipUsers" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_MembershipUsers" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_MembershipUsers">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_MembershipUsers].[UserId] AS [UserId], 
+      [vw_aspnet_MembershipUsers].[PasswordFormat] AS [PasswordFormat], 
+      [vw_aspnet_MembershipUsers].[MobilePIN] AS [MobilePIN], 
+      [vw_aspnet_MembershipUsers].[Email] AS [Email], 
+      [vw_aspnet_MembershipUsers].[LoweredEmail] AS [LoweredEmail], 
+      [vw_aspnet_MembershipUsers].[PasswordQuestion] AS [PasswordQuestion], 
+      [vw_aspnet_MembershipUsers].[PasswordAnswer] AS [PasswordAnswer], 
+      [vw_aspnet_MembershipUsers].[IsApproved] AS [IsApproved], 
+      [vw_aspnet_MembershipUsers].[IsLockedOut] AS [IsLockedOut], 
+      [vw_aspnet_MembershipUsers].[CreateDate] AS [CreateDate], 
+      [vw_aspnet_MembershipUsers].[LastLoginDate] AS [LastLoginDate], 
+      [vw_aspnet_MembershipUsers].[LastPasswordChangedDate] AS [LastPasswordChangedDate], 
+      [vw_aspnet_MembershipUsers].[LastLockoutDate] AS [LastLockoutDate], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAttemptCount] AS [FailedPasswordAttemptCount], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAttemptWindowStart] AS [FailedPasswordAttemptWindowStart], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptCount] AS [FailedPasswordAnswerAttemptCount], 
+      [vw_aspnet_MembershipUsers].[FailedPasswordAnswerAttemptWindowStart] AS [FailedPasswordAnswerAttemptWindowStart], 
+      [vw_aspnet_MembershipUsers].[Comment] AS [Comment], 
+      [vw_aspnet_MembershipUsers].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_MembershipUsers].[UserName] AS [UserName], 
+      [vw_aspnet_MembershipUsers].[MobileAlias] AS [MobileAlias], 
+      [vw_aspnet_MembershipUsers].[IsAnonymous] AS [IsAnonymous], 
+      [vw_aspnet_MembershipUsers].[LastActivityDate] AS [LastActivityDate]
+      FROM [dbo].[vw_aspnet_MembershipUsers] AS [vw_aspnet_MembershipUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Profiles" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_Profiles" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Profiles">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_Profiles].[UserId] AS [UserId], 
+      [vw_aspnet_Profiles].[LastUpdatedDate] AS [LastUpdatedDate], 
+      [vw_aspnet_Profiles].[DataSize] AS [DataSize]
+      FROM [dbo].[vw_aspnet_Profiles] AS [vw_aspnet_Profiles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Roles" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_Roles" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Roles">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_Roles].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_Roles].[RoleId] AS [RoleId], 
+      [vw_aspnet_Roles].[RoleName] AS [RoleName], 
+      [vw_aspnet_Roles].[LoweredRoleName] AS [LoweredRoleName], 
+      [vw_aspnet_Roles].[Description] AS [Description]
+      FROM [dbo].[vw_aspnet_Roles] AS [vw_aspnet_Roles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_Users" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_Users" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_Users">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_Users].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_Users].[UserId] AS [UserId], 
+      [vw_aspnet_Users].[UserName] AS [UserName], 
+      [vw_aspnet_Users].[LoweredUserName] AS [LoweredUserName], 
+      [vw_aspnet_Users].[MobileAlias] AS [MobileAlias], 
+      [vw_aspnet_Users].[IsAnonymous] AS [IsAnonymous], 
+      [vw_aspnet_Users].[LastActivityDate] AS [LastActivityDate]
+      FROM [dbo].[vw_aspnet_Users] AS [vw_aspnet_Users]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_UsersInRoles" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_UsersInRoles" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_UsersInRoles">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_UsersInRoles].[UserId] AS [UserId], 
+      [vw_aspnet_UsersInRoles].[RoleId] AS [RoleId]
+      FROM [dbo].[vw_aspnet_UsersInRoles] AS [vw_aspnet_UsersInRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_WebPartState_Paths" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_WebPartState_Paths" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_WebPartState_Paths">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_WebPartState_Paths].[ApplicationId] AS [ApplicationId], 
+      [vw_aspnet_WebPartState_Paths].[PathId] AS [PathId], 
+      [vw_aspnet_WebPartState_Paths].[Path] AS [Path], 
+      [vw_aspnet_WebPartState_Paths].[LoweredPath] AS [LoweredPath]
+      FROM [dbo].[vw_aspnet_WebPartState_Paths] AS [vw_aspnet_WebPartState_Paths]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_WebPartState_Shared" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_WebPartState_Shared" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_WebPartState_Shared">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_WebPartState_Shared].[PathId] AS [PathId], 
+      [vw_aspnet_WebPartState_Shared].[DataSize] AS [DataSize], 
+      [vw_aspnet_WebPartState_Shared].[LastUpdatedDate] AS [LastUpdatedDate]
+      FROM [dbo].[vw_aspnet_WebPartState_Shared] AS [vw_aspnet_WebPartState_Shared]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vw_aspnet_WebPartState_User" EntityType="ProduccionNtLinkModel.Store.vw_aspnet_WebPartState_User" store:Type="Views" store:Schema="dbo" store:Name="vw_aspnet_WebPartState_User">
+      <DefiningQuery>SELECT 
+      [vw_aspnet_WebPartState_User].[PathId] AS [PathId], 
+      [vw_aspnet_WebPartState_User].[UserId] AS [UserId], 
+      [vw_aspnet_WebPartState_User].[DataSize] AS [DataSize], 
+      [vw_aspnet_WebPartState_User].[LastUpdatedDate] AS [LastUpdatedDate]
+      FROM [dbo].[vw_aspnet_WebPartState_User] AS [vw_aspnet_WebPartState_User]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__aspnet_Me__Appli__16CE6296" Association="ProduccionNtLinkModel.Store.FK__aspnet_Me__Appli__16CE6296">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__17C286CF" Association="ProduccionNtLinkModel.Store.FK__aspnet_Me__UserI__17C286CF">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__18B6AB08" Association="ProduccionNtLinkModel.Store.FK__aspnet_Pa__Appli__18B6AB08">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__19AACF41" Association="ProduccionNtLinkModel.Store.FK__aspnet_Pe__PathI__19AACF41">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__1A9EF37A" Association="ProduccionNtLinkModel.Store.FK__aspnet_Pe__PathI__1A9EF37A">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__1B9317B3" Association="ProduccionNtLinkModel.Store.FK__aspnet_Pe__UserI__1B9317B3">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__1C873BEC" Association="ProduccionNtLinkModel.Store.FK__aspnet_Pr__UserI__1C873BEC">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__1D7B6025" Association="ProduccionNtLinkModel.Store.FK__aspnet_Ro__Appli__1D7B6025">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__1E6F845E" Association="ProduccionNtLinkModel.Store.FK__aspnet_Us__Appli__1E6F845E">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__1F63A897" Association="ProduccionNtLinkModel.Store.FK__aspnet_Us__RoleI__1F63A897">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__2057CCD0" Association="ProduccionNtLinkModel.Store.FK__aspnet_Us__UserI__2057CCD0">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="accesos">
+    <Key>
+      <PropertyRef Name="idAcceso" />
+    </Key>
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="idModulo" Type="int" />
+    <Property Name="idFuncion" Type="int" Nullable="false" />
+    <Property Name="idsub" Type="int" />
+    <Property Name="Acceso" Type="smallint" Nullable="false" />
+    <Property Name="idAcceso" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ActivacionConvertidor">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="key" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mac" Type="nvarchar" MaxLength="50" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="FechaActivacion" Type="datetime" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Admin" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="adminPantallas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="admin" Type="int" Nullable="false" />
+    <Property Name="pantalla" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.apartados' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="apartados">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="Color" Type="int" />
+    <Property Name="talla" Type="real" />
+    <Property Name="idAlmacen" Type="int" />
+    <Property Name="cantidad" Type="int" />
+    <Property Name="Documento" Type="int" />
+    <Property Name="TipoDoc" Type="nvarchar" MaxLength="64" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" />
+    <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="BitacoraSistemasTotales">
+    <Key>
+      <PropertyRef Name="IdBitacora" />
+    </Key>
+    <Property Name="IdBitacora" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="datetime" />
+    <Property Name="Usuario" Type="int" />
+    <Property Name="Cambio" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="cheques">
+    <Key>
+      <PropertyRef Name="IDCHEQUE" />
+    </Key>
+    <Property Name="IDCHEQUE" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDCHEQUERA" Type="int" Nullable="false" />
+    <Property Name="FOLIO" Type="int" Nullable="false" />
+    <Property Name="IDPROVEEDOR" Type="int" Nullable="false" />
+    <Property Name="IMPORTE" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="OBSERVACIONES" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Descuento" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="idCliente" />
+    </Key>
+    <Property Name="idCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RazonSocial" Type="nvarchar(max)" />
+    <Property Name="Direccion" Type="nvarchar(max)" />
+    <Property Name="Colonia" Type="nvarchar(max)" />
+    <Property Name="Ciudad" Type="nvarchar(max)" />
+    <Property Name="Estado" Type="nvarchar(max)" />
+    <Property Name="CP" Type="nvarchar" MaxLength="5" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="14" />
+    <Property Name="Telefonos" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="32" />
+    <Property Name="Email" Type="nvarchar" MaxLength="64" />
+    <Property Name="Pagina" Type="nvarchar" MaxLength="64" />
+    <Property Name="Contacto" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tipo" Type="smallint" />
+    <Property Name="EmailContacto" Type="nvarchar" MaxLength="64" />
+    <Property Name="idempresa" Type="int" />
+    <Property Name="Descuento" Type="int" />
+    <Property Name="idVendedor" Type="int" />
+    <Property Name="Cuenta" Type="nvarchar" MaxLength="32" />
+    <Property Name="DiasRevision" Type="int" />
+    <Property Name="MetodoPago" Type="nvarchar" MaxLength="50" />
+    <Property Name="CuentaPago" Type="nvarchar" MaxLength="50" />
+    <Property Name="Bcc" Type="nvarchar" MaxLength="64" />
+    <Property Name="Pais" Type="nvarchar" MaxLength="100" />
+    <Property Name="CURP" Type="nvarchar" MaxLength="24" />
+    <Property Name="NoExt" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoInt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Referencia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Localidad" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nacionalidad" Type="varchar" MaxLength="15" />
+    <Property Name="NumRegIdTrib" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="ClientesPromotores">
+    <Key>
+      <PropertyRef Name="IdCP" />
+    </Key>
+    <Property Name="IdCP" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="IdPromotor" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comision_Distribuidores">
+    <Key>
+      <PropertyRef Name="IdComision" />
+    </Key>
+    <Property Name="IdComision" Type="int" Nullable="false" />
+    <Property Name="PaquetesdeFacturacion" Type="int" />
+    <Property Name="Totalconiva" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="NtlinkPorcentaje1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Promotores" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorPrimario1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorSecundario1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorTerciario1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="NtlinkPorcentaje2" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Promotor2" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorPrimario2" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorSecundario2" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorTerciario2" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="NtlinkPorcentaje3" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Promotor3" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorPrimario3" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorSecundario3" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PromotorTerciario3" Type="decimal" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="Comisionistas">
+    <Key>
+      <PropertyRef Name="IdComisionista" />
+    </Key>
+    <Property Name="IdComisionista" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="compras">
+    <Key>
+      <PropertyRef Name="idCompra" />
+    </Key>
+    <Property Name="idCompra" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="nvarchar" MaxLength="48" />
+    <Property Name="nProducto" Type="int" />
+    <Property Name="captura" Type="datetime" Nullable="false" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="16" />
+    <Property Name="Cancelado" Type="smallint" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Pagado" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="IVA" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Condiciones" Type="int" />
+    <Property Name="Vencimiento" Type="datetime2" Precision="0" />
+    <Property Name="Cheque" Type="int" />
+    <Property Name="Facturado" Type="smallint" />
+    <Property Name="idCliente" Type="int" />
+    <Property Name="Gasto" Type="int" />
+  </EntityType>
+  <EntityType Name="comprasdetalle">
+    <Key>
+      <PropertyRef Name="IdCompraDetalle" />
+    </Key>
+    <Property Name="idCompra" Type="int" Nullable="false" />
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Codigo" Type="nvarchar" Nullable="false" MaxLength="48" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento1" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Total" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="IVA" Type="int" />
+    <Property Name="IdCompraDetalle" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="ComprobantePdf">
+    <Key>
+      <PropertyRef Name="IdComprobantePdf" />
+    </Key>
+    <Property Name="VoBoTitulo" Type="nvarchar(max)" />
+    <Property Name="RecibiTitulo" Type="nvarchar(max)" />
+    <Property Name="AutorizoTitulo" Type="nvarchar(max)" />
+    <Property Name="AgregadoTitulo" Type="nvarchar(max)" />
+    <Property Name="AgregadoNombre" Type="nvarchar(max)" />
+    <Property Name="AgregadoPuesto" Type="nvarchar(max)" />
+    <Property Name="AgregadoArea" Type="nvarchar(max)" />
+    <Property Name="VoBoNombre" Type="nvarchar(max)" />
+    <Property Name="VoBoPuesto" Type="nvarchar(max)" />
+    <Property Name="VoBoArea" Type="nvarchar(max)" />
+    <Property Name="RecibiNombre" Type="nvarchar(max)" />
+    <Property Name="RecibiPuesto" Type="nvarchar(max)" />
+    <Property Name="RecibiArea" Type="nvarchar(max)" />
+    <Property Name="AutorizoNombre" Type="nvarchar(max)" />
+    <Property Name="AutorizoPuesto" Type="nvarchar(max)" />
+    <Property Name="AutorizoArea" Type="nvarchar(max)" />
+    <Property Name="DonatLeyenda" Type="nvarchar(max)" />
+    <Property Name="DonatAprobacion" Type="nvarchar(max)" />
+    <Property Name="DonatFecha" Type="nvarchar(max)" />
+    <Property Name="TituloOtros" Type="nvarchar(max)" />
+    <Property Name="Titulo" Type="nvarchar(max)" />
+    <Property Name="RetencionIsr" Type="nvarchar(max)" />
+    <Property Name="RetencionIva" Type="nvarchar(max)" />
+    <Property Name="CURPEmisor" Type="nvarchar(max)" />
+    <Property Name="FechaPago" Type="nvarchar(max)" />
+    <Property Name="DatosAduana" Type="nvarchar(max)" />
+    <Property Name="ConceptosAduana" Type="nvarchar(max)" />
+    <Property Name="Leyenda" Type="nvarchar(max)" />
+    <Property Name="Regimen" Type="nvarchar(max)" />
+    <Property Name="LeyendaSuperior" Type="nvarchar(max)" />
+    <Property Name="LeyendaInferior" Type="nvarchar(max)" />
+    <Property Name="XmlString" Type="nvarchar(max)" />
+    <Property Name="CadenaOriginal" Type="nvarchar(max)" />
+    <Property Name="CadenaOriginalTimbre" Type="nvarchar(max)" />
+    <Property Name="CantidadLetra" Type="nvarchar(max)" />
+    <Property Name="Proyecto" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_calle" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_noExterior" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_noInterior" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_colonia" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_localidad" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_referencia" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_municipio" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_estado" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_pais" Type="nvarchar(max)" />
+    <Property Name="EmDomicilioFiscal_codigoPostal" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_calle" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_noExterior" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_noInterior" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_colonia" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_localidad" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_referencia" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_municipio" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_estado" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_pais" Type="nvarchar(max)" />
+    <Property Name="EmExpedidoEn_codigoPostal" Type="nvarchar(max)" />
+    <Property Name="Em_RegimenFiscal" Type="nvarchar(max)" />
+    <Property Name="Em_rfc" Type="nvarchar(max)" />
+    <Property Name="Em_nombre" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_calle" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_noExterior" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_noInterior" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_colonia" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_localidad" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_referencia" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_municipio" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_estado" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_pais" Type="nvarchar(max)" />
+    <Property Name="ReDomicilio_codigoPostal" Type="nvarchar(max)" />
+    <Property Name="Re_rfc" Type="nvarchar(max)" />
+    <Property Name="Re_nombre" Type="nvarchar(max)" />
+    <Property Name="Conceptos" Type="nvarchar(max)" />
+    <Property Name="Impuestos" Type="nvarchar(max)" />
+    <Property Name="Complemento" Type="nvarchar(max)" />
+    <Property Name="Addenda" Type="nvarchar(max)" />
+    <Property Name="version" Type="nvarchar(max)" />
+    <Property Name="serie" Type="nvarchar(max)" />
+    <Property Name="folio" Type="nvarchar(max)" />
+    <Property Name="fecha" Type="nvarchar(max)" />
+    <Property Name="sello" Type="nvarchar(max)" />
+    <Property Name="formaDePago" Type="nvarchar(max)" />
+    <Property Name="noCertificado" Type="nvarchar(max)" />
+    <Property Name="certificado" Type="nvarchar(max)" />
+    <Property Name="condicionesDePago" Type="nvarchar(max)" />
+    <Property Name="subTotal" Type="nvarchar(max)" />
+    <Property Name="descuento" Type="nvarchar(max)" />
+    <Property Name="descuentoSpecified" Type="nvarchar(max)" />
+    <Property Name="motivoDescuento" Type="nvarchar(max)" />
+    <Property Name="TipoCambio" Type="nvarchar(max)" />
+    <Property Name="Moneda" Type="nvarchar(max)" />
+    <Property Name="total" Type="nvarchar(max)" />
+    <Property Name="tipoDeComprobante" Type="nvarchar(max)" />
+    <Property Name="metodoDePago" Type="nvarchar(max)" />
+    <Property Name="LugarExpedicion" Type="nvarchar(max)" />
+    <Property Name="NumCtaPago" Type="nvarchar(max)" />
+    <Property Name="FolioFiscalOrig" Type="nvarchar(max)" />
+    <Property Name="SerieFolioFiscalOrig" Type="nvarchar(max)" />
+    <Property Name="FechaFolioFiscalOrig" Type="nvarchar(max)" />
+    <Property Name="FechaFolioFiscalOrigSpecified" Type="nvarchar(max)" />
+    <Property Name="MontoFolioFiscalOrig" Type="nvarchar(max)" />
+    <Property Name="MontoFolioFiscalOrigSpecified" Type="nvarchar(max)" />
+    <Property Name="timbre_CadenaOriginal" Type="nvarchar(max)" />
+    <Property Name="timbre_Version" Type="nvarchar(max)" />
+    <Property Name="timbre_UUID" Type="nvarchar(max)" />
+    <Property Name="timbre_FechaTimbrado" Type="nvarchar(max)" />
+    <Property Name="timbre_SelloCFD" Type="nvarchar(max)" />
+    <Property Name="timbre_NoCertificadoSAT" Type="nvarchar(max)" />
+    <Property Name="timbre_SelloSAT" Type="nvarchar(max)" />
+    <Property Name="IdComprobantePdf" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Imp_totalImpuestosRetenidos" Type="nvarchar(max)" />
+    <Property Name="Imp_totalImpuestosTrasladados" Type="nvarchar(max)" />
+    <Property Name="QrCode" Type="image" />
+    <Property Name="Aduana_SaldoLetra" Type="nvarchar(max)" />
+    <Property Name="Aduana_GuiaMaster" Type="nvarchar(max)" />
+    <Property Name="Aduana_ReferenciaInterna" Type="nvarchar(max)" />
+    <Property Name="Aduana_GuiaHouse" Type="nvarchar(max)" />
+    <Property Name="Aduana_ReferenciaPascal" Type="nvarchar(max)" />
+    <Property Name="Aduana_TipoCambioFletes" Type="nvarchar(max)" />
+    <Property Name="Aduana_Aduana" Type="nvarchar(max)" />
+    <Property Name="Aduana_TipoOperacion" Type="nvarchar(max)" />
+    <Property Name="Aduana_Pedimento" Type="nvarchar(max)" />
+    <Property Name="Aduana_ValorAduana" Type="nvarchar(max)" />
+    <Property Name="Aduana_TipoCambioPedimento" Type="nvarchar(max)" />
+    <Property Name="Aduana_Mercancia" Type="nvarchar(max)" />
+    <Property Name="Aduana_Mterr" Type="nvarchar(max)" />
+    <Property Name="Aduana_NoBultos" Type="nvarchar(max)" />
+    <Property Name="Aduana_DiasCredito" Type="nvarchar(max)" />
+    <Property Name="Aduana_PesoBruto" Type="nvarchar(max)" />
+    <Property Name="Aduana_FechaVencimiento" Type="nvarchar(max)" />
+    <Property Name="Aduana_Contenedores" Type="nvarchar(max)" />
+    <Property Name="Aduana_Facturas" Type="nvarchar(max)" />
+    <Property Name="Aduana_TotalAddenda" Type="nvarchar(max)" />
+    <Property Name="Aduana_Anticipo" Type="nvarchar(max)" />
+    <Property Name="Aduana_Saldo" Type="nvarchar(max)" />
+    <Property Name="SaldoLetra" Type="nvarchar(max)" />
+    <Property Name="GuiaMaster" Type="nvarchar(max)" />
+    <Property Name="ReferenciaInterna" Type="nvarchar(max)" />
+    <Property Name="GuiaHouse" Type="nvarchar(max)" />
+    <Property Name="ReferenciaPascal" Type="nvarchar(max)" />
+    <Property Name="TipoCambioFletes" Type="nvarchar(max)" />
+    <Property Name="Aduana" Type="nvarchar(max)" />
+    <Property Name="TipoOperacion" Type="nvarchar(max)" />
+    <Property Name="Pedimento" Type="nvarchar(max)" />
+    <Property Name="ValorAduana" Type="nvarchar(max)" />
+    <Property Name="TipoCambioPedimento" Type="nvarchar(max)" />
+    <Property Name="Mercancia" Type="nvarchar(max)" />
+    <Property Name="Mterr" Type="nvarchar(max)" />
+    <Property Name="NoBultos" Type="nvarchar(max)" />
+    <Property Name="DiasCredito" Type="nvarchar(max)" />
+    <Property Name="PesoBruto" Type="nvarchar(max)" />
+    <Property Name="FechaVencimiento" Type="nvarchar(max)" />
+    <Property Name="Contenedores" Type="nvarchar(max)" />
+    <Property Name="Facturas" Type="nvarchar(max)" />
+    <Property Name="TotalAddenda" Type="nvarchar(max)" />
+    <Property Name="Anticipo" Type="nvarchar(max)" />
+    <Property Name="Saldo" Type="nvarchar(max)" />
+    <Property Name="nopedido" Type="varchar(max)" />
+    <Property Name="Tipomoneda" Type="varchar(max)" />
+    <Property Name="correocontacto" Type="varchar(max)" />
+    <Property Name="oficina" Type="varchar(max)" />
+    <Property Name="origendefactura" Type="varchar(max)" />
+    <Property Name="noproveedor" Type="varchar(max)" />
+    <Property Name="correoproveedor" Type="varchar(max)" />
+    <Property Name="nombreproveedor" Type="varchar(max)" />
+    <Property Name="MonedatipoMoneda" Type="varchar(max)" />
+    <Property Name="Proveedorcodigo" Type="varchar(max)" />
+    <Property Name="EntregaCodigoPostal" Type="varchar(max)" />
+    <Property Name="noExterior" Type="varchar(max)" />
+    <Property Name="FechaInicial" Type="varchar(max)" />
+    <Property Name="FechaFinal" Type="varchar(max)" />
+    <Property Name="PlantaEntrega" Type="varchar(max)" />
+    <Property Name="Calle" Type="varchar(max)" />
+    <Property Name="noInterior" Type="varchar(max)" />
+    <Property Name="NumeroPedido" Type="varchar(max)" />
+    <Property Name="Buyer" Type="varchar(max)" />
+    <Property Name="Seller" Type="varchar(max)" />
+    <Property Name="FechaPedido" Type="varchar(max)" />
+    <Property Name="DeptoContacto" Type="varchar(max)" />
+    <Property Name="Proveedor" Type="varchar(max)" />
+    <Property Name="Aprob" Type="varchar(max)" />
+    <Property Name="Contrarecibo" Type="varchar(max)" />
+    <Property Name="FechaContrarecibo" Type="varchar(max)" />
+    <Property Name="Telefono" Type="varchar(max)" />
+    <Property Name="Gln" Type="varchar(max)" />
+    <Property Name="NombreCorto" Type="varchar(max)" />
+    <Property Name="Descripcion" Type="varchar(max)" />
+    <Property Name="ExtraAtributo" Type="varchar(max)" />
+    <Property Name="ExtraAtributo1" Type="varchar(max)" />
+    <Property Name="Valor" Type="varchar(max)" />
+    <Property Name="Valor1" Type="varchar(max)" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Id" Type="varchar(max)" />
+    <Property Name="RowOrder1" Type="varchar(max)" />
+    <Property Name="Remision" Type="varchar(max)" />
+    <Property Name="Consecutivo" Type="varchar(max)" />
+    <Property Name="FechaRemision" Type="varchar(max)" />
+    <Property Name="Tienda" Type="varchar(max)" />
+    <Property Name="TipoBulto" Type="varchar(max)" />
+    <Property Name="EntrgaMercancia" Type="varchar(max)" />
+    <Property Name="CumpleReqFiscal" Type="varchar(max)" />
+    <Property Name="CantidadBultos" Type="varchar(max)" />
+    <Property Name="Descuentos" Type="varchar(max)" />
+    <Property Name="IEPS" Type="varchar(max)" />
+    <Property Name="IVA" Type="varchar(max)" />
+    <Property Name="OtrosImpuestos" Type="varchar(max)" />
+    <Property Name="CantidadPedidos" Type="varchar(max)" />
+    <Property Name="FechaEntrgaMercancia" Type="varchar(max)" />
+    <Property Name="FolioNotaEntrada" Type="varchar(max)" />
+    <Property Name="id2" Type="varchar(max)" />
+    <Property Name="RowOrder2" Type="varchar(max)" />
+    <Property Name="Proveedor2" Type="varchar(max)" />
+    <Property Name="Remision2" Type="varchar(max)" />
+    <Property Name="FolioPedido" Type="varchar(max)" />
+    <Property Name="Tienda2" Type="varchar(max)" />
+    <Property Name="CantidadArticulos" Type="varchar(max)" />
+    <Property Name="Id3" Type="varchar(max)" />
+    <Property Name="RowOrder3" Type="varchar(max)" />
+    <Property Name="Proveedor3" Type="varchar(max)" />
+    <Property Name="Remision3" Type="varchar(max)" />
+    <Property Name="FolioPedidos" Type="varchar(max)" />
+    <Property Name="Tienda3" Type="varchar(max)" />
+    <Property Name="Codigo" Type="varchar(max)" />
+    <Property Name="CantidadUnidadCompra" Type="varchar(max)" />
+    <Property Name="CostoNetoUnidadCompra" Type="varchar(max)" />
+    <Property Name="PorcentajeIEPS" Type="varchar(max)" />
+    <Property Name="PorecentajeIVA" Type="varchar(max)" />
+    <Property Name="ProveedorRemision" Type="varchar(max)" />
+    <Property Name="RemisionR" Type="varchar(max)" />
+    <Property Name="TiendaRemision" Type="varchar(max)" />
+    <Property Name="ProveedorPedido" Type="varchar(max)" />
+    <Property Name="RemisionPedido" Type="varchar(max)" />
+    <Property Name="TiendaPedido" Type="varchar(max)" />
+    <Property Name="ProveedorArticulos" Type="varchar(max)" />
+    <Property Name="RemisionArticulos" Type="varchar(max)" />
+    <Property Name="FolioArticulos" Type="varchar(max)" />
+    <Property Name="TiendaArticulos" Type="varchar(max)" />
+    <Property Name="timbre_RfcProvCertif" Type="varchar(max)" />
+    <Property Name="timbre_Leyenda" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="ConceptoPdf">
+    <Key>
+      <PropertyRef Name="IdComprobanteConcepto" />
+    </Key>
+    <Property Name="Detalles" Type="nvarchar(max)" />
+    <Property Name="OrdenCompra" Type="nvarchar(max)" />
+    <Property Name="CuentaPredial" Type="nvarchar(max)" />
+    <Property Name="Items" Type="nvarchar(max)" />
+    <Property Name="cantidad" Type="nvarchar(max)" />
+    <Property Name="unidad" Type="nvarchar(max)" />
+    <Property Name="noIdentificacion" Type="nvarchar(max)" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="valorUnitario" Type="nvarchar(max)" />
+    <Property Name="importe" Type="nvarchar(max)" />
+    <Property Name="timbre_UUID" Type="nvarchar(max)" />
+    <Property Name="IdComprobanteConcepto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdComprobantePdf" Type="bigint" Nullable="false" />
+    <Property Name="descuento" Type="nvarchar(max)" />
+    <Property Name="ClaveProdServ" Type="nvarchar(max)" />
+    <Property Name="ClaveUnidad" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ConceptoPdfAddenda">
+    <Key>
+      <PropertyRef Name="IdComprobanteConcepto" />
+    </Key>
+    <Property Name="Detalles" Type="nvarchar(max)" />
+    <Property Name="OrdenCompra" Type="nvarchar(max)" />
+    <Property Name="CuentaPredial" Type="nvarchar(max)" />
+    <Property Name="Items" Type="nvarchar(max)" />
+    <Property Name="cantidad" Type="nvarchar(max)" />
+    <Property Name="unidad" Type="nvarchar(max)" />
+    <Property Name="noIdentificacion" Type="nvarchar(max)" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="valorUnitario" Type="nvarchar(max)" />
+    <Property Name="importe" Type="nvarchar(max)" />
+    <Property Name="timbre_UUID" Type="nvarchar(max)" />
+    <Property Name="IdComprobanteConcepto" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdComprobantePdf" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConceptosCartaPorte">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idVenta" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="64" />
+    <Property Name="Valor" Type="nvarchar(max)" />
+    <Property Name="idComprobantePdf" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.condcompras' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="condcompras">
+    <Key>
+      <PropertyRef Name="idMarca" />
+      <PropertyRef Name="Nombre" />
+      <PropertyRef Name="Dias" />
+      <PropertyRef Name="Descuento" />
+    </Key>
+    <Property Name="idMarca" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="Dias" Type="int" Nullable="false" />
+    <Property Name="Descuento" Type="int" Nullable="false" />
+    <Property Name="Cascada" Type="int" />
+  </EntityType>
+  <EntityType Name="ConfirmacionTimbreWs33">
+    <Key>
+      <PropertyRef Name="IdTimbre" />
+    </Key>
+    <Property Name="IdTimbre" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+    <Property Name="RfcEmisor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RfcReceptor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="procesado" Type="bit" />
+    <Property Name="Confirmacion" Type="varchar" MaxLength="50" />
+    <Property Name="Folio" Type="varchar" MaxLength="50" />
+    <Property Name="Error" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Contratos">
+    <Key>
+      <PropertyRef Name="IdContrato" />
+    </Key>
+    <Property Name="IdContrato" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSistema" Type="int" Nullable="false" />
+    <Property Name="FechaContrato" Type="datetime" Nullable="false" />
+    <Property Name="TipoContrato" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Timbres" Type="int" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar(max)" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="Usuario" Type="bigint" />
+  </EntityType>
+  <EntityType Name="cotizacion">
+    <Key>
+      <PropertyRef Name="idCotizacion" />
+    </Key>
+    <Property Name="idCotizacion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="int" />
+    <Property Name="Fecha" Type="datetime2" Precision="0" />
+    <Property Name="timestamp" Type="datetime" Nullable="false" />
+    <Property Name="urgencia" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Solicitante" Type="int" />
+    <Property Name="Area" Type="int" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Importe" Type="decimal" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="cotizaciondetalle">
+    <Key>
+      <PropertyRef Name="IdCotizacionDetalle" />
+    </Key>
+    <Property Name="idCotizacion" Type="int" Nullable="false" />
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="Codigo" Type="nvarchar" MaxLength="48" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Precio" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Descuento1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="IdCotizacionDetalle" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Csd">
+    <Key>
+      <PropertyRef Name="IdCsd" />
+    </Key>
+    <Property Name="IdCsd" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="no_serie" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FechaInicial" Type="datetime" Nullable="false" />
+    <Property Name="FechaFinal" Type="datetime" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Estado" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ctdistribuidores">
+    <Key>
+      <PropertyRef Name="IdCtdis" />
+    </Key>
+    <Property Name="IdCtdis" Type="int" Nullable="false" />
+    <Property Name="PAQUETEDETIMBRADO" Type="int" />
+    <Property Name="TOTALCONIVA" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="NTLINK70" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORP" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDOR1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDOR2" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDOR3" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="NTLINK" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORS" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORUNO" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORDOS" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORTRES" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="NTLINK75" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORTER" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORU" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORD" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="DISTRIBUIDORT" Type="decimal" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="DatosNomina">
+    <Key>
+      <PropertyRef Name="IdDatoNomina" />
+    </Key>
+    <Property Name="IdDatoNomina" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+    <Property Name="NoEmpleado" Type="nvarchar" MaxLength="100" />
+    <Property Name="NoSeguridadSocial" Type="nvarchar" MaxLength="100" />
+    <Property Name="Clabe" Type="nvarchar" MaxLength="100" />
+    <Property Name="Regimen" Type="nvarchar" MaxLength="100" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="100" />
+    <Property Name="Banco" Type="nvarchar" MaxLength="100" />
+    <Property Name="FechaInicio" Type="datetime" Nullable="false" />
+    <Property Name="Puesto" Type="nvarchar" MaxLength="100" />
+    <Property Name="TipoContrato" Type="nvarchar" MaxLength="100" />
+    <Property Name="TipoJornada" Type="nvarchar" MaxLength="100" />
+    <Property Name="Periodicidad" Type="int" Nullable="false" />
+    <Property Name="SalarioBase" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Riesgo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SalarioDiario" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="DistContratos">
+    <Key>
+      <PropertyRef Name="IdContrato" />
+    </Key>
+    <Property Name="IdContrato" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSistema" Type="int" Nullable="false" />
+    <Property Name="FechaContrato" Type="datetime" Nullable="false" />
+    <Property Name="TipoContrato" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Timbres" Type="int" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar(max)" />
+    <Property Name="IdDistribuidor" Type="int" Nullable="false" />
+    <Property Name="Costo" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Pocentaje" Type="int" />
+    <Property Name="Comision" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Productos" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Distribuidores">
+    <Key>
+      <PropertyRef Name="IdDistribuidor" />
+    </Key>
+    <Property Name="IdDistribuidor" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Colonia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ciudad" Type="nvarchar" MaxLength="255" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cp" Type="varchar" MaxLength="5" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contacto" Type="nvarchar" MaxLength="255" />
+    <Property Name="Completo" Type="int" />
+    <Property Name="Iniciales" Type="int" />
+    <Property Name="TipoSistema" Type="int" Nullable="false" />
+    <Property Name="PrimeraVez" Type="bit" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="RegimenFiscal" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contrato" Type="nvarchar" MaxLength="255" />
+    <Property Name="Distribuidor2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Distribuidor3" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="empleados">
+    <Key>
+      <PropertyRef Name="idEmpleado" />
+    </Key>
+    <Property Name="idEmpleado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Direccion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Colonia" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Municipio" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Estado" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CP" Type="nvarchar" MaxLength="100" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="14" />
+    <Property Name="CURP" Type="nvarchar" MaxLength="18" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="100" />
+    <Property Name="email" Type="nvarchar" MaxLength="100" />
+    <Property Name="foto" Type="varbinary(max)" />
+    <Property Name="Zona" Type="int" />
+    <Property Name="Tipo" Type="int" />
+  </EntityType>
+  <EntityType Name="empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idSistema" Type="bigint" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Colonia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ciudad" Type="nvarchar" MaxLength="255" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="CP" Type="varchar" MaxLength="5" />
+    <Property Name="RFC" Type="varchar" MaxLength="14" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="128" />
+    <Property Name="Pagina" Type="varchar" MaxLength="64" />
+    <Property Name="Contacto" Type="varchar" MaxLength="100" />
+    <Property Name="RutaCert" Type="varchar" MaxLength="255" />
+    <Property Name="RutaKey" Type="varchar" MaxLength="255" />
+    <Property Name="PassKey" Type="varchar" MaxLength="255" />
+    <Property Name="CustomerKey" Type="nvarchar" MaxLength="50" />
+    <Property Name="PrimeraVez" Type="bit" Nullable="false" />
+    <Property Name="RegimenFiscal" Type="nvarchar" MaxLength="100" />
+    <Property Name="Orientacion" Type="int" Nullable="false" />
+    <Property Name="LeyendaSuperior" Type="nvarchar(max)" />
+    <Property Name="LeyendaInferior" Type="nvarchar(max)" />
+    <Property Name="CURP" Type="nvarchar" MaxLength="24" />
+    <Property Name="Linea" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Logo" Type="image" />
+    <Property Name="Bloqueado" Type="bit" Nullable="false" />
+    <Property Name="Baja" Type="bit" Nullable="false" />
+    <Property Name="TimbresConsumidos" Type="int" Nullable="false" />
+    <Property Name="NoExt" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoInt" Type="nvarchar" MaxLength="50" />
+    <Property Name="Referencia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Localidad" Type="nvarchar" MaxLength="255" />
+    <Property Name="Folio" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="empresaPantalla">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idEmpresa" Type="int" Nullable="false" />
+    <Property Name="pantalla" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Reporte" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="facturas">
+    <Key>
+      <PropertyRef Name="idVenta" />
+    </Key>
+    <Property Name="idVenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="idcliente" Type="int" Nullable="false" />
+    <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="nvarchar" MaxLength="48" />
+    <Property Name="nProducto" Type="int" />
+    <Property Name="captura" Type="datetime" Nullable="false" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Cancelado" Type="smallint" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Pagado" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="IVA" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Condiciones" Type="int" />
+    <Property Name="Vencimiento" Type="datetime2" Precision="0" />
+    <Property Name="Moneda" Type="int" />
+    <Property Name="TipoCambio" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Proyecto" Type="varchar(max)" />
+    <Property Name="FechaPago" Type="datetime2" Precision="0" />
+    <Property Name="ReferenciaPago" Type="nvarchar" MaxLength="254" />
+    <Property Name="Serie" Type="nvarchar" MaxLength="25" />
+    <Property Name="Uid" Type="nvarchar" MaxLength="64" />
+    <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="PorcentajeIva" Type="int" />
+    <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="IdComisionista" Type="bigint" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="Resta" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="StatusPago" Type="bit" Nullable="false" />
+    <Property Name="IdPromotor" Type="int" />
+    <Property Name="FolioPreFactura" Type="nvarchar" MaxLength="50" />
+    <Property Name="SelloCancelacion" Type="nvarchar" MaxLength="128" />
+    <Property Name="FechaCancelacion" Type="nvarchar" MaxLength="40" />
+    <Property Name="EstatusCancelacion" Type="nvarchar" MaxLength="40" />
+    <Property Name="RetIva" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="RetIsr" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Ieps" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="IdEjecutivo" Type="int" />
+    <Property Name="IdPdf" Type="bigint" />
+    <Property Name="TipoDocumentoStr" Type="nvarchar" MaxLength="50" />
+    <Property Name="SelloCFD" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="facturasdetalle">
+    <Key>
+      <PropertyRef Name="IdFacturaDetalle" />
+    </Key>
+    <Property Name="idVenta" Type="int" Nullable="false" />
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="Codigo" Type="nvarchar(max)" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Descuento1" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Total" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="IVA" Type="int" />
+    <Property Name="IdFacturaDetalle" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unidad" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrdenCompra" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="FacturasPagos">
+    <Key>
+      <PropertyRef Name="IdFacturaPago" />
+    </Key>
+    <Property Name="IdFacturaPago" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdVenta" Type="int" Nullable="false" />
+    <Property Name="IdPago" Type="int" Nullable="false" />
+    <Property Name="Acuenta" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="FoliosCfd">
+    <Key>
+      <PropertyRef Name="IdFolios" />
+    </Key>
+    <Property Name="IdFolios" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RFC" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="NoAprobacion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AnoAprobacion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Serie" Type="nvarchar" MaxLength="50" />
+    <Property Name="FolioInicial" Type="bigint" Nullable="false" />
+    <Property Name="FolioFinal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="funciones">
+    <Key>
+      <PropertyRef Name="idFuncion" />
+    </Key>
+    <Property Name="idFuncion" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idModulo" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Hint" Type="nvarchar" MaxLength="100" />
+    <Property Name="Icono" Type="int" />
+    <Property Name="ssma$rowid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lineas">
+    <Key>
+      <PropertyRef Name="IdLinea" />
+    </Key>
+    <Property Name="IdLinea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idempresa" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="tipo" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.Logger' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="Logger">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="Thread" />
+      <PropertyRef Name="Level" />
+      <PropertyRef Name="Logger" />
+      <PropertyRef Name="Message" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Thread" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Level" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Logger" Type="varchar" Nullable="false" MaxLength="255" />
+    <Property Name="Message" Type="varchar" Nullable="false" MaxLength="4000" />
+    <Property Name="Exception" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="LogLco">
+    <Key>
+      <PropertyRef Name="IdLogLco" />
+    </Key>
+    <Property Name="IdLogLco" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="NoRegistros" Type="int" Nullable="false" />
+    <Property Name="Error" Type="text" />
+  </EntityType>
+  <EntityType Name="marcas">
+    <Key>
+      <PropertyRef Name="idmarca" />
+    </Key>
+    <Property Name="idmarca" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idempresa" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="idsistema" Type="int" />
+    <Property Name="idalta" Type="int" />
+    <Property Name="idproveedor" Type="int" />
+    <Property Name="descuento1" Type="int" />
+    <Property Name="Descuento2" Type="int" />
+  </EntityType>
+  <EntityType Name="modelos">
+    <Key>
+      <PropertyRef Name="idmodelo" />
+    </Key>
+    <Property Name="idmodelo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="marca" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="estatus" Type="smallint" />
+  </EntityType>
+  <EntityType Name="modulos">
+    <Key>
+      <PropertyRef Name="idModulo" />
+    </Key>
+    <Property Name="idModulo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Icono" Type="int" Nullable="false" />
+    <Property Name="ssma$rowid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="movimientos">
+    <Key>
+      <PropertyRef Name="idmovimiento" />
+    </Key>
+    <Property Name="idmovimiento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="Pedido" Type="nvarchar" Nullable="false" MaxLength="48" />
+    <Property Name="Factura" Type="nvarchar" Nullable="false" MaxLength="48" />
+    <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="nvarchar" MaxLength="48" />
+    <Property Name="Captura" Type="datetime" Nullable="false" />
+    <Property Name="nProducto" Type="int" />
+    <Property Name="ImpoteTotal" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="TipoMov" Type="int" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.movimientosdetalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="movimientosdetalle">
+    <Key>
+      <PropertyRef Name="idMovimiento" />
+      <PropertyRef Name="idproducto" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Codigo" />
+      <PropertyRef Name="Descripcion" />
+      <PropertyRef Name="Precio" />
+      <PropertyRef Name="Descuento" />
+      <PropertyRef Name="Descuento1" />
+      <PropertyRef Name="Total" />
+      <PropertyRef Name="IVA" />
+    </Key>
+    <Property Name="idMovimiento" Type="int" Nullable="false" />
+    <Property Name="idproducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Codigo" Type="nvarchar" Nullable="false" MaxLength="48" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Descuento1" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Total" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="IVA" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+  </EntityType>
+  <EntityType Name="nivelusuarios">
+    <Key>
+      <PropertyRef Name="Nivel" />
+    </Key>
+    <Property Name="Nivel" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ordenes">
+    <Key>
+      <PropertyRef Name="idorden" />
+    </Key>
+    <Property Name="idorden" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime2" Precision="0" />
+    <Property Name="idCliente" Type="int" />
+    <Property Name="Falla" Type="nvarchar" MaxLength="80" />
+    <Property Name="Diagnostico" Type="varchar(max)" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="64" />
+    <Property Name="Captura" Type="datetime" Nullable="false" />
+    <Property Name="Departamento" Type="nvarchar" MaxLength="64" />
+    <Property Name="idEquipo" Type="int" />
+  </EntityType>
+  <EntityType Name="Pagos">
+    <Key>
+      <PropertyRef Name="IdPago" />
+    </Key>
+    <Property Name="IdPago" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Referencia" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Observaciones" Type="text" Nullable="false" />
+    <Property Name="Pendiente" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+    <Property Name="Tipo" Type="bit" Nullable="false" />
+    <Property Name="IdCliente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Paquetes">
+    <Key>
+      <PropertyRef Name="IdPaquete" />
+    </Key>
+    <Property Name="IdPaquete" Type="int" Nullable="false" />
+    <Property Name="TipoPaquete" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Usuarios" Type="int" />
+    <Property Name="Folios" Type="int" />
+    <Property Name="Empresas" Type="int" />
+    <Property Name="Sucursales" Type="int" />
+  </EntityType>
+  <EntityType Name="pedidos">
+    <Key>
+      <PropertyRef Name="Auto" />
+    </Key>
+    <Property Name="Pedido" Type="int" Nullable="false" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Importe" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Usuario" Type="int" />
+    <Property Name="Maquina" Type="nvarchar" MaxLength="16" />
+    <Property Name="FechaCap" Type="datetime" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="marca" Type="int" />
+    <Property Name="Status" Type="int" />
+    <Property Name="idPedido" Type="nchar" Nullable="false" MaxLength="32" />
+    <Property Name="Auto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descuento" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.pedidosdetalle' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="pedidosdetalle">
+    <Key>
+      <PropertyRef Name="Pedido" />
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="Talla" />
+      <PropertyRef Name="Color" />
+      <PropertyRef Name="Precio" />
+      <PropertyRef Name="Cantidad" />
+      <PropertyRef Name="Partida" />
+      <PropertyRef Name="Descuento" />
+      <PropertyRef Name="idcorrida" />
+    </Key>
+    <Property Name="Pedido" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="Talla" Type="real" Nullable="false" />
+    <Property Name="Color" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Partida" Type="int" Nullable="false" />
+    <Property Name="Descuento" Type="int" Nullable="false" />
+    <Property Name="idcorrida" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.pedidosucursal' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="pedidosucursal">
+    <Key>
+      <PropertyRef Name="Pedido" />
+    </Key>
+    <Property Name="Pedido" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="Total" Type="int" />
+    <Property Name="Importe" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="idSucursal" Type="int" />
+    <Property Name="Partida" Type="int" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="Referencia" Type="nvarchar" MaxLength="32" />
+    <Property Name="Folio" Type="nvarchar" MaxLength="32" />
+    <Property Name="FechaEntrega" Type="date" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.permisos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="permisos">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+      <PropertyRef Name="Altas" />
+      <PropertyRef Name="Bajas" />
+      <PropertyRef Name="Cambios" />
+      <PropertyRef Name="Cancela" />
+      <PropertyRef Name="Autoriza" />
+    </Key>
+    <Property Name="idUsuario" Type="int" Nullable="false" />
+    <Property Name="Altas" Type="smallint" Nullable="false" />
+    <Property Name="Bajas" Type="smallint" Nullable="false" />
+    <Property Name="Cambios" Type="smallint" Nullable="false" />
+    <Property Name="Cancela" Type="smallint" Nullable="false" />
+    <Property Name="Autoriza" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.precios' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="precios">
+    <Key>
+      <PropertyRef Name="idProducto" />
+      <PropertyRef Name="idProveedor" />
+    </Key>
+    <Property Name="idProducto" Type="int" Nullable="false" />
+    <Property Name="idProveedor" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Modelo" Type="int" />
+    <Property Name="Aplicacion" Type="nvarchar" MaxLength="100" />
+    <Property Name="Linea" Type="int" />
+    <Property Name="Sublinea" Type="int" />
+    <Property Name="Modificacion" Type="datetime" Nullable="false" />
+    <Property Name="Creacion" Type="datetime" Nullable="false" />
+    <Property Name="Marca" Type="int" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Imagen" Type="varbinary(max)" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Codigo" Type="nvarchar" MaxLength="64" />
+    <Property Name="Utilidad" Type="int" />
+    <Property Name="UltimaVenta" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="UltimaCompra" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="CostoP" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Existencia" Type="int" />
+    <Property Name="PrecioP" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Unidad" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="CuentaPredial" Type="nvarchar" MaxLength="255" />
+    <Property Name="ClaveUnidad" Type="varchar" MaxLength="10" />
+    <Property Name="NoIdentificacion" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Promotores">
+    <Key>
+      <PropertyRef Name="IdPromotor" />
+    </Key>
+    <Property Name="IdPromotor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="150" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="proveedores">
+    <Key>
+      <PropertyRef Name="idProveedor" />
+    </Key>
+    <Property Name="idProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RazonSocial" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="100" />
+    <Property Name="Colonia" Type="nvarchar" MaxLength="100" />
+    <Property Name="Cuidad" Type="nvarchar" MaxLength="100" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="100" />
+    <Property Name="CP" Type="nvarchar" MaxLength="5" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="14" />
+    <Property Name="Telefonos" Type="nvarchar" MaxLength="100" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="32" />
+    <Property Name="Email" Type="nvarchar" MaxLength="64" />
+    <Property Name="Pagina" Type="nvarchar" MaxLength="64" />
+    <Property Name="Contacto" Type="nvarchar" MaxLength="100" />
+    <Property Name="Tipo" Type="smallint" />
+    <Property Name="DireccionP" Type="nvarchar" MaxLength="100" />
+    <Property Name="ColoniaP" Type="nvarchar" MaxLength="100" />
+    <Property Name="CiudadP" Type="nvarchar" MaxLength="100" />
+    <Property Name="EstadoP" Type="nvarchar" MaxLength="100" />
+    <Property Name="CPP" Type="nvarchar" MaxLength="100" />
+    <Property Name="TelefonoP" Type="nvarchar" MaxLength="32" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Cuenta" Type="nvarchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="Retencion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Uuid" Type="nvarchar" MaxLength="128" />
+    <Property Name="Emisor" Type="int" Nullable="false" />
+    <Property Name="Receptor" Type="int" Nullable="false" />
+    <Property Name="MesInicial" Type="int" Nullable="false" />
+    <Property Name="MesFinal" Type="int" Nullable="false" />
+    <Property Name="Ejercicio" Type="int" Nullable="false" />
+    <Property Name="ClaveRetencion" Type="nvarchar" MaxLength="3" />
+    <Property Name="DescripcionRetencion" Type="nvarchar(max)" />
+    <Property Name="MontoTotalOperacion" Type="decimal" Nullable="false" Scale="6" />
+    <Property Name="MontoTotalGravado" Type="decimal" Nullable="false" Scale="6" />
+    <Property Name="MontoTotalExento" Type="decimal" Nullable="false" Scale="6" />
+    <Property Name="MontoTotalRetencion" Type="decimal" Nullable="false" Scale="6" />
+    <Property Name="Folio" Type="nchar" MaxLength="20" />
+    <Property Name="FechaCancelacion" Type="varchar" MaxLength="50" />
+    <Property Name="EstatusCancelacion" Type="varchar" MaxLength="50" />
+    <Property Name="SelloCancelacion" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="RetencionesItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Retenciones" Type="int" Nullable="false" />
+    <Property Name="BaseRet" Type="decimal" Nullable="false" Scale="6" />
+    <Property Name="Impuestos" Type="nvarchar" Nullable="false" MaxLength="6" />
+    <Property Name="MontoRet" Type="decimal" Nullable="false" Scale="6" />
+    <Property Name="TipoPagoRet" Type="nvarchar" Nullable="false" MaxLength="32" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.septiembre' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="septiembre">
+    <Key>
+      <PropertyRef Name="IdTimbre" />
+      <PropertyRef Name="FechaFactura" />
+      <PropertyRef Name="RfcEmisor" />
+      <PropertyRef Name="RfcReceptor" />
+      <PropertyRef Name="Xml" />
+      <PropertyRef Name="Uuid" />
+    </Key>
+    <Property Name="IdTimbre" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" />
+    <Property Name="FechaCancelacion" Type="datetime" />
+    <Property Name="RfcEmisor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RfcReceptor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Acuse" Type="nvarchar(max)" />
+    <Property Name="Uuid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Error" Type="int" />
+    <Property Name="AcuseCancelacion" Type="nvarchar(max)" />
+    <Property Name="StrError" Type="nvarchar(max)" />
+    <Property Name="Hash" Type="nvarchar" MaxLength="40" />
+    <Property Name="procesado" Type="bit" />
+    <Property Name="Retenciones" Type="bit" />
+  </EntityType>
+  <EntityType Name="Sistemas">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Rfc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Colonia" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ciudad" Type="nvarchar" MaxLength="255" />
+    <Property Name="Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cp" Type="varchar" MaxLength="5" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contacto" Type="nvarchar" MaxLength="255" />
+    <Property Name="RegimenFiscal" Type="nvarchar" MaxLength="100" />
+    <Property Name="Folios" Type="int" />
+    <Property Name="Empresas" Type="int" />
+    <Property Name="Usuarios" Type="int" />
+    <Property Name="Sucursales" Type="int" />
+    <Property Name="TipoSistema" Type="int" Nullable="false" />
+    <Property Name="TimbresContratados" Type="int" />
+    <Property Name="FechaContrato" Type="datetime" />
+    <Property Name="TimbresConsumidos" Type="int" Nullable="false" />
+    <Property Name="Bloqueado" Type="bit" Nullable="false" />
+    <Property Name="SaldoEmision" Type="int" Nullable="false" />
+    <Property Name="SaldoTimbrado" Type="int" Nullable="false" />
+    <Property Name="IdPromotor" Type="int" />
+    <Property Name="UltimaRenovacion" Type="datetime" />
+    <Property Name="ConsumoEmision" Type="int" />
+    <Property Name="ConsumoTimbrado" Type="int" />
+    <Property Name="Multiple" Type="bit" />
+  </EntityType>
+  <EntityType Name="solicitantes">
+    <Key>
+      <PropertyRef Name="idSolicitante" />
+    </Key>
+    <Property Name="idSolicitante" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="80" />
+    <Property Name="Puesto" Type="nvarchar" MaxLength="60" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="32" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="32" />
+    <Property Name="email" Type="nvarchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="statusprod">
+    <Key>
+      <PropertyRef Name="idstatus" />
+    </Key>
+    <Property Name="idstatus" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="subfunciones">
+    <Key>
+      <PropertyRef Name="IdSub" />
+    </Key>
+    <Property Name="idFuncion" Type="int" Nullable="false" />
+    <Property Name="IdSub" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Hint" Type="nvarchar" MaxLength="100" />
+    <Property Name="Icono" Type="int" />
+  </EntityType>
+  <EntityType Name="sublineas">
+    <Key>
+      <PropertyRef Name="idSublinea" />
+    </Key>
+    <Property Name="idSublinea" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idlinea" Type="int" Nullable="false" />
+    <Property Name="Idempresa" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Sucursales">
+    <Key>
+      <PropertyRef Name="IdSucursal" />
+    </Key>
+    <Property Name="IdSucursal" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="LugarExpedicion" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Direccion" Type="nvarchar(max)" />
+    <Property Name="Estado" Type="nchar" MaxLength="3" />
+    <Property Name="Minicipio" Type="nchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="TimbradoEmpresaMensual">
+    <Key>
+      <PropertyRef Name="IdTimbrado" />
+    </Key>
+    <Property Name="IdTimbrado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="Anio" Type="int" Nullable="false" />
+    <Property Name="Timbres" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimbradoSistemaMensual">
+    <Key>
+      <PropertyRef Name="IdTimbrado" />
+    </Key>
+    <Property Name="IdTimbrado" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSistema" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="Anio" Type="int" Nullable="false" />
+    <Property Name="Timbres" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TimbresEmpresa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TimbresSistema">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TimbresSistemaHistorico">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TimbresSistemaHistoricoMensual">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="15" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <EntityType Name="TimbreWs">
+    <Key>
+      <PropertyRef Name="IdTimbre" />
+    </Key>
+    <Property Name="IdTimbre" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" />
+    <Property Name="FechaCancelacion" Type="datetime" />
+    <Property Name="RfcEmisor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RfcReceptor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Acuse" Type="nvarchar(max)" />
+    <Property Name="Uuid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Error" Type="int" />
+    <Property Name="AcuseCancelacion" Type="nvarchar(max)" />
+    <Property Name="StrError" Type="nvarchar(max)" />
+    <Property Name="Hash" Type="nvarchar" MaxLength="40" />
+    <Property Name="procesado" Type="bit" />
+    <Property Name="Retenciones" Type="bit" />
+  </EntityType>
+  <EntityType Name="TimbreWs33">
+    <Key>
+      <PropertyRef Name="IdTimbre" />
+    </Key>
+    <Property Name="IdTimbre" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" />
+    <Property Name="FechaCancelacion" Type="datetime" />
+    <Property Name="RfcEmisor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RfcReceptor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Acuse" Type="nvarchar(max)" />
+    <Property Name="Uuid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Error" Type="int" />
+    <Property Name="AcuseCancelacion" Type="nvarchar(max)" />
+    <Property Name="StrError" Type="nvarchar(max)" />
+    <Property Name="Hash" Type="nvarchar" MaxLength="100" />
+    <Property Name="procesado" Type="bit" />
+    <Property Name="Retenciones" Type="bit" />
+  </EntityType>
+  <EntityType Name="TimbreWsHistorico">
+    <Key>
+      <PropertyRef Name="IdTimbre" />
+    </Key>
+    <Property Name="IdTimbre" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FechaFactura" Type="datetime" Nullable="false" />
+    <Property Name="FechaEnvio" Type="datetime" />
+    <Property Name="FechaCancelacion" Type="datetime" />
+    <Property Name="RfcEmisor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RfcReceptor" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Xml" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Acuse" Type="nvarchar(max)" />
+    <Property Name="Uuid" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Status" Type="int" />
+    <Property Name="Error" Type="int" />
+    <Property Name="AcuseCancelacion" Type="nvarchar(max)" />
+    <Property Name="StrError" Type="nvarchar(max)" />
+    <Property Name="Hash" Type="nvarchar" MaxLength="100" />
+    <Property Name="procesado" Type="bit" />
+    <Property Name="Retenciones" Type="bit" />
+  </EntityType>
+  <EntityType Name="tipoempleados">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tipomovimiento">
+    <Key>
+      <PropertyRef Name="idmovimiento" />
+    </Key>
+    <Property Name="idmovimiento" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="Tipo" Type="smallint" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="100" />
+    <Property Name="puntoventa" Type="smallint" />
+    <Property Name="Afecta" Type="int" />
+  </EntityType>
+  <EntityType Name="tipoprod">
+    <Key>
+      <PropertyRef Name="idtipo" />
+    </Key>
+    <Property Name="idtipo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idempresa" Type="int" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tipostienda">
+    <Key>
+      <PropertyRef Name="idtipo" />
+    </Key>
+    <Property Name="idtipo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="idempresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tubo">
+    <Key>
+      <PropertyRef Name="idtubo" />
+    </Key>
+    <Property Name="idtubo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idempresa" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="idsistema" Type="int" />
+    <Property Name="idalta" Type="int" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nivelusuario" Type="int" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="16" />
+    <Property Name="pass" Type="nvarchar" MaxLength="128" />
+    <Property Name="NombreReal" Type="nvarchar" MaxLength="100" />
+    <Property Name="apaterno" Type="nvarchar" MaxLength="100" />
+    <Property Name="aMaterno" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="usuarios_distribuidor">
+    <Key>
+      <PropertyRef Name="IdUsuarios_Distribuidor" />
+    </Key>
+    <Property Name="IdUsuarios_Distribuidor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="IdDistribuidor" Type="int" />
+  </EntityType>
+  <EntityType Name="usuarios_empresas">
+    <Key>
+      <PropertyRef Name="IdUsuarios_Empresas" />
+    </Key>
+    <Property Name="IdUsuarios_Empresas" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="varchar" MaxLength="50" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="Terminos" Type="bit" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.TotalesContratos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="TotalesContratos">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="int" Nullable="false" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.TotalesTimbrado' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="TotalesTimbrado">
+    <Key>
+      <PropertyRef Name="idSistema" />
+    </Key>
+    <Property Name="idSistema" Type="int" Nullable="false" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vClientesPromotores' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vClientesPromotores">
+    <Key>
+      <PropertyRef Name="IdCP" />
+      <PropertyRef Name="IdPromotor" />
+      <PropertyRef Name="idCliente" />
+      <PropertyRef Name="Promotor" />
+    </Key>
+    <Property Name="IdCP" Type="int" Nullable="false" />
+    <Property Name="IdPromotor" Type="int" Nullable="false" />
+    <Property Name="idCliente" Type="int" Nullable="false" />
+    <Property Name="Promotor" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Cliente" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vCsd' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vCsd">
+    <Key>
+      <PropertyRef Name="no_serie" />
+      <PropertyRef Name="FechaInicial" />
+      <PropertyRef Name="FechaFinal" />
+      <PropertyRef Name="Rfc" />
+      <PropertyRef Name="Estado" />
+    </Key>
+    <Property Name="no_serie" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="FechaInicial" Type="datetime" Nullable="false" />
+    <Property Name="FechaFinal" Type="datetime" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Estado" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vFoliosCfd' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vFoliosCfd">
+    <Key>
+      <PropertyRef Name="RFC" />
+      <PropertyRef Name="NoAprobacion" />
+      <PropertyRef Name="AnoAprobacion" />
+      <PropertyRef Name="FolioInicial" />
+      <PropertyRef Name="FolioFinal" />
+    </Key>
+    <Property Name="RFC" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="NoAprobacion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="AnoAprobacion" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Serie" Type="nvarchar" MaxLength="50" />
+    <Property Name="FolioInicial" Type="bigint" Nullable="false" />
+    <Property Name="FolioFinal" Type="bigint" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vListaTimbre' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vListaTimbre">
+    <Key>
+      <PropertyRef Name="Rfc" />
+    </Key>
+    <Property Name="IdSistema" Type="int" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Rfc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Contratados" Type="int" />
+    <Property Name="Consumidos" Type="bigint" />
+    <Property Name="porcentaje" Type="bigint" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vPagos' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vPagos">
+    <Key>
+      <PropertyRef Name="idventa" />
+      <PropertyRef Name="idcliente" />
+      <PropertyRef Name="Moneda" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="folio" />
+      <PropertyRef Name="Importe" />
+      <PropertyRef Name="Referencia" />
+      <PropertyRef Name="Observaciones" />
+    </Key>
+    <Property Name="idventa" Type="int" Nullable="false" />
+    <Property Name="idcliente" Type="int" Nullable="false" />
+    <Property Name="Moneda" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="EmpresaEmisora" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fecha" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Solicitud" Type="nvarchar" MaxLength="50" />
+    <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="cliente" Type="nvarchar(max)" />
+    <Property Name="Acuenta" Type="int" />
+    <Property Name="resta" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Referencia" Type="nvarchar" Nullable="false" MaxLength="250" />
+    <Property Name="Observaciones" Type="text" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbradoAnualSistema' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbradoAnualSistema">
+    <Key>
+      <PropertyRef Name="Anio" />
+    </Key>
+    <Property Name="id" Type="bigint" />
+    <Property Name="Anio" Type="int" Nullable="false" />
+    <Property Name="Timbres" Type="bigint" />
+    <Property Name="idSistema" Type="bigint" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="RFC" Type="varchar" MaxLength="14" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbradoMensualSistema' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbradoMensualSistema">
+    <Key>
+      <PropertyRef Name="Anio" />
+      <PropertyRef Name="Mes" />
+      <PropertyRef Name="Timbres" />
+    </Key>
+    <Property Name="Anio" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="Timbres" Type="bigint" Nullable="false" />
+    <Property Name="idSistema" Type="bigint" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="RFC" Type="varchar" MaxLength="14" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresAnual' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresAnual">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresAnualEmpresa' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresAnualEmpresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresEmpresa' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresEmpresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdSistema" />
+      <PropertyRef Name="Timbres" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="rfc" Type="varchar" MaxLength="14" />
+    <Property Name="Timbres" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresEmpresaOld' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresEmpresaOld">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresEmpresaRazonSocial' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresEmpresaRazonSocial">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="rfc" Type="varchar" MaxLength="14" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresMensual' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresMensual">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresSistema' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresSistema">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresSistemaAnio' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresSistemaAnio">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresSistemaAnioOld' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresSistemaAnioOld">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+      <PropertyRef Name="Rfc" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresSistemaAnual' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresSistemaAnual">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="999" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="bigint" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vTimbresSistemaOld' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vTimbresSistemaOld">
+    <Key>
+      <PropertyRef Name="IdSistema" />
+      <PropertyRef Name="Rfc" />
+    </Key>
+    <Property Name="IdSistema" Type="bigint" Nullable="false" />
+    <Property Name="Rfc" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mes" Type="int" />
+    <Property Name="Anio" Type="int" />
+    <Property Name="Timbres" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vUsuariosSistema' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vUsuariosSistema">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="PasswordSalt" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+    <Property Name="RazonSocial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Rfc" Type="varchar" MaxLength="14" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vventaRetenciones' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vventaRetenciones">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Status" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Folio" Type="nchar" MaxLength="20" />
+    <Property Name="FechaFactura" Type="datetime" />
+    <Property Name="Guid" Type="nvarchar" MaxLength="128" />
+    <Property Name="Cliente" Type="nvarchar(max)" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="14" />
+    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="9" />
+    <Property Name="idCliente" Type="int" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="EmpresaEmisora" Type="nvarchar" MaxLength="255" />
+    <Property Name="Linea" Type="nvarchar" MaxLength="1" />
+    <Property Name="RfcEmisor" Type="varchar" MaxLength="14" />
+    <Property Name="FechaCancelacion" Type="varchar" MaxLength="50" />
+    <Property Name="EstatusCancelacion" Type="varchar" MaxLength="50" />
+    <Property Name="SelloCancelacion" Type="varchar" MaxLength="150" />
+    <Property Name="Expr1" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vventas' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vventas">
+    <Key>
+      <PropertyRef Name="idVenta" />
+      <PropertyRef Name="Fecha" />
+      <PropertyRef Name="Importe" />
+      <PropertyRef Name="Folio" />
+      <PropertyRef Name="idcliente" />
+      <PropertyRef Name="Moneda" />
+    </Key>
+    <Property Name="idVenta" Type="int" Nullable="false" />
+    <Property Name="Fecha" Type="datetime2" Nullable="false" Precision="0" />
+    <Property Name="Guid" Type="nvarchar" MaxLength="64" />
+    <Property Name="Importe" Type="decimal" Nullable="false" Precision="19" Scale="2" />
+    <Property Name="IVA" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="PorcentajeIva" Type="int" />
+    <Property Name="Total" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="SubTotal" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="nProducto" Type="int" />
+    <Property Name="Cliente" Type="nvarchar(max)" />
+    <Property Name="RFC" Type="nvarchar" MaxLength="14" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Folio" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Cancelado" Type="smallint" />
+    <Property Name="idcliente" Type="int" Nullable="false" />
+    <Property Name="Vencimiento" Type="datetime2" Precision="0" />
+    <Property Name="Saldo" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Cuenta" Type="nvarchar" MaxLength="32" />
+    <Property Name="Proyecto" Type="varchar(max)" />
+    <Property Name="ReferenciaPago" Type="nvarchar" MaxLength="254" />
+    <Property Name="FechaPago" Type="datetime2" Precision="0" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pagado" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Resta" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="IdPromotor" Type="int" />
+    <Property Name="FolioPreFactura" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmpresaEmisora" Type="nvarchar" MaxLength="255" />
+    <Property Name="Linea" Type="nvarchar" MaxLength="1" />
+    <Property Name="RfcEmisor" Type="varchar" MaxLength="14" />
+    <Property Name="Moneda" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="SelloCancelacion" Type="nvarchar" MaxLength="128" />
+    <Property Name="FechaCancelacion" Type="nvarchar" MaxLength="40" />
+    <Property Name="EstatusCancelacion" Type="nvarchar" MaxLength="40" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="RetIva" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="RetIsr" Type="decimal" Precision="19" Scale="2" />
+    <Property Name="Ieps" Type="decimal" Precision="19" Scale="2" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_Applications' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationName" />
+      <PropertyRef Name="LoweredApplicationName" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_MembershipUsers' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_MembershipUsers">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="PasswordFormat" />
+      <PropertyRef Name="IsApproved" />
+      <PropertyRef Name="IsLockedOut" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="LastLoginDate" />
+      <PropertyRef Name="LastPasswordChangedDate" />
+      <PropertyRef Name="LastLockoutDate" />
+      <PropertyRef Name="FailedPasswordAttemptCount" />
+      <PropertyRef Name="FailedPasswordAttemptWindowStart" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptCount" />
+      <PropertyRef Name="FailedPasswordAnswerAttemptWindowStart" />
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_Profiles' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_Profiles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+    <Property Name="DataSize" Type="int" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_Roles' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_Roles">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="RoleId" />
+      <PropertyRef Name="RoleName" />
+      <PropertyRef Name="LoweredRoleName" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_Users' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_Users">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="LoweredUserName" />
+      <PropertyRef Name="IsAnonymous" />
+      <PropertyRef Name="LastActivityDate" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_UsersInRoles' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_WebPartState_Paths' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_WebPartState_Paths">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="Path" />
+      <PropertyRef Name="LoweredPath" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_WebPartState_Shared' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_WebPartState_Shared">
+    <Key>
+      <PropertyRef Name="PathId" />
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DataSize" Type="int" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+      advertencia 6002: La tabla o vista 'ProduccionNtlink33.dbo.vw_aspnet_WebPartState_User' no tiene ninguna clave principal definida. Se ha inferido la clave y la definición se creó como vista o tabla de solo lectura.
+      -->
+  <EntityType Name="vw_aspnet_WebPartState_User">
+    <Key>
+      <PropertyRef Name="LastUpdatedDate" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="DataSize" Type="int" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__16CE6296">
+    <End Role="aspnet_Applications" Type="ProduccionNtLinkModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="ProduccionNtLinkModel.Store.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__17C286CF">
+    <End Role="aspnet_Users" Type="ProduccionNtLinkModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="ProduccionNtLinkModel.Store.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__18B6AB08">
+    <End Role="aspnet_Applications" Type="ProduccionNtLinkModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="ProduccionNtLinkModel.Store.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__19AACF41">
+    <End Role="aspnet_Paths" Type="ProduccionNtLinkModel.Store.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="ProduccionNtLinkModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__1A9EF37A">
+    <End Role="aspnet_Paths" Type="ProduccionNtLinkModel.Store.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="ProduccionNtLinkModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__1B9317B3">
+    <End Role="aspnet_Users" Type="ProduccionNtLinkModel.Store.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="ProduccionNtLinkModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__1C873BEC">
+    <End Role="aspnet_Users" Type="ProduccionNtLinkModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="ProduccionNtLinkModel.Store.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__1D7B6025">
+    <End Role="aspnet_Applications" Type="ProduccionNtLinkModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="ProduccionNtLinkModel.Store.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__1E6F845E">
+    <End Role="aspnet_Applications" Type="ProduccionNtLinkModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="ProduccionNtLinkModel.Store.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__1F63A897">
+    <End Role="aspnet_Roles" Type="ProduccionNtLinkModel.Store.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="ProduccionNtLinkModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__2057CCD0">
+    <End Role="aspnet_Users" Type="ProduccionNtLinkModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="ProduccionNtLinkModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="aspnet_AnyDataInTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TablesToCheck" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Applications_CreateApplication" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_CheckSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_ChangePasswordQuestionAndAnswer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPasswordQuestion" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPasswordAnswer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordQuestion" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsApproved" Type="bit" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="CreateDate" Type="datetime" Mode="In" />
+    <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+    <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_Membership_FindUsersByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="EmailToMatch" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_FindUsersByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetAllUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetNumberOfUsersOnline" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MinutesSinceLastInActive" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+    <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetPasswordWithFormat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetUserByEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetUserByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_GetUserByUserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="UpdateLastActivity" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_ResetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+    <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+    <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+    <Parameter Name="PasswordAnswer" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_SetPassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="NewPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="PasswordSalt" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="PasswordFormat" Type="int" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_UnlockUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_UpdateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar" Mode="In" />
+    <Parameter Name="Comment" Type="ntext" Mode="In" />
+    <Parameter Name="IsApproved" Type="bit" Mode="In" />
+    <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+    <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+    <Parameter Name="UniqueEmail" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Membership_UpdateUserInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsPasswordCorrect" Type="bit" Mode="In" />
+    <Parameter Name="UpdateLastLoginActivityDate" Type="bit" Mode="In" />
+    <Parameter Name="MaxInvalidPasswordAttempts" Type="int" Mode="In" />
+    <Parameter Name="PasswordAttemptWindow" Type="int" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="LastLoginDate" Type="datetime" Mode="In" />
+    <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Paths_CreatePath" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="PathId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_Personalization_GetApplicationId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_DeleteAllState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_FindState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_GetCountOfState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+    <Parameter Name="AllUsersScope" Type="bit" Mode="In" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_ResetSharedState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAdministration_ResetUserState" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Count" Type="int" Mode="InOut" />
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAllUsers_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAllUsers_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationAllUsers_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageSettings" Type="image" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationPerUser_GetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationPerUser_ResetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_PersonalizationPerUser_SetPageSettings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Path" Type="nvarchar" Mode="In" />
+    <Parameter Name="PageSettings" Type="image" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_DeleteInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_DeleteProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_GetNumberOfInactiveProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_GetProfiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProfileAuthOptions" Type="int" Mode="In" />
+    <Parameter Name="PageIndex" Type="int" Mode="In" />
+    <Parameter Name="PageSize" Type="int" Mode="In" />
+    <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+    <Parameter Name="InactiveSinceDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_GetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Profile_SetProperties" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="PropertyNames" Type="ntext" Mode="In" />
+    <Parameter Name="PropertyValuesString" Type="ntext" Mode="In" />
+    <Parameter Name="PropertyValuesBinary" Type="image" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_RegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsCurrentVersion" Type="bit" Mode="In" />
+    <Parameter Name="RemoveIncompatibleSchema" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_CreateRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_DeleteRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="DeleteOnlyIfRoleIsEmpty" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_GetAllRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Roles_RoleExists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Setup_RemoveAllRoleMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Setup_RestorePermissions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UnRegisterSchemaVersion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Feature" Type="nvarchar" Mode="In" />
+    <Parameter Name="CompatibleSchemaVersion" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_Users_CreateUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationId" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="IsUserAnonymous" Type="bit" Mode="In" />
+    <Parameter Name="LastActivityDate" Type="datetime" Mode="In" />
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_Users_DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TablesToDeleteFrom" Type="int" Mode="In" />
+    <Parameter Name="NumTablesDeletedFrom" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_AddUsersToRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_FindUsersInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNameToMatch" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_GetRolesForUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_GetUsersInRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_IsUserInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_UsersInRoles_RemoveUsersFromRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
+    <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="aspnet_WebEvent_LogEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EventId" Type="char" Mode="In" />
+    <Parameter Name="EventTimeUtc" Type="datetime" Mode="In" />
+    <Parameter Name="EventTime" Type="datetime" Mode="In" />
+    <Parameter Name="EventType" Type="nvarchar" Mode="In" />
+    <Parameter Name="EventSequence" Type="decimal" Mode="In" />
+    <Parameter Name="EventOccurrence" Type="decimal" Mode="In" />
+    <Parameter Name="EventCode" Type="int" Mode="In" />
+    <Parameter Name="EventDetailCode" Type="int" Mode="In" />
+    <Parameter Name="Message" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="ApplicationVirtualPath" Type="nvarchar" Mode="In" />
+    <Parameter Name="MachineName" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestUrl" Type="nvarchar" Mode="In" />
+    <Parameter Name="ExceptionType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Details" Type="ntext" Mode="In" />
+  </Function>
+  <Function Name="BorraTodosUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="DeleteUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="GetReports" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="InsertaCsd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="archivo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="InsertaFolios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="archivo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="LiberarMemoria" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="proc_A_InsertaLCO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rutaArchivo" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_Backup" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="base" Type="nvarchar" Mode="In" />
+    <Parameter Name="ruta" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Sp_EliminaFactura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="idFactura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_eliminaSistema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="rfc" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_historico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="meses" Type="int" Mode="In" />
+    <Parameter Name="batchSize" Type="int" Mode="In" />
+  </Function>
+  <Function Name="spTimbresEmpresa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTimbresHistorico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTimbresHistoricoMensual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="spTimbresTrabajo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

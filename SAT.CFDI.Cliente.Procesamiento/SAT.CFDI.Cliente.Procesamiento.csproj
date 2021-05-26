@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{017230BA-CA19-45C0-9A49-6E146C22C427}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SAT.CFDI.Cliente.Procesamiento</RootNamespace>
+    <AssemblyName>SAT.CFDI.Cliente.Procesamiento</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.StorageClient">
+      <HintPath>..\Lib\Microsoft.WindowsAzure.StorageClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoAlmacenBlob.cs" />
+    <Compile Include="AccesoDisco.cs" />
+    <Compile Include="AccesoServicios.cs" />
+    <Compile Include="AdministradorLogs.cs" />
+    <Compile Include="Encabezado.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AutenticaRetencion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioAceptacionRechazo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioAutenticacionCFDI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioCancelacionCFDI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioConsultaCFDI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioRecepcionCFDI\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioRelacionados\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AutenticaRetencion\Autenticacion.wsdl" />
+    <None Include="Service References\AutenticaRetencion\wsdl.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AutenticaRetencion\wsdl1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioAceptacionRechazo\AceptacionRechazoService.wsdl" />
+    <None Include="Service References\ServicioAceptacionRechazo\AceptacionRechazoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioAceptacionRechazo\AceptacionRechazoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioAceptacionRechazo\SAT.CFDI.Cliente.Procesamiento.ServicioAceptacionRechazo.AcuseAceptacionRechazo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicioAceptacionRechazo\SAT.CFDI.Cliente.Procesamiento.ServicioAceptacionRechazo.AcusePeticionesPendientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicioAutenticacionCFDI\Autenticacion.wsdl" />
+    <None Include="Service References\ServicioAutenticacionCFDI\Autenticacion.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioAutenticacionCFDI\Autenticacion1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioCancelacionCFDI\CancelaCFDService.wsdl" />
+    <None Include="Service References\ServicioCancelacionCFDI\CancelaCFDService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioCancelacionCFDI\CancelaCFDService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioCancelacionCFDI\SAT.CFDI.Cliente.Procesamiento.ServicioCancelacionCFDI.Acuse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicioConsultaCFDI\ConsultaCFDIService.wsdl" />
+    <None Include="Service References\ServicioConsultaCFDI\ConsultaCFDIService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioConsultaCFDI\ConsultaCFDIService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioConsultaCFDI\ConsultaCFDIService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioConsultaCFDI\SAT.CFDI.Cliente.Procesamiento.ServicioConsultaCFDI.Acuse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicioRecepcionCFDI\RecibeCFDIService2.wsdl" />
+    <None Include="Service References\ServicioRecepcionCFDI\RecibeCFDIService21.wsdl" />
+    <None Include="Service References\ServicioRecepcionCFDI\RecibeCFDIService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRecepcionCFDI\RecibeCFDIService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRecepcionCFDI\RecibeCFDIService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRecepcionCFDI\SAT.CFDI.Cliente.Procesamiento.ServicioRecepcionCFDI.Acuse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicioRelacionados\CfdiConsultaRelacionadosService1.wsdl" />
+    <None Include="Service References\ServicioRelacionados\CfdiConsultaRelacionadosService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRelacionados\CfdiConsultaRelacionadosService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRelacionados\SAT.CFDI.Cliente.Procesamiento.ServicioRelacionados.ConsultaRelacionados.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AutenticaRetencion\" />
+    <WCFMetadataStorage Include="Service References\ServicioAceptacionRechazo\" />
+    <WCFMetadataStorage Include="Service References\ServicioAutenticacionCFDI\" />
+    <WCFMetadataStorage Include="Service References\ServicioCancelacionCFDI\" />
+    <WCFMetadataStorage Include="Service References\ServicioConsultaCFDI\" />
+    <WCFMetadataStorage Include="Service References\ServicioRecepcionCFDI\" />
+    <WCFMetadataStorage Include="Service References\ServicioRelacionados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioCancelacionCFDI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioCancelacionCFDI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioCancelacionCFDI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRecepcionCFDI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRecepcionCFDI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRecepcionCFDI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAutenticacionCFDI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAutenticacionCFDI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAutenticacionCFDI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAutenticacionCFDI\Autenticacion.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioCancelacionCFDI\CancelaCFDService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServivioLocalContract\ServicioLocalContract.csproj">
+      <Project>{EE39AD87-B692-418E-BE59-856F640404DF}</Project>
+      <Name>ServicioLocalContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AutenticaRetencion\wsdl.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AutenticaRetencion\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AutenticaRetencion\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AutenticaRetencion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRecepcionCFDI\RecibeCFDIService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAceptacionRechazo\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAceptacionRechazo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioAceptacionRechazo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioConsultaCFDI\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioConsultaCFDI\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioConsultaCFDI\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRelacionados\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRelacionados\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRelacionados\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

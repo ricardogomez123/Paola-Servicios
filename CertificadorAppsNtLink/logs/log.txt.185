@@ -1,0 +1,12 @@
+﻿2017-10-11 17:46:11,554-5848-ERROR-CertificadorAppsNtLink.CertificadorApps.TimbraCfdi.280: System.Xml.XmlException: Un nombre no puede empezar con el carácter '<', valor hexadecimal 0x3C. línea 1, posición 2.
+   en System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   en System.Xml.XmlTextReaderImpl.Throw(String res, String[] args)
+   en System.Xml.XmlTextReaderImpl.ParseQName(Boolean isQName, Int32 startOffset, Int32& colonPos)
+   en System.Xml.XmlTextReaderImpl.ParseElement()
+   en System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   en System.Xml.XmlTextReaderImpl.Read()
+   en System.Xml.XmlReader.MoveToContent()
+   en System.Xml.Linq.XElement.Load(XmlReader reader, LoadOptions options)
+   en System.Xml.Linq.XElement.Load(TextReader textReader, LoadOptions options)
+   en System.Xml.Linq.XElement.Load(TextReader textReader)
+   en CertificadorAppsNtLink.CertificadorApps.TimbraCfdi(String userName, String password, String comprobante) en C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\CertificadorAppsNtLink\CertificadorApps.svc.cs:línea 109

@@ -1,0 +1,5 @@
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\I_RFC_SAT\bin\Release\I_RFC_SAT.dll.config
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\I_RFC_SAT\bin\Release\I_RFC_SAT.dll
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\I_RFC_SAT\bin\Release\I_RFC_SAT.pdb
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\I_RFC_SAT\obj\x86\Release\I_RFC_SAT.dll
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\I_RFC_SAT\obj\x86\Release\I_RFC_SAT.pdb

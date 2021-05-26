@@ -1,0 +1,4 @@
+﻿2017-07-19 18:48:15,489-6644-ERROR-ServicioLocal.Business.ValidarCFDI33.VerificaEmisorCertificado.1620: Org.BouncyCastle.Security.InvalidKeyException: Public key presented not for certificate signature
+   en Org.BouncyCastle.X509.X509Certificate.CheckSignature(AsymmetricKeyParameter publicKey, ISigner signature)
+   en Org.BouncyCastle.X509.X509Certificate.Verify(AsymmetricKeyParameter key)
+   en ServicioLocal.Business.ValidarCFDI33.VerificaEmisorCertificado(Byte[] certificado, Byte[] certificadoAC) en C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ServicioLocal.Business\ValidarCFDI33.cs:línea 1615

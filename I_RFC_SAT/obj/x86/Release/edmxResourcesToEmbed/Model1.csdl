@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DescargasSatModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="DescargasSatEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="I_RFC_ACTUAL" EntityType="DescargasSatModel.I_RFC_ACTUAL" />
+    <EntitySet Name="I_RFC0" EntityType="DescargasSatModel.I_RFC0" />
+    <EntitySet Name="I_RFC1" EntityType="DescargasSatModel.I_RFC1" />
+    <EntitySet Name="LogI_RFC" EntityType="DescargasSatModel.LogI_RFC" />
+    <EntitySet Name="vI_RFC" EntityType="DescargasSatModel.vI_RFC" />
+    <EntitySet Name="vI_RFC_Carga" EntityType="DescargasSatModel.vI_RFC_Carga" />
+    <EntitySet Name="LCO_ACTUAL" EntityType="DescargasSatModel.LCO_ACTUAL" />
+    <EntitySet Name="LCO0" EntityType="DescargasSatModel.LCO0" />
+    <EntitySet Name="LCO1" EntityType="DescargasSatModel.LCO1" />
+    <EntitySet Name="LogLCO" EntityType="DescargasSatModel.LogLCO" />
+    <EntitySet Name="vLCO" EntityType="DescargasSatModel.vLCO" />
+    <EntitySet Name="vLCO_Carga" EntityType="DescargasSatModel.vLCO_Carga" />
+  </EntityContainer>
+  <EntityType Name="I_RFC_ACTUAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="FechaUltimaActualizacion" Type="DateTime" />
+    <Property Name="NombreTabla" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="I_RFC0">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="I_RFC1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="LogI_RFC">
+    <Key>
+      <PropertyRef Name="IdLogRFC" />
+    </Key>
+    <Property Name="IdLogRFC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" />
+    <Property Name="NoRegistros" Type="Int32" Nullable="false" />
+    <Property Name="Error" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="Tabla" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vI_RFC">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="RFC" />
+    </Key>
+    <Property Name="ID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vI_RFC_Carga">
+    <Key>
+      <PropertyRef Name="RFC" />
+    </Key>
+    <Property Name="RFC" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="SNCF" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="SUBCONTRATACION" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LCO_ACTUAL">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="FechaUltimaActualizacion" />
+    <Property Type="String" Name="NombreTabla" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LCO0">
+    <Key>
+      <PropertyRef Name="IdRfcLco" />
+    </Key>
+    <Property Type="Int64" Name="IdRfcLco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaFinal" />
+    <Property Type="DateTime" Name="FechaInicio" />
+  </EntityType>
+  <EntityType Name="LCO1">
+    <Key>
+      <PropertyRef Name="IdRfcLco" />
+    </Key>
+    <Property Type="Int64" Name="IdRfcLco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaFinal" />
+    <Property Type="DateTime" Name="FechaInicio" />
+  </EntityType>
+  <EntityType Name="LogLCO">
+    <Key>
+      <PropertyRef Name="IdLogRFC" />
+    </Key>
+    <Property Type="Int32" Name="IdLogRFC" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="Int32" Name="NoRegistros" Nullable="false" />
+    <Property Type="String" Name="Error" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Tabla" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vLCO">
+    <Key>
+      <PropertyRef Name="IdRfcLco" />
+      <PropertyRef Name="Rfc" />
+      <PropertyRef Name="noCertificado" />
+    </Key>
+    <Property Type="Int64" Name="IdRfcLco" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaFinal" />
+    <Property Type="DateTime" Name="FechaInicio" />
+  </EntityType>
+  <EntityType Name="vLCO_Carga">
+    <Key>
+      <PropertyRef Name="Rfc" />
+      <PropertyRef Name="noCertificado" />
+    </Key>
+    <Property Type="String" Name="Rfc" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ValidezObligaciones" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EstatusCertificado" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="noCertificado" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaFinal" />
+    <Property Type="DateTime" Name="FechaInicio" />
+  </EntityType>
+</Schema>

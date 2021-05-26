@@ -1,0 +1,56 @@
+C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+C:\Users\Administrador\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+C:\Users\Administrador\Desktop\algo de anteriores\importante\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+C:\Users\Administrador\Desktop\algo de anteriores\importante\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+C:\Users\Administrador\Desktop\algo de anteriores\importante\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+C:\Users\Administrador\Desktop\algo de anteriores\importante\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+C:\Users\Administrador\Desktop\algo de anteriores\importante\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+C:\Users\anonimo\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+C:\Users\anonimo\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+C:\Users\anonimo\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+C:\Users\anonimo\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+C:\Users\anonimo\Desktop\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+H:\AplicativosDesarrollo\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+H:\AplicativosDesarrollo\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+H:\AplicativosDesarrollo\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+H:\AplicativosDesarrollo\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+H:\AplicativosDesarrollo\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+E:\Aplicativos\AplicativosNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+E:\Aplicativos\AplicativosNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+E:\Aplicativos\AplicativosNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+E:\Aplicativos\AplicativosNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+E:\Aplicativos\AplicativosNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+Z:\produccionNtlink\certificadoCDFI3.3\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+Z:\produccionNtlink\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+Z:\produccionNtlink\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+Z:\produccionNtlink\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+Z:\produccionNtlink\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+Z:\produccionNtlink\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+D:\Aplicaciones\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+D:\Aplicaciones\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+D:\Aplicaciones\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+D:\Aplicaciones\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+D:\Aplicaciones\certificadoCDFI3.3_cambioNomina\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+D:\Aplicaciones\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+D:\Aplicaciones\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+D:\Aplicaciones\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+D:\Aplicaciones\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+D:\Aplicaciones\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+D:\Aplicaciones\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.csproj.CoreCompileInputs.cache
+C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb

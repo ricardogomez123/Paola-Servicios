@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3a52d427-6d49-4859-a309-b01cc5592533" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://prodretencionautentica.clouda.sat.gob.mx/Autenticacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsdl1.disco" MetadataType="Disco" ID="8361060e-0cad-4f9a-b37a-92c9378408eb" SourceId="1" SourceUrl="https://prodretencionautentica.clouda.sat.gob.mx/Autenticacion.svc/wsdl?disco" />
+    <MetadataFile FileName="wsdl2.xsd" MetadataType="Schema" ID="623fa336-25ae-4203-83f0-3a9077455130" SourceId="1" SourceUrl="https://prodretencionautentica.clouda.sat.gob.mx/Autenticacion.svc/wsdl?xsd=xsd1" />
+    <MetadataFile FileName="wsdl21.xsd" MetadataType="Schema" ID="7db4c621-88e5-4a21-baed-01f7886b1ae7" SourceId="1" SourceUrl="https://prodretencionautentica.clouda.sat.gob.mx/Autenticacion.svc/wsdl?xsd=xsd0" />
+    <MetadataFile FileName="Autenticacion1.wsdl" MetadataType="Wsdl" ID="6db114c4-a768-4a7e-9673-7a5161c1e3ec" SourceId="1" SourceUrl="https://prodretencionautentica.clouda.sat.gob.mx/Autenticacion.svc/wsdl?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e27e7ea3-8394-4e98-a838-8175b9fe3807" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RecibeCFDIService2.wsdl" MetadataType="Wsdl" ID="f34ffdfd-104a-4d94-bca9-ff34118e6f9e" SourceId="1" SourceUrl="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?wsdl" />
+    <MetadataFile FileName="RecibeCFDIService3.xsd" MetadataType="Schema" ID="b5057dc1-3b04-48ad-b57d-4121f5da3e36" SourceId="1" SourceUrl="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RecibeCFDIService1.disco" MetadataType="Disco" ID="0469c33e-e95e-4409-9c3e-834f0781b2d1" SourceId="1" SourceUrl="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?disco" />
+    <MetadataFile FileName="RecibeCFDIService31.xsd" MetadataType="Schema" ID="366f32b4-a151-4165-863c-ccff529f260d" SourceId="1" SourceUrl="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RecibeCFDIService32.xsd" MetadataType="Schema" ID="8c786e8e-60c1-40e1-8ffa-309307d6d1f6" SourceId="1" SourceUrl="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RecibeCFDIService21.wsdl" MetadataType="Wsdl" ID="792afbaf-06a0-44dc-bcf7-0cc72a87f2c5" SourceId="1" SourceUrl="https://pruebacfdirecepcion.cloudapp.net/Recepcion/CFDI33/RecibeCFDIService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

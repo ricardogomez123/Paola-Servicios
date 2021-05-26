@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CatalogosModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="CatalogosModelStoreContainer">
+    <EntitySet Name="c_ClaveProdServ" EntityType="CatalogosModel.Store.c_ClaveProdServ" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_ClaveProdServCP" EntityType="CatalogosModel.Store.c_ClaveProdServCP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_ClaveUnidad" EntityType="CatalogosModel.Store.c_ClaveUnidad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Colonia" EntityType="CatalogosModel.Store.c_Colonia" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_CP" EntityType="CatalogosModel.Store.c_CP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Estado" EntityType="CatalogosModel.Store.c_Estado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_FormaPago" EntityType="CatalogosModel.Store.c_FormaPago" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_FraccionArancelaria" EntityType="CatalogosModel.Store.c_FraccionArancelaria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_INCOTERM" EntityType="CatalogosModel.Store.c_INCOTERM" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Localidad" EntityType="CatalogosModel.Store.c_Localidad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Moneda" EntityType="CatalogosModel.Store.c_Moneda" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Municipio" EntityType="CatalogosModel.Store.c_Municipio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_NumPedimentoAduana" EntityType="CatalogosModel.Store.c_NumPedimentoAduana" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Pais" EntityType="CatalogosModel.Store.c_Pais" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_PatenteAduanal" EntityType="CatalogosModel.Store.c_PatenteAduanal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_RegimenFiscal" EntityType="CatalogosModel.Store.c_RegimenFiscal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_TasaOCuota" EntityType="CatalogosModel.Store.c_TasaOCuota" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_TipoDeComprobante" EntityType="CatalogosModel.Store.c_TipoDeComprobante" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_UsoCFDI" EntityType="CatalogosModel.Store.c_UsoCFDI" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Divisas" EntityType="CatalogosModel.Store.Divisas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RangoMensual" EntityType="CatalogosModel.Store.RangoMensual" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RangoSemanal" EntityType="CatalogosModel.Store.RangoSemanal" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SubActividad" EntityType="CatalogosModel.Store.SubActividad" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tareas" EntityType="CatalogosModel.Store.Tareas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UnidadMedida" EntityType="CatalogosModel.Store.UnidadMedida" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="c_ClaveProdServ">
+    <Key>
+      <PropertyRef Name="c_ClaveProdServ" />
+    </Key>
+    <Property Name="c_ClaveProdServ" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="200" />
+    <Property Name="IncluirIVAtrasladado" Type="nvarchar" MaxLength="10" />
+    <Property Name="IncluirIEPStrasladado" Type="nvarchar" MaxLength="10" />
+    <Property Name="Complemento" Type="nvarchar" MaxLength="55" />
+    <Property Name="FechaInicioVigencia" Type="datetime" />
+    <Property Name="FechaFinVigencia" Type="datetime" />
+    <Property Name="EstimuloFranjaFronteriza" Type="int" />
+  </EntityType>
+  <EntityType Name="c_ClaveProdServCP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ClaveProdructo" Type="nvarchar" MaxLength="55" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+    <Property Name="PalabrasSimilares" Type="nvarchar" MaxLength="255" />
+    <Property Name="MaterialPeligroso" Type="nvarchar" MaxLength="10" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_ClaveUnidad">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="c_ClaveUnidad" Type="nvarchar" MaxLength="5" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nota" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha de fin de vigencia" Type="datetime" />
+    <Property Name="Símbolo" Type="nvarchar" MaxLength="25" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Colonia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Colonia" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_CodigoPostal" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nombredelasentamiento" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_CP">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_CP" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_Municipio" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_Localidad" Type="nvarchar" MaxLength="255" />
+    <Property Name="EstímuloFranjaFronteriza" Type="int" />
+    <Property Name="Fechainiciodevigencia" Type="datetime" />
+    <Property Name="Fechafindevigencia" Type="datetime" />
+    <Property Name="DescripcióndelHusoHorario" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mes_Inicio_Horario_Verano" Type="nvarchar" MaxLength="255" />
+    <Property Name="Día_Inicio_Horario_Verano" Type="nvarchar" MaxLength="255" />
+    <Property Name="Hora_Inicio_Horario_Verano" Type="nvarchar" MaxLength="255" />
+    <Property Name="Diferencia_Horaria_Verano" Type="float" />
+    <Property Name="Mes_Inicio_Horario_Invierno" Type="nvarchar" MaxLength="255" />
+    <Property Name="Día_Inicio_Horario_Invierno" Type="nvarchar" MaxLength="255" />
+    <Property Name="Hora_Inicio_Horario_Invierno" Type="nvarchar" MaxLength="255" />
+    <Property Name="Diferencia_Horaria_Invierno" Type="float" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Estado">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_Pais" Type="nvarchar" MaxLength="255" />
+    <Property Name="NombredelEstado" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_FormaPago">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_FormaPago" Type="varchar" MaxLength="5" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="55" />
+    <Property Name="Bancarizado" Type="nvarchar" MaxLength="10" />
+    <Property Name="NumeroOperación" Type="nvarchar" MaxLength="10" />
+    <Property Name="RFCcuentaOrdenante" Type="nvarchar" MaxLength="10" />
+    <Property Name="CuentaOrdenante" Type="nvarchar" MaxLength="255" />
+    <Property Name="Patroncuentaordenante" Type="nvarchar" MaxLength="255" />
+    <Property Name="RFCCuentaBeneficiario" Type="nvarchar" MaxLength="255" />
+    <Property Name="CuentaBenenficiario" Type="nvarchar" MaxLength="255" />
+    <Property Name="PatroncuentaBeneficiaria" Type="nvarchar" MaxLength="255" />
+    <Property Name="TipoCadenaPago" Type="nvarchar" MaxLength="255" />
+    <Property Name="NombreBancoEncasoextranjero" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_FraccionArancelaria">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_FraccionArancelaria" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripción" Type="nvarchar(max)" />
+    <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha de fin de vigencia" Type="datetime" />
+    <Property Name="UMT" Type="nvarchar" MaxLength="255" />
+    <Property Name="Criterio" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unidad de Medida" Type="int" />
+    <Property Name="IMP" Type="float" />
+    <Property Name="EXP" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_INCOTERM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_INCOTERM" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Localidad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Localidad" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Moneda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Moneda" Type="nvarchar" MaxLength="5" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="200" />
+    <Property Name="Decimales" Type="int" />
+    <Property Name="Variacion" Type="varchar" MaxLength="50" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Municipio">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Municipio" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_Estado" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_NumPedimentoAduana">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Aduana" Type="int" />
+    <Property Name="Patente" Type="int" />
+    <Property Name="Ejercicio" Type="int" />
+    <Property Name="Cantidad" Type="nvarchar" MaxLength="25" />
+    <Property Name="Fecha inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha fin de vigencia" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Pais">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Pais" Type="nvarchar" MaxLength="255" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+    <Property Name="FormatodeCP" Type="nvarchar" MaxLength="255" />
+    <Property Name="FormatodeRIT" Type="nvarchar" MaxLength="255" />
+    <Property Name="ValidaciondelRIT" Type="nvarchar" MaxLength="255" />
+    <Property Name="Agrupaciones" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_PatenteAduanal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="C_PatenteAduanal" Type="int" />
+    <Property Name="Inicio de vigencia de la patente" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fin de vigencia de la patente" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_RegimenFiscal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_RegimenFiscal" Type="nchar" MaxLength="3" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Física" Type="nvarchar" MaxLength="25" />
+    <Property Name="Moral" Type="nvarchar" MaxLength="25" />
+    <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_TasaOCuota">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="RangoOFijo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Minimo" Type="varchar" MaxLength="50" />
+    <Property Name="Maximo" Type="varchar" MaxLength="50" />
+    <Property Name="Impuesto" Type="nvarchar" MaxLength="255" />
+    <Property Name="Factor" Type="nvarchar" MaxLength="255" />
+    <Property Name="Traslado" Type="nvarchar" MaxLength="255" />
+    <Property Name="Retencion" Type="nvarchar" MaxLength="255" />
+    <Property Name="FechaInicio" Type="datetime" />
+    <Property Name="FechaVigencia" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_TipoDeComprobante">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_TipoDeComprobante" Type="nvarchar" MaxLength="5" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="20" />
+    <Property Name="Valor máximo" Type="bigint" />
+    <Property Name="Fecha inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha fin de vigencia" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_UsoCFDI">
+    <Key>
+      <PropertyRef Name="c_UsoCFDI" />
+    </Key>
+    <Property Name="c_UsoCFDI" Type="nvarchar" Nullable="false" MaxLength="3" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="255" />
+    <Property Name="Física" Type="nvarchar" MaxLength="2" />
+    <Property Name="Moral" Type="nvarchar" MaxLength="2" />
+    <Property Name="Fecha inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha fin de vigencia" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Divisas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Pais" Type="nvarchar" MaxLength="255" />
+    <Property Name="Clave" Type="nvarchar" MaxLength="255" />
+    <Property Name="Divisa" Type="nvarchar" MaxLength="255" />
+    <Property Name="PesosDivisa" Type="float" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="RangoMensual">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Rango" Type="nvarchar" MaxLength="5" />
+    <Property Name="Valorminimo" Type="decimal" Scale="2" />
+    <Property Name="Valormaximo" Type="decimal" Scale="2" />
+    <Property Name="ISR" Type="float" />
+    <Property Name="IVA" Type="float" />
+    <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha de fin de vigencia" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="RangoSemanal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Rango" Type="nvarchar" MaxLength="5" />
+    <Property Name="Valorminimo" Type="decimal" Scale="2" />
+    <Property Name="Valormaximo" Type="decimal" Scale="2" />
+    <Property Name="ISR" Type="float" />
+    <Property Name="IVA" Type="float" />
+    <Property Name="Fecha de inicio de vigencia" Type="datetime" />
+    <Property Name="Fecha de fin de vigencia" Type="datetime" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="SubActividad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Actividad" Type="nvarchar" MaxLength="255" />
+    <Property Name="c_SubActividad" Type="nvarchar" MaxLength="255" />
+    <Property Name="DescripcionSubActividadPetrolera" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Tareas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="c_Actividad" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_SubActividad" Type="nvarchar" MaxLength="50" />
+    <Property Name="c_Tarea" Type="nvarchar" MaxLength="255" />
+    <Property Name="DescripcipnTarea" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="UnidadMedida">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="C_UnidadMedida" Type="nvarchar" MaxLength="5" />
+    <Property Name="Descripción" Type="nvarchar" MaxLength="155" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+</Schema>

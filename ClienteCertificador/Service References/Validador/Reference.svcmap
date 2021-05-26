@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="19793dfc-904c-4f06-ad20-f5cac8711efb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3576/ServicioValidador.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioValidador.xsd" MetadataType="Schema" ID="fcadf066-6ffb-47fe-af49-db5bf354ff7c" SourceId="1" SourceUrl="http://localhost:3576/ServicioValidador.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioValidador1.xsd" MetadataType="Schema" ID="a4946433-bfb2-4626-acd1-44d964f815e2" SourceId="1" SourceUrl="http://localhost:3576/ServicioValidador.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicioValidador.wsdl" MetadataType="Wsdl" ID="156169eb-3a1e-4d55-87fd-f20e0c541e47" SourceId="1" SourceUrl="http://localhost:3576/ServicioValidador.svc?wsdl" />
+    <MetadataFile FileName="ServicioValidador2.xsd" MetadataType="Schema" ID="8de03a8d-27d1-41ef-b385-ba9fc14a1631" SourceId="1" SourceUrl="http://localhost:3576/ServicioValidador.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioValidador3.xsd" MetadataType="Schema" ID="1deac6b6-c04a-434b-8c42-3957ed0b88f2" SourceId="1" SourceUrl="http://localhost:3576/ServicioValidador.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServicioValidador.disco" MetadataType="Disco" ID="3944639b-68c0-4e10-a1d1-a9c540cae3a0" SourceId="1" SourceUrl="http://localhost:3576/ServicioValidador.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

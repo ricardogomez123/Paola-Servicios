@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://cancelacfd.sat.gob.mx" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AceptacionRechazoService" targetNamespace="http://cancelacfd.sat.gob.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IAceptacionRechazoService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://cancelacfd.sat.gob.mx/Imports">
+      <xsd:import schemaLocation="https://cancelacion.facturaelectronica.sat.gob.mx/Cancelacion/AceptacionRechazoService.svc?xsd=xsd0" namespace="http://cancelacfd.sat.gob.mx" />
+      <xsd:import schemaLocation="https://cancelacion.facturaelectronica.sat.gob.mx/Cancelacion/AceptacionRechazoService.svc?xsd=xsd1" namespace="http://www.w3.org/2000/09/xmldsig#" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAceptacionRechazoService_ProcesarRespuesta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarRespuesta" />
+  </wsdl:message>
+  <wsdl:message name="IAceptacionRechazoService_ProcesarRespuesta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarRespuestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAceptacionRechazoService_ObtenerPeticionesPendientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeticionesPendientes" />
+  </wsdl:message>
+  <wsdl:message name="IAceptacionRechazoService_ObtenerPeticionesPendientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPeticionesPendientesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAceptacionRechazoService">
+    <wsdl:operation name="ProcesarRespuesta">
+      <wsdl:input wsaw:Action="http://cancelacfd.sat.gob.mx/IAceptacionRechazoService/ProcesarRespuesta" message="tns:IAceptacionRechazoService_ProcesarRespuesta_InputMessage" />
+      <wsdl:output wsaw:Action="http://cancelacfd.sat.gob.mx/IAceptacionRechazoService/ProcesarRespuestaResponse" message="tns:IAceptacionRechazoService_ProcesarRespuesta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeticionesPendientes">
+      <wsdl:input wsaw:Action="http://cancelacfd.sat.gob.mx/IAceptacionRechazoService/ObtenerPeticionesPendientes" message="tns:IAceptacionRechazoService_ObtenerPeticionesPendientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://cancelacfd.sat.gob.mx/IAceptacionRechazoService/ObtenerPeticionesPendientesResponse" message="tns:IAceptacionRechazoService_ObtenerPeticionesPendientes_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAceptacionRechazoService" type="tns:IAceptacionRechazoService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IAceptacionRechazoService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcesarRespuesta">
+      <soap:operation soapAction="http://cancelacfd.sat.gob.mx/IAceptacionRechazoService/ProcesarRespuesta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPeticionesPendientes">
+      <soap:operation soapAction="http://cancelacfd.sat.gob.mx/IAceptacionRechazoService/ObtenerPeticionesPendientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AceptacionRechazoService">
+    <wsdl:port name="BasicHttpBinding_IAceptacionRechazoService" binding="tns:BasicHttpBinding_IAceptacionRechazoService">
+      <soap:address location="https://cancelacion.facturaelectronica.sat.gob.mx/Cancelacion/AceptacionRechazoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

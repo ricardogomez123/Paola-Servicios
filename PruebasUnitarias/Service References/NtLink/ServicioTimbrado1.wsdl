@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="https://ntlink.com.mx/IServicioTimbrado" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="https://ntlink.com.mx/IServicioTimbrado" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="https://ntlink.com.mx/IServicioTimbrado/Imports">
+      <xsd:import schemaLocation="http://ntlink.com.mx/ntfacturacionws/ServicioTimbrado.svc?xsd=xsd0" namespace="https://ntlink.com.mx/IServicioTimbrado" />
+      <xsd:import schemaLocation="http://ntlink.com.mx/ntfacturacionws/ServicioTimbrado.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ntlink.com.mx/ntfacturacionws/ServicioTimbrado.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CertificadorWs.Business" />
+      <xsd:import schemaLocation="http://ntlink.com.mx/ntfacturacionws/ServicioTimbrado.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/CertificadorWs" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioTimbrado_RegistraEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistraEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_RegistraEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistraEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_BajaEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:BajaEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_BajaEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BajaEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_ObtenerDatosCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosCliente" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_ObtenerDatosCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDatosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_ObtenerEmpresas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_ObtenerEmpresas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_TimbraCfdiQr_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimbraCfdiQr" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_TimbraCfdiQr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimbraCfdiQrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_TimbraCfdi_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimbraCfdi" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_TimbraCfdi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimbraCfdiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_CancelaCfdi_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaCfdi" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_CancelaCfdi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaCfdiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_CancelaCfdiRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaCfdiRequest" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_CancelaCfdiRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelaCfdiRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_ObtenerStatusUuid_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerStatusUuid" />
+  </wsdl:message>
+  <wsdl:message name="IServicioTimbrado_ObtenerStatusUuid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerStatusUuidResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioTimbrado">
+    <wsdl:operation name="RegistraEmpresa">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/RegistraEmpresa" message="tns:IServicioTimbrado_RegistraEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/RegistraEmpresaResponse" message="tns:IServicioTimbrado_RegistraEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BajaEmpresa">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/BajaEmpresa" message="tns:IServicioTimbrado_BajaEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/BajaEmpresaResponse" message="tns:IServicioTimbrado_BajaEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDatosCliente">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/ObtenerDatosCliente" message="tns:IServicioTimbrado_ObtenerDatosCliente_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/ObtenerDatosClienteResponse" message="tns:IServicioTimbrado_ObtenerDatosCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresas">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/ObtenerEmpresas" message="tns:IServicioTimbrado_ObtenerEmpresas_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/ObtenerEmpresasResponse" message="tns:IServicioTimbrado_ObtenerEmpresas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TimbraCfdiQr">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/TimbraCfdiQr" message="tns:IServicioTimbrado_TimbraCfdiQr_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/TimbraCfdiQrResponse" message="tns:IServicioTimbrado_TimbraCfdiQr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TimbraCfdi">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/TimbraCfdi" message="tns:IServicioTimbrado_TimbraCfdi_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/TimbraCfdiResponse" message="tns:IServicioTimbrado_TimbraCfdi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaCfdi">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/CancelaCfdi" message="tns:IServicioTimbrado_CancelaCfdi_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/CancelaCfdiResponse" message="tns:IServicioTimbrado_CancelaCfdi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelaCfdiRequest">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/CancelaCfdiRequest" message="tns:IServicioTimbrado_CancelaCfdiRequest_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/CancelaCfdiRequestResponse" message="tns:IServicioTimbrado_CancelaCfdiRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerStatusUuid">
+      <wsdl:input wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/ObtenerStatusUuid" message="tns:IServicioTimbrado_ObtenerStatusUuid_InputMessage" />
+      <wsdl:output wsaw:Action="https://ntlink.com.mx/IServicioTimbrado/IServicioTimbrado/ObtenerStatusUuidResponse" message="tns:IServicioTimbrado_ObtenerStatusUuid_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

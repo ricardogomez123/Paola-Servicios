@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CertificadorWs.CertificadorService" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIACAAIAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CertificadorService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CertificadorWs.ResultadoConsulta">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAEAAACAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsultaUuid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CertificadorWs.ServicioTimbrado" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gKBAAAACAAIABAAAAgwAAIIAQAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>ServicioTimbrado.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CertificadorWs.TimbradoResponse">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAABAQAAQA=</HashCode>
+      <FileName>TimbradoResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CertificadorWs.Business.ValidadorDatos">
+    <Position X="4.5" Y="4" Width="2.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="CertificadorWs.Business.ValidadorCFDi32">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="CertificadorWs.ICertificador">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICertificador.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CertificadorWs.IServicioTimbrado">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gKAAAAACAAAAAAAAAgQAAIIAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>IServicioTimbrado.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CertificadorWs.StatusComprobante">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAFAAAAAAAAAAAAACAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsultaUuid.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://cancelacfd.sat.gob.mx" elementFormDefault="qualified" targetNamespace="http://cancelacfd.sat.gob.mx" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://cancelacion.facturaelectronica.sat.gob.mx/Cancelacion/AceptacionRechazoService.svc?xsd=xsd1" namespace="http://www.w3.org/2000/09/xmldsig#" />
+  <xs:element name="ProcesarRespuesta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="solicitud" type="tns:SolicitudAceptacionRechazo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SolicitudAceptacionRechazo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Folios">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="UUID" type="xs:string" />
+            <xs:element minOccurs="1" maxOccurs="1" name="Respuesta" type="tns:TipoAccionPeticionCancelacion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q1="http://www.w3.org/2000/09/xmldsig#" minOccurs="0" maxOccurs="1" ref="q1:Signature" />
+    </xs:sequence>
+    <xs:attribute name="RfcReceptor" type="xs:string" />
+    <xs:attribute name="RfcPacEnviaSolicitud" type="xs:string" />
+    <xs:attribute name="Fecha" type="xs:dateTime" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="TipoAccionPeticionCancelacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Aceptacion" />
+      <xs:enumeration value="Rechazo" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProcesarRespuestaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ProcesarRespuestaResult" type="tns:AcuseAceptacionRechazo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AcuseAceptacionRechazo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Folios">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="UUID" type="xs:string" />
+            <xs:element minOccurs="0" maxOccurs="1" name="EstatusUUID" type="xs:string" />
+          </xs:sequence>
+          <xs:attribute name="Respuesta" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+      <xs:element xmlns:q2="http://www.w3.org/2000/09/xmldsig#" minOccurs="0" maxOccurs="1" ref="q2:Signature" />
+    </xs:sequence>
+    <xs:attribute name="RfcReceptor" type="xs:string" />
+    <xs:attribute name="RfcPac" type="xs:string" />
+    <xs:attribute name="CodEstatus" type="xs:string" />
+    <xs:attribute name="Fecha" type="xs:dateTime" use="required" />
+  </xs:complexType>
+  <xs:element name="ObtenerPeticionesPendientes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="rfcReceptor" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPeticionesPendientesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="ObtenerPeticionesPendientesResult" type="tns:AcusePeticionesPendientes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AcusePeticionesPendientes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UUID" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="CodEstatus" type="xs:string" />
+  </xs:complexType>
+</xs:schema>
