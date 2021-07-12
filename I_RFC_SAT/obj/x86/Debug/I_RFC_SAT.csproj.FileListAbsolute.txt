@@ -75,8 +75,8 @@ C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\b
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.pdb
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\obj\x86\Debug\I_RFC_SAT.dll
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\obj\x86\Debug\I_RFC_SAT.pdb
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.dll.config
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.pdb
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\obj\x86\Debug\I_RFC_SAT.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\obj\x86\Debug\I_RFC_SAT.pdb
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.dll.config
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\bin\Debug\I_RFC_SAT.pdb
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\obj\x86\Debug\I_RFC_SAT.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\I_RFC_SAT\obj\x86\Debug\I_RFC_SAT.pdb

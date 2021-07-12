@@ -123,9 +123,9 @@ C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteNtLi
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\log4net.dll
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteNtLink\obj\Debug\ClienteNtLink.dll
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteNtLink\obj\Debug\ClienteNtLink.pdb
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\ClienteNtLink.dll.config
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\ClienteNtLink.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\ClienteNtLink.pdb
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\log4net.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteNtLink\obj\Debug\ClienteNtLink.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteNtLink\obj\Debug\ClienteNtLink.pdb
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\ClienteNtLink.dll.config
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\ClienteNtLink.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\ClienteNtLink.pdb
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteNtLink\bin\Debug\log4net.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteNtLink\obj\Debug\ClienteNtLink.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteNtLink\obj\Debug\ClienteNtLink.pdb

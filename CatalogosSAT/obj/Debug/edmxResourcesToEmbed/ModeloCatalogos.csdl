@@ -26,6 +26,7 @@
     <EntitySet Name="c_CP" EntityType="CatalogosModel.c_CP" />
     <EntitySet Name="RangoSemanal" EntityType="CatalogosModel.RangoSemanal" />
     <EntitySet Name="c_ClaveProdServCP" EntityType="CatalogosModel.c_ClaveProdServCP" />
+    <EntitySet Name="c_Estaciones" EntityType="CatalogosModel.c_Estaciones" />
   </EntityContainer>
   <EntityType Name="c_Colonia">
     <Key>
@@ -314,6 +315,20 @@
     <Property Type="String" Name="Descripción" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="PalabrasSimilares" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Type="String" Name="MaterialPeligroso" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Estaciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="String" Name="Clavetransporte" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Claveidentificacion" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Descripcion" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Nacionalidad" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DesignadorIATA" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Líneaferrea" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="FechaInicioVigencia" />
+    <Property Type="DateTime" Name="FechaFinVigencia" />
     <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
 </Schema>

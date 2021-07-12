@@ -20,6 +20,7 @@ using System.Text;
 using System.Web.Security;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using ServicioLocal.Business.Carta;
 
 namespace CertificadorAppsNtLink
 {
@@ -46,7 +47,7 @@ namespace CertificadorAppsNtLink
         private readonly XNamespace _ns89 = "http://www.sat.gob.mx/IngresosHidrocarburos10";
 
         private readonly XNamespace _ns39 = "http://www.sat.gob.mx/GastosHidrocarburos10";
-
+        private readonly XNamespace _ns40 = "http://www.sat.gob.mx/CartaPorte";
         public string CancelaRetencion(string userName, string password, string uuid, string rfc)
         {
             string result;
@@ -127,6 +128,19 @@ namespace CertificadorAppsNtLink
             {
                 XElement element = XElement.Load(new StringReader(comprobante));
                 ServicioLocal.Business.Comprobante comp = this.DesSerializar(element);
+                if (comprobante.Contains("<cartaporte:CartaPorte"))
+                {
+                    string erroGH = "";
+                    CartaPorte I2 = this.DesSerializarCARTP(element, ref erroGH);
+                    ValidarCartaP VI2 = new ValidarCartaP();
+                    erroGH = VI2.ProcesarCarta(I2, comp);
+                    if (erroGH != "0")
+                    {
+                        result2 = erroGH;
+                        return result2;
+                    }
+                }
+            
                 if (comprobante.Contains("<ieeh:IngresosHidrocarburos"))
                 {
                     string erroIH = "";
@@ -676,6 +690,42 @@ namespace CertificadorAppsNtLink
                                 string xml = e.ToString();
                                 StringReader reader = new StringReader(xml);
                                 GastosHidrocarburos comLXMLComprobante = (GastosHidrocarburos)ser.Deserialize(reader);
+                                result = comLXMLComprobante;
+                                return result;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                erroGH = ex.InnerException.Message;
+                result = null;
+                return result;
+            }
+            result = null;
+            return result;
+        }
+        public CartaPorte DesSerializarCARTP(XElement element, ref string erroGH)
+        {
+            CartaPorte result;
+            try
+            {
+                IEnumerable<XElement> cart = element.Elements(this._ns + "Complemento");
+                if (cart != null)
+                {
+                    cart = cart.Elements(this._ns40 + "CartaPorte");
+                    if (cart != null)
+                    {
+                        using (IEnumerator<XElement> enumerator = cart.GetEnumerator())
+                        {
+                            if (enumerator.MoveNext())
+                            {
+                                XElement e = enumerator.Current;
+                                XmlSerializer ser = new XmlSerializer(typeof(CartaPorte));
+                                string xml = e.ToString();
+                                StringReader reader = new StringReader(xml);
+                                CartaPorte comLXMLComprobante = (CartaPorte)ser.Deserialize(reader);
                                 result = comLXMLComprobante;
                                 return result;
                             }

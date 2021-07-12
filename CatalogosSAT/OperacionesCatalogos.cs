@@ -6,6 +6,24 @@ namespace CatalogosSAT
 {
     public class OperacionesCatalogos
     {
+        public c_Estaciones Consultar_Estaciones(string Clavetransporte,string NumeroEstacion)
+        {
+          c_Estaciones result;
+            try
+            {
+                using (CatalogosEntities1 db = new CatalogosEntities1())
+                {
+                    c_Estaciones C = db.c_Estaciones.FirstOrDefault((c_Estaciones p) => p.Clavetransporte == Clavetransporte && p.Claveidentificacion==NumeroEstacion);
+                    result = C;
+                }
+            }
+            catch (Exception ex)
+            {
+                result = null;
+            }
+            return result;
+        }
+
         public Double Consultar_rangoMensualSemanal(string Periodicidad, decimal BaseRet, string Impuesto)
         {
             try
