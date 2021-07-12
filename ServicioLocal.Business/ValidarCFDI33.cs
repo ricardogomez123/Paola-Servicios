@@ -103,6 +103,7 @@ namespace ServicioLocal.Business
                             OperacionesCatalogos o9 = new OperacionesCatalogos();
                             CatalogosSAT.c_Moneda mone = o9.Consultar_Moneda(com.Moneda);
                             string sub = com.SubTotal.ToString();
+                            if(com.SubTotal!=0 && mone.Decimales!=0)
                             if (sub != null)
                             {
                                 string[] split = sub.Split(".".ToCharArray());

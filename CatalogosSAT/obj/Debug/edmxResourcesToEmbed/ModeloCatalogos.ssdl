@@ -6,6 +6,7 @@
     <EntitySet Name="c_ClaveUnidad" EntityType="CatalogosModel.Store.c_ClaveUnidad" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="c_Colonia" EntityType="CatalogosModel.Store.c_Colonia" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="c_CP" EntityType="CatalogosModel.Store.c_CP" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="c_Estaciones" EntityType="CatalogosModel.Store.c_Estaciones" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="c_Estado" EntityType="CatalogosModel.Store.c_Estado" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="c_FormaPago" EntityType="CatalogosModel.Store.c_FormaPago" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="c_FraccionArancelaria" EntityType="CatalogosModel.Store.c_FraccionArancelaria" store:Type="Tables" Schema="dbo" />
@@ -92,6 +93,20 @@
     <Property Name="Día_Inicio_Horario_Invierno" Type="nvarchar" MaxLength="255" />
     <Property Name="Hora_Inicio_Horario_Invierno" Type="nvarchar" MaxLength="255" />
     <Property Name="Diferencia_Horaria_Invierno" Type="float" />
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="c_Estaciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Clavetransporte" Type="nvarchar" MaxLength="5" />
+    <Property Name="Claveidentificacion" Type="nvarchar" MaxLength="10" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" />
+    <Property Name="Nacionalidad" Type="nvarchar" MaxLength="100" />
+    <Property Name="DesignadorIATA" Type="nvarchar" MaxLength="50" />
+    <Property Name="Líneaferrea" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaInicioVigencia" Type="datetime" />
+    <Property Name="FechaFinVigencia" Type="datetime" />
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="c_Estado">

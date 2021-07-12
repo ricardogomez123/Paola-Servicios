@@ -315,5 +315,20 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="c_Estaciones">
+      <EntityTypeMapping TypeName="CatalogosModel.c_Estaciones">
+        <MappingFragment StoreEntitySet="c_Estaciones">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FechaFinVigencia" ColumnName="FechaFinVigencia" />
+          <ScalarProperty Name="FechaInicioVigencia" ColumnName="FechaInicioVigencia" />
+          <ScalarProperty Name="Líneaferrea" ColumnName="Líneaferrea" />
+          <ScalarProperty Name="DesignadorIATA" ColumnName="DesignadorIATA" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Claveidentificacion" ColumnName="Claveidentificacion" />
+          <ScalarProperty Name="Clavetransporte" ColumnName="Clavetransporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

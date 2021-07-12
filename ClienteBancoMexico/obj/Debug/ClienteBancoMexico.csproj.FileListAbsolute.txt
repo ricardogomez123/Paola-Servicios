@@ -49,8 +49,8 @@ C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBanc
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
 C:\datosRGV\respaldo_15_02_2021\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
-C:\ProyectosNTLINK\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll.config
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\bin\Debug\ClienteBancoMexico.pdb
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.dll
+C:\ProyectosNTLINK\Aenviar\certificadoCDFI3.3_2021\certificador\ClienteBancoMexico\obj\Debug\ClienteBancoMexico.pdb

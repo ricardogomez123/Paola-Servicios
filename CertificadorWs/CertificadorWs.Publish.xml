@@ -1,44 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="C:\inetpub\wwwroot\CertificadorWs33" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Perfil1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/XSDRet/planesderetiro11.xsd" publishTime="06/07/2019 17:01:30" />
     <file relUrl="bin/XSLRet/intereseshipotecarios.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/MessagingToolkit.QRCode.dll" publishTime="02/08/2016 17:59:12" />
     <file relUrl="XSLRet/arrendamientoenfideicomiso.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsd33/TuristaPasajeroExtranjero.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="XSLRet/utilerias.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsd33/donat11.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/HSMXml.dll" publishTime="05/18/2021 00:48:35" />
+    <file relUrl="bin/HSMXml.dll" publishTime="06/29/2021 12:45:19" />
     <file relUrl="XSLRet/ServiciosPlataformasTecnologicas10.xslt" publishTime="04/02/2019 13:47:40" />
     <file relUrl="bin/Xsd33/psgecfd.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Xsl33/utilerias.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/XSLRet/sectorfinanciero.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/cfdiregistrofiscal.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Configuracion.svc" publishTime="02/08/2016 17:58:56" />
-    <file relUrl="bin/ServicioLocal.Business.pdb" publishTime="05/18/2021 00:48:47" />
     <file relUrl="bin/Xsl33/TuristaPasajeroExtranjero.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="ServicioTimbrado.svc" publishTime="02/08/2016 17:58:56" />
     <file relUrl="Xsl33/nomina11.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/ServicioLocalContract.dll" publishTime="05/18/2021 00:48:33" />
+    <file relUrl="bin/ServicioLocalContract.dll" publishTime="06/29/2021 12:45:15" />
     <file relUrl="bin/Xsd33/terceros11.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSDRet/retencionpagov1.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/System.Net.Http.xml" publishTime="02/08/2016 17:59:14" />
     <file relUrl="Xsl33/implocal.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/ServicioLocal.Business.dll" publishTime="05/18/2021 00:48:47" />
+    <file relUrl="bin/ServicioLocal.Business.dll" publishTime="07/01/2021 13:48:31" />
     <file relUrl="XSDRet/pagosaextranjeros.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/detallista.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="XSLRet/dividendos.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/cfdv32.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Xsd33/cfdiregistrofiscal.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="XSLRet/cadenaoriginal_TFD_1_0.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSDRet/planesderetiro11.xsd" publishTime="06/07/2019 17:01:30" />
     <file relUrl="XSDRet/operacionesconderivados.xsd" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/Xsl33/ecc.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="Xsl33/leyendasFisc.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/CatalogosSAT.pdb" publishTime="06/29/2021 12:45:12" />
+    <file relUrl="Xsl33/ecb.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSDRet/retencionpagov1.xsd" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/CatalogosSAT.pdb" publishTime="05/18/2021 00:48:31" />
+    <file relUrl="XSLRet/intereses.xslt" publishTime="02/08/2016 17:59:02" />
     <file relUrl="XSDRet/fideicomisonoempresarial.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSDRet/arrendamientoenfideicomiso.xsd" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/XSDRet/sectorfinanciero.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/pfic.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSDRet/dividendos.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSDRet/ServiciosPlataformasTecnologicas10.xsd" publishTime="04/11/2019 08:58:06" />
@@ -47,52 +45,56 @@
     <file relUrl="bin/XSLRet/arrendamientoenfideicomiso.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/XSDRet/intereseshipotecarios.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Gma.QrCodeNet.Encoding.dll" publishTime="02/08/2016 17:59:06" />
-    <file relUrl="bin/I_RFC_SAT.dll" publishTime="05/18/2021 00:48:31" />
+    <file relUrl="bin/I_RFC_SAT.dll" publishTime="06/29/2021 12:45:13" />
     <file relUrl="bin/Xsd33/divisas.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="XSLRet/retenciones.xslt" publishTime="06/10/2019 22:43:56" />
     <file relUrl="bin/Xsd33/nomina11.xsd" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/Xsl33/pfic.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSLRet/enajenaciondeacciones.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/XSLRet/ServiciosPlataformasTecnologicas10.xslt" publishTime="04/02/2019 13:47:40" />
     <file relUrl="XSDRet/intereses.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="CertificadorService.svc" publishTime="02/08/2016 17:58:56" />
     <file relUrl="bin/Xsl33/spei.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/Xsl33/iedu.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/spei.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/BouncyCastle.Crypto.dll" publishTime="02/08/2016 17:59:08" />
     <file relUrl="Xsl33/ventavehiculos11.xslt" publishTime="02/08/2016 17:59:02" />
     <file relUrl="bin/Xsd33/ventavehiculos11.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Xsd33/iedu.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/log4net.dll" publishTime="02/08/2016 17:59:06" />
-    <file relUrl="bin/CertificadorWs.pdb" publishTime="05/18/2021 00:48:52" />
-    <file relUrl="bin/SAT.CFDI.Cliente.Procesamiento.dll" publishTime="05/18/2021 00:48:34" />
-    <file relUrl="bin/ClienteNtLink.pdb" publishTime="05/18/2021 00:48:33" />
+    <file relUrl="bin/CertificadorWs.pdb" publishTime="07/01/2021 13:48:34" />
+    <file relUrl="bin/ClienteNtLink.pdb" publishTime="06/29/2021 12:45:15" />
     <file relUrl="Xsd33/terceros11.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="Web.config" publishTime="05/18/2021 00:49:18" />
+    <file relUrl="Web.config" publishTime="06/23/2021 15:23:30" />
     <file relUrl="bin/EPPlus.dll" publishTime="02/08/2016 17:59:06" />
     <file relUrl="bin/Certificados/AC_SAT_PRUEBAS.cer" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSLRet/cadenaoriginal_TFD_1_0.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="XSLRet/operacionesconderivados.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/implocal.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="XSLRet/intereses.xslt" publishTime="02/08/2016 17:59:02" />
     <file relUrl="bin/Xsd33/implocal.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/CertificadorWs.Business.dll" publishTime="05/18/2021 00:48:51" />
+    <file relUrl="Xsl33/ecc.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/CertificadorWs.Business.dll" publishTime="07/01/2021 13:48:33" />
     <file relUrl="bin/XSDRet/operacionesconderivados.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/leyendasFisc.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Microsoft.WindowsAzure.StorageClient.dll" publishTime="02/08/2016 17:59:08" />
-    <file relUrl="bin/SAT.CFDI.Cliente.Procesamiento.pdb" publishTime="05/18/2021 00:48:34" />
+    <file relUrl="bin/SAT.CFDI.Cliente.Procesamiento.pdb" publishTime="06/29/2021 12:45:18" />
     <file relUrl="bin/XSDRet/arrendamientoenfideicomiso.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/ecb.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSLRet/retenciones.xslt" publishTime="06/10/2019 22:43:56" />
+    <file relUrl="Xsl33/leyendasFisc.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/XSLRet/premios.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/leyendasFiscales.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/CertificadorWs.dll" publishTime="05/18/2021 00:48:52" />
+    <file relUrl="bin/CertificadorWs.dll" publishTime="07/01/2021 13:48:34" />
     <file relUrl="XSDRet/sectorfinanciero.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsd33/leyendasFisc.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Xsl33/psgecfd.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSLRet/premios.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsl33/cadenaoriginal_3_3.xslt" publishTime="07/12/2017 21:14:20" />
     <file relUrl="bin/Xsl33/ecb.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/ClienteBancoMexico.dll" publishTime="05/18/2021 00:48:29" />
+    <file relUrl="bin/ClienteBancoMexico.dll" publishTime="06/29/2021 12:45:10" />
     <file relUrl="Xsd33/divisas.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSLRet/pagosaextranjeros.xslt" publishTime="02/08/2016 17:59:02" />
-    <file relUrl="bin/HSMXml.pdb" publishTime="05/18/2021 00:48:35" />
+    <file relUrl="bin/HSMXml.pdb" publishTime="06/29/2021 12:45:19" />
     <file relUrl="XSDRet/intereseshipotecarios.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/XSLRet/fideicomisonoempresarial.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="XSDRet/enajenaciondeacciones.xsd" publishTime="02/08/2016 17:59:00" />
@@ -106,7 +108,7 @@
     <file relUrl="Xsl33/cadenaoriginal_3_3.xslt" publishTime="07/12/2017 21:14:20" />
     <file relUrl="bin/XSLRet/intereses.xslt" publishTime="02/08/2016 17:59:02" />
     <file relUrl="Xsl33/iedu.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/I_RFC_SAT.pdb" publishTime="05/18/2021 00:48:31" />
+    <file relUrl="bin/I_RFC_SAT.pdb" publishTime="06/29/2021 12:45:12" />
     <file relUrl="Xsl33/pagoenespecie.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsl33/cadenaoriginal_TFD_1_1.xslt" publishTime="07/12/2017 21:15:12" />
     <file relUrl="Xsd33/pagoenespecie.xsd" publishTime="02/08/2016 17:59:00" />
@@ -124,34 +126,32 @@
     <file relUrl="Xsl33/donat11.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsl33/divisas.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Certificados/AC_SAT.cer" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/CatalogosSAT.dll" publishTime="05/18/2021 00:48:31" />
-    <file relUrl="bin/ClienteNtLink.dll" publishTime="05/18/2021 00:48:33" />
+    <file relUrl="bin/CatalogosSAT.dll" publishTime="06/29/2021 12:45:12" />
+    <file relUrl="bin/ClienteNtLink.dll" publishTime="06/29/2021 12:45:15" />
     <file relUrl="ServicioValidador.svc" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSLRet/dividendos.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/detallista.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSDRet/premios.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsl33/implocal.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/ventavehiculos11.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/ServicioLocalContract.pdb" publishTime="05/18/2021 00:48:33" />
+    <file relUrl="bin/ServicioLocalContract.pdb" publishTime="06/29/2021 12:45:15" />
     <file relUrl="Xsd33/donat11.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSLRet/enajenaciondeacciones.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="Xsl33/ecb.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/TuristaPasajeroExtranjero.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/XSDRet/enajenaciondeacciones.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsd33/pfic.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Xsl33/detallista.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsd33/ecb.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/Xsl33/pfic.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/XSDRet/sectorfinanciero.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsd33/psgecfd.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Xsl33/leyendasFisc.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/XSDRet/planesderetiro11.xsd" publishTime="06/07/2019 17:01:30" />
+    <file relUrl="bin/Xsl33/ecc.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/divisas.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/app.config" publishTime="06/26/2019 13:52:46" />
-    <file relUrl="Xsl33/utilerias.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Xsl33/pfic.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="bin/ClienteBancoMexico.pdb" publishTime="05/18/2021 00:48:29" />
+    <file relUrl="bin/ClienteBancoMexico.pdb" publishTime="06/29/2021 12:45:10" />
     <file relUrl="ServicioTimbradoMovil.svc" publishTime="03/09/2017 11:42:10" />
-    <file relUrl="bin/Xsl33/iedu.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="XSLRet/dividendos.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/XSLRet/utilerias.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="Certificados/AC_SAT_PRUEBAS.cer" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/XSDRet/intereses.xsd" publishTime="02/08/2016 17:59:00" />
@@ -160,23 +160,23 @@
     <file relUrl="Certificados/AC_SAT_PRODUCCION.cer" publishTime="02/08/2016 17:58:58" />
     <file relUrl="bin/Microsoft.WindowsAzure.StorageClient.xml" publishTime="02/08/2016 17:59:08" />
     <file relUrl="bin/XSDRet/ServiciosPlataformasTecnologicas10.xsd" publishTime="04/11/2019 08:58:06" />
-    <file relUrl="bin/CertificadorWs.XML" publishTime="05/18/2021 00:48:52" />
+    <file relUrl="bin/CertificadorWs.XML" publishTime="07/01/2021 13:48:34" />
     <file relUrl="XSDRet/dividendos.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsd33/pagoenespecie.xsd" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="XSLRet/operacionesconderivados.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/SAT.CFDI.Cliente.Procesamiento.dll" publishTime="06/29/2021 12:45:18" />
     <file relUrl="Xsl33/psgecfd.xslt" publishTime="02/08/2016 17:59:00" />
-    <file relUrl="Xsl33/ecc.xslt" publishTime="02/08/2016 17:59:00" />
+    <file relUrl="bin/ServicioLocal.Business.pdb" publishTime="07/01/2021 13:48:31" />
     <file relUrl="bin/XSLRet/planesderetiro11.xslt" publishTime="10/12/2018 07:27:14" />
     <file relUrl="bin/Xsd33/detallista.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="XSLRet/planesderetiro11.xslt" publishTime="10/12/2018 07:27:14" />
     <file relUrl="bin/Xsd33/spei.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/CertificadorWs.Business.pdb" publishTime="05/18/2021 00:48:51" />
+    <file relUrl="bin/CertificadorWs.Business.pdb" publishTime="07/01/2021 13:48:33" />
     <file relUrl="Xsd33/TuristaPasajeroExtranjero.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="Xsd33/nomina11.xsd" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/Xsl33/donat11.xslt" publishTime="02/08/2016 17:59:00" />
     <file relUrl="bin/System.Net.Http.dll" publishTime="02/08/2016 17:59:14" />
     <file relUrl="bin/Xsd33/cfdv32.xsd" publishTime="02/08/2016 17:58:58" />
     <file relUrl="Xsd33/cfdiregistrofiscal.xsd" publishTime="02/08/2016 17:58:58" />
-    <file relUrl="bin/XSLRet/ServiciosPlataformasTecnologicas10.xslt" publishTime="04/02/2019 13:47:40" />
+    <file relUrl="Xsl33/utilerias.xslt" publishTime="02/08/2016 17:59:00" />
   </publishProfile>
 </publishData>

@@ -27,6 +27,7 @@ using System.Web.Security;
 using ServicioLocal.Business.Hidro;
 using ServicioLocal.Business.Hidrocarburos;
 using Planesderetiro11;
+using ServicioLocal.Business.Carta;
 
 
 namespace CertificadorWs
@@ -1565,7 +1566,7 @@ namespace CertificadorWs
        
                 }
                 //-------------------------
-                if (comprobante.Contains("<cartaporte:CartaPorte"))
+               if (comprobante.Contains("<cartaporte:CartaPorte"))
                 {
                     string erroGH = "";
                     CartaPorte I2 = this.DesSerializarCARTP(element, ref erroGH);
