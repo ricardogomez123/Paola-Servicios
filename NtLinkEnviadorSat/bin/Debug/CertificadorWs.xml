@@ -4,38 +4,6 @@
         <name>CertificadorWs</name>
     </assembly>
     <members>
-        <member name="F:CertificadorWs.ServicioTimbradoMovil.Logger">
-            <summary>
-            Obtiene un listado con las empresas que estan dadas de alta en el sistema de timbrado
-            </summary>
-            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
-            <param name="password">Contraseña (proporcionado por NT LINK)</param>
-            <returns></returns>
-        </member>
-        <member name="F:CertificadorWs.ServicioTimbradoMovil._ns7">
-            <summary>
-            Timbra un comprobante
-            </summary>
-            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
-            <param name="password">Contraseña (proporcionado por NT LINK)</param>
-            <param name="comprobante">String con el contenido del CFDi codificado en UTF-8</param>
-            <returns>El String con el complemento de certificacion (TimbreFiscalDigital)</returns>
-        </member>
-        <member name="M:CertificadorWs.CertificadorService.TimbraCfdi(System.String,System.String,System.String,System.String,System.String)">
-            <summary>
-            Timbra un comprobante
-            </summary>
-            <param name="comprobante">Documento para validar y timbrar</param>
-            <returns>Una cadena con el timbre fiscal digital (TFD)</returns>
-        </member>
-        <member name="M:CertificadorWs.CertificadorService.CancelaCfdi(System.String,System.String,System.String,System.String)">
-            <summary>
-            Cancela un cfdi
-            </summary>
-            <param name="uuid">uuid del comprobante a cancelar</param>
-            <param name="rfc">RFC del emisor</param>
-            <returns>Acuse de cancelación del SAT</returns>
-        </member>
         <member name="F:CertificadorWs.ServicioTimbrado._ns">
             <summary>
             Regresa el saldo de timbrado del cliente
@@ -183,6 +151,23 @@
             <param name="rfc">RFC del emisor del comprobante a cancelar</param>
             <returns></returns>
         </member>
+        <member name="F:CertificadorWs.ServicioTimbradoMovil.Logger">
+            <summary>
+            Obtiene un listado con las empresas que estan dadas de alta en el sistema de timbrado
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <returns></returns>
+        </member>
+        <member name="F:CertificadorWs.ServicioTimbradoMovil._ns7">
+            <summary>
+            Timbra un comprobante
+            </summary>
+            <param name="userName">Nombre de usuario (proporcionado por NT LINK)</param>
+            <param name="password">Contraseña (proporcionado por NT LINK)</param>
+            <param name="comprobante">String con el contenido del CFDi codificado en UTF-8</param>
+            <returns>El String con el complemento de certificacion (TimbreFiscalDigital)</returns>
+        </member>
         <member name="T:CertificadorWs.TimbradoResponse">
             <summary>
             Estructura de regreso del metodo TimbraCfdiQr
@@ -212,6 +197,21 @@
             <summary>
             Descripcion del error 
             </summary>
+        </member>
+        <member name="M:CertificadorWs.CertificadorService.TimbraCfdi(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Timbra un comprobante
+            </summary>
+            <param name="comprobante">Documento para validar y timbrar</param>
+            <returns>Una cadena con el timbre fiscal digital (TFD)</returns>
+        </member>
+        <member name="M:CertificadorWs.CertificadorService.CancelaCfdi(System.String,System.String,System.String,System.String)">
+            <summary>
+            Cancela un cfdi
+            </summary>
+            <param name="uuid">uuid del comprobante a cancelar</param>
+            <param name="rfc">RFC del emisor</param>
+            <returns>Acuse de cancelación del SAT</returns>
         </member>
     </members>
 </doc>
